@@ -1,161 +1,26 @@
-<?php require_once("inc/init.php"); ?>
+<?php require_once("inc/init.php");
+require ('../lib/xcrud/xcrud.php');
+$db = Xcrud_db::get_instance();
+$db->query('SELECT * FROM events');
+$events = $db->result();
+
+
+?>
 <div class="row">
 	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
 		<h1 class="page-title txt-color-blueDark"><i class="fa fa-calendar fa-fw "></i> 
 			Calendar
 			<span>>
-			Add events
+			Events and Activities
 			</span>
 		</h1>
-	</div>
-	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
-		<ul id="sparks" class="">
-			<li class="sparks-info">
-				<h5> My Income <span class="txt-color-blue">$47,171</span></h5>
-				<div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
-					1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
-				</div>
-			</li>
-			<li class="sparks-info">
-				<h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up" data-rel="bootstrap-tooltip" title="Increased"></i>&nbsp;45%</span></h5>
-				<div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
-					110,150,300,130,400,240,220,310,220,300, 270, 210
-				</div>
-			</li>
-			<li class="sparks-info">
-				<h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
-				<div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
-					110,150,300,130,400,240,220,310,220,300, 270, 210
-				</div>
-			</li>
-		</ul>
 	</div>
 </div>
 <!-- row -->
 
 <div class="row">
 
-	<div class="col-sm-12 col-md-12 col-lg-3">
-		<!-- new widget -->
-		<div class="jarviswidget jarviswidget-color-blueDark">
-			<header>
-				<h2> Add Events </h2>
-			</header>
-
-			<!-- widget div-->
-			<div>
-
-				<div class="widget-body">
-					<!-- content goes here -->
-
-					<form id="add-event-form">
-						<fieldset>
-
-							<div class="form-group">
-								<label>Select Event Icon</label>
-								<div class="btn-group btn-group-sm btn-group-justified" data-toggle="buttons">
-									<label class="btn btn-default active">
-										<input type="radio" name="iconselect" id="icon-1" value="fa-info" checked>
-										<i class="fa fa-info text-muted"></i> </label>
-									<label class="btn btn-default">
-										<input type="radio" name="iconselect" id="icon-2" value="fa-warning">
-										<i class="fa fa-warning text-muted"></i> </label>
-									<label class="btn btn-default">
-										<input type="radio" name="iconselect" id="icon-3" value="fa-check">
-										<i class="fa fa-check text-muted"></i> </label>
-									<label class="btn btn-default">
-										<input type="radio" name="iconselect" id="icon-4" value="fa-user">
-										<i class="fa fa-user text-muted"></i> </label>
-									<label class="btn btn-default">
-										<input type="radio" name="iconselect" id="icon-5" value="fa-lock">
-										<i class="fa fa-lock text-muted"></i> </label>
-									<label class="btn btn-default">
-										<input type="radio" name="iconselect" id="icon-6" value="fa-clock-o">
-										<i class="fa fa-clock-o text-muted"></i> </label>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label>Event Title</label>
-								<input class="form-control"  id="title" name="title" maxlength="40" type="text" placeholder="Event Title">
-							</div>
-							<div class="form-group">
-								<label>Event Description</label>
-								<textarea class="form-control" placeholder="Please be brief" rows="3" maxlength="40" id="description"></textarea>
-								<p class="note">Maxlength is set to 40 characters</p>
-							</div>
-
-							<div class="form-group">
-								<label>Select Event Color</label>
-								<div class="btn-group btn-group-justified btn-select-tick" data-toggle="buttons">
-									<label class="btn bg-color-darken active">
-										<input type="radio" name="priority" id="option1" value="bg-color-darken txt-color-white" checked>
-										<i class="fa fa-check txt-color-white"></i> </label>
-									<label class="btn bg-color-blue">
-										<input type="radio" name="priority" id="option2" value="bg-color-blue txt-color-white">
-										<i class="fa fa-check txt-color-white"></i> </label>
-									<label class="btn bg-color-orange">
-										<input type="radio" name="priority" id="option3" value="bg-color-orange txt-color-white">
-										<i class="fa fa-check txt-color-white"></i> </label>
-									<label class="btn bg-color-greenLight">
-										<input type="radio" name="priority" id="option4" value="bg-color-greenLight txt-color-white">
-										<i class="fa fa-check txt-color-white"></i> </label>
-									<label class="btn bg-color-blueLight">
-										<input type="radio" name="priority" id="option5" value="bg-color-blueLight txt-color-white">
-										<i class="fa fa-check txt-color-white"></i> </label>
-									<label class="btn bg-color-red">
-										<input type="radio" name="priority" id="option6" value="bg-color-red txt-color-white">
-										<i class="fa fa-check txt-color-white"></i> </label>
-								</div>
-							</div>
-
-						</fieldset>
-						<div class="form-actions">
-							<div class="row">
-								<div class="col-md-12">
-									<button class="btn btn-default" type="button" id="add-event" >
-										Add Event
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
-
-					<!-- end content -->
-				</div>
-
-			</div>
-			<!-- end widget div -->
-		</div>
-		<!-- end widget -->
-
-		<div class="well well-sm" id="event-container">
-			<form>
-				<legend>
-					Draggable Events
-				</legend>
-				<ul id='external-events' class="list-unstyled">
-					<li>
-						<span class="bg-color-darken txt-color-white" data-description="Currently busy" data-icon="fa-time">Office Meeting</span>
-					</li>
-					<li>
-						<span class="bg-color-blue txt-color-white" data-description="No Description" data-icon="fa-pie">Lunch Break</span>
-					</li>
-					<li>
-						<span class="bg-color-red txt-color-white" data-description="Urgent Tasks" data-icon="fa-alert">URGENT</span>
-					</li>
-				</ul>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" id="drop-remove" class="checkbox style-0" checked="checked">
-						<span>remove after drop</span> </label>
-
-				</div>
-			</form>
-
-		</div>
-	</div>
-	<div class="col-sm-12 col-md-12 col-lg-9">
+	<div class="col-sm-12 col-md-12 col-lg-12">
 
 		<!-- new widget -->
 		<div class="jarviswidget jarviswidget-color-blueDark">
@@ -384,6 +249,16 @@
 			            }
 			
 			        },
+
+                    eventClick:  function(event, jsEvent, view) {
+                        endtime = $.fullCalendar.moment(event.end).format('h:mm');
+                        starttime = $.fullCalendar.moment(event.start).format('dddd, MMMM Do YYYY, h:mm');
+                        var mywhen = starttime + ' - ' + endtime;
+                        $('#modalTitle').html(event.title);
+                        $('#modalWhen').text(mywhen);
+                        $('#eventID').val(event.id);
+                        $('#calendarModal').modal();
+                    },
 			
 			        select: function (start, end, allDay) {
 			            var title = prompt('Event Title:');
@@ -399,62 +274,7 @@
 			            calendar.fullCalendar('unselect');
 			        },
 			
-			        events: [{
-                        title: 'Independence Day',
-                        start: new Date(2018, 9, 9),
-                        description: 'Uganda Independence date',
-                        className: ["event", "bg-color-greenLight"],
-                        icon: 'fa-check'
-                    },
-                        {
-			            title: 'All Day Event',
-			            start: new Date(2018, 9, 1),
-			            description: 'long description',
-			            className: ["event", "bg-color-greenLight"],
-			            icon: 'fa-check'
-			        }, {
-			            title: 'Long Event',
-			            start: new Date(y, m, d - 5),
-			            end: new Date(y, m, d - 2),
-			            className: ["event", "bg-color-red"],
-			            icon: 'fa-lock'
-			        }, {
-			            id: 999,
-			            title: 'Repeating Event',
-			            start: new Date(y, m, d - 3, 16, 0),
-			            allDay: false,
-			            className: ["event", "bg-color-blue"],
-			            icon: 'fa-clock-o'
-			        }, {
-			            id: 999,
-			            title: 'Repeating Event',
-			            start: new Date(y, m, d + 4, 16, 0),
-			            allDay: false,
-			            className: ["event", "bg-color-blue"],
-			            icon: 'fa-clock-o'
-			        }, {
-			            title: 'Meeting',
-			            start: new Date(y, m, d, 10, 30),
-			            allDay: false,
-			            className: ["event", "bg-color-darken"]
-			        }, {
-			            title: 'Lunch',
-			            start: new Date(y, m, d, 12, 0),
-			            end: new Date(y, m, d, 14, 0),
-			            allDay: false,
-			            className: ["event", "bg-color-darken"]
-			        }, {
-			            title: 'Birthday Party',
-			            start: new Date(y, m, d + 1, 19, 0),
-			            end: new Date(y, m, d + 1, 22, 30),
-			            allDay: false,
-			            className: ["event", "bg-color-darken"]
-			        }, {
-			            title: 'GOU Dashboard Open Day',
-			            start: new Date(y, m, 28),
-			            end: new Date(y, m, 29),
-			            className: ["event", "bg-color-darken"]
-			        }],
+			        events: <?php echo json_encode($events); ?>,
 			
 			        eventRender: function (event, element, icon) {
 			            if (!event.description == "") {
