@@ -192,8 +192,8 @@ $username = $user->username;
 
 	<!-- col -->
 	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
-		<h1 class="page-title txt-color-blueDark"><!-- PAGE HEADER --><i class="fa-fw fa fa-home"></i> Other Pages <span>>
-			Timeline </span></h1>
+		<h1 class="page-title txt-color-blueDark"><!-- PAGE HEADER --><i class="fa-fw fa fa-home"></i> Timeline <span>>
+			Posts and Activities </span></h1>
 	</div>
 	<!-- end col -->
 

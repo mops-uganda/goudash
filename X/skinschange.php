@@ -6,5 +6,5 @@ if (isset($_GET['skin'])) {
     setcookie("opmDashSkin", $skin, time() + (86400 * 30), "/"); // 86400 = 1 day
     //echo $_SESSION["opmDashSkin"];
 }
-header('Location: ../#X/skins.php');
+header('Location: ../#X/skins');
 ?>

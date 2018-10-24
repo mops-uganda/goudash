@@ -29,7 +29,7 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/dash') ? 'active' : ''  }}" href="../../">
+                <a class="nav-link {{ Request::is('/dash') ? 'active' : ''  }}" href="../../../../">
                     <i class="fas fa-home"></i>
                     <span>Home Page</span>
                 </a>

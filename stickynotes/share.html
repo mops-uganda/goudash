@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Shared Note</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/reset.css" type="text/css" rel="stylesheet">
+	<link href="css/all.css" type="text/css" rel="stylesheet">
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="stickyNotes.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="header shared-note" id="header">
+		<div class="container">
+			<div class="col-md-3 col-sm-5">
+				<a href="index.html"><h2>Shared Note</h2></a>
+			</div>
+			<div class="col-md-6 col-md-push-3 col-sm-7">
+				<div class="hold-img">
+					<img src="stickynotes/img/Group 12.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="notes" class="notes">
+		<div class="container">
+			<!--Start The Loop-->
+			<shared-note></shared-note>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<span>Made With <i class="fas fa-heart"></i> In <a href="http://engtechnos.com">Eng Techno</a></span>
+		</div>
+	</footer>
+	
+	<!--Scripts-->
+	<script src="js/httpVueLoader.js" charset="utf-8"></script>
+	<script src="js/vue.min.js" charset="utf-8"></script>
+	<script src="js/stickyNotes.js" charset="utf-8"></script>
+</body>
+</html>
