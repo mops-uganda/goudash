@@ -208,7 +208,7 @@ a:hover {
 .notes .single-note h2,
 .notes .single-note input {
   font-family: 'poppin-sbold', 'toriom-med';
-  font-size: 23px;
+  font-size: 18px;
   transition: all 0.3s;
   margin-top: 0;
 }
@@ -256,7 +256,7 @@ a:hover {
 }
 .notes .single-note .meta span {
   margin: 0 12px;
-  font-size: 23px;
+  font-size: 18px;
   transition: all 0.2s;
   color: hsla(0, 0%, 0%, 0.2);
   cursor: pointer;
