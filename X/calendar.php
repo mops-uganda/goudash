@@ -15,6 +15,13 @@ $events = $db->result();
 			</span>
 		</h1>
 	</div>
+    <div class="col-md-4 text-center">
+        <ul class="demo-btns">
+            <li>
+                <a class="btn btn-labeled btn-success btn-lg" onclick="location.href='#X/events';"> <span class="btn-label"><i class="fa fa-plus"></i></span>View, Edit or Add Events to Calendar </a>
+            </li>
+        </ul>
+    </div>
 </div>
 <!-- row -->
 

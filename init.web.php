@@ -25,6 +25,7 @@ ex:
 )
 
 */
+
 $page_nav = array(
     "dashboard" => array(
         "title" => "Dashboard",
@@ -33,11 +34,28 @@ $page_nav = array(
     )
 );
 
-$infofeed = array(
-        "title" => "Information Feed",
-        "icon" => "fa-sliders",
-        "url" => "X/infofeed"
+$intranet = array(
+    "title" => "Information Feed",
+    "icon" => "fa-balance-scale",
+    "sub" => array(
+        "infofeed" => array(
+            "title" => "Posts Timeline",
+            "icon" => "fa-sliders",
+            "url" => "X/infofeed"
+        ),
+        "calendar" => array(
+            "title" => "Events Calendar",
+            "icon" => "fa-calendar",
+            "url" => "X/calendar?=".mt_rand(5, 500)
+        ),
+        "stickynotes" => array(
+            "title" => "Sticky Notes",
+            "icon" => "fa-slack",
+            "url" => "stickynotes/index.html"
+        )
+    )
 );
+
 
 $Strategic_Projects = array(
     "title" => "Strategic Projects",
@@ -309,7 +327,7 @@ $setting_array = array(
     )
 );
 
-array_push($page_nav, $infofeed);
+array_push($page_nav, $intranet);
 if ($user->Strategic_Projects) array_push($page_nav, $Strategic_Projects);
 if ($user->Strategic_Actions) array_push($page_nav, $Strategic_Actions);
 if ($user->Strategic_Data) array_push($page_nav, $Strategic_Data);
