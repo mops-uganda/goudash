@@ -1,15 +1,11 @@
 <?php require_once("inc/init.php");
 require ('../lib/xcrud/xcrud.php');
 $db = Xcrud_db::get_instance();
-$db->query('SELECT * FROM events order by id desc');
+$db->query('SELECT * FROM events');
 $events = $db->result();
 
+
 ?>
-<style>
-    .alert-info {
-        border-color: #342806;
-        color: #ffffff;
-</style>
 
 <div class="row">
     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
@@ -35,23 +31,31 @@ $events = $db->result();
                 </li>
             </ul>
         </div>
-        <br><br><br><br>
-        <?php
-        for ($count=0;$count<count($events);$count++) {
-            ?>
-            <div>
-                <alert dismissible="false" type="success"><!---->
-                    <div role="alert" class="alert alert-info alert-dismissible ng-star-inserted <?php echo $events[$count]["className"] ?>"> <!---->
-                        <h7 class="alert-heading"><?php echo $events[$count]["title"] ?></h7>
-                        <?php echo $events[$count]["description"] ?>
-                    </div>
-                </alert>
-            </div>
-            <?php
-        }
-        ?>
+        <br>
+        <div> class="col-md-4"<alert dismissible="true" type="warning"><!----> <div role="alert" class="alert alert-warning alert-dismissible ng-star-inserted"> <!---->
+                <h4 class="alert-heading">Warning!</h4>
+                Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue.
+            </div>  </alert>
+        </div>
 
         <!-- end widget -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Event</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Row 1</td>
+                <td>Row 2</td>
+                <td>Row 3</td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
     <div class="col-sm-12 col-md-12 col-lg-9">
 

@@ -36,7 +36,7 @@ $page_nav = array(
 
 $intranet = array(
     "title" => "Information Feed",
-    "icon" => "fa-balance-scale",
+    "icon" => "fa-sliders",
     "sub" => array(
         "infofeed" => array(
             "title" => "Posts Timeline",
