@@ -244,6 +244,38 @@ $Govt_Performance = array(
     )
 );
 
+$inspection_performance = array(
+    "title" => "Inspection Tool",
+    "icon" => "fa-check-square-o txt-color-green",
+    "sub" => array(
+        "actionsdashboard" => array(
+            "title" => "Inspect Dashboard",
+            "icon" => "fa-home",
+            "url" => "inspect/home"
+        ),
+        "strategicmeetings" => array(
+            "title" => "Meetings / Events",
+            "icon" => "fa-cube",
+            "url" => "X/meetings?=".mt_rand(5, 500)
+        ),
+        "strategicactions" => array(
+            "title" => "Actions and Tasks",
+            "icon" => "fa-tasks",
+            "url" => "X/actions"
+        ),
+        "performance_questions" => array(
+            "title" => "Performance Questions",
+            "icon" => "fa-cube",
+            "url" => "inspect/performance_questions"
+        ),
+        "manual" => array(
+            "title" => "Inspection Manual",
+            "icon" => "fa-calendar",
+            "url" => "inspect/manual"
+        )
+    )
+);
+
 $General_Information = array(
     "title" => "General Information",
     "icon" => "fa-desktop",
@@ -330,6 +362,7 @@ $setting_array = array(
 array_push($page_nav, $intranet);
 if ($user->Strategic_Projects) array_push($page_nav, $Strategic_Projects);
 if ($user->Strategic_Actions) array_push($page_nav, $Strategic_Actions);
+if ($user->inspection_performance) array_push($page_nav, $inspection_performance);
 if ($user->Strategic_Data) array_push($page_nav, $Strategic_Data);
 if ($user->Govt_Performance) array_push($page_nav, $Govt_Performance);
 if ($user->General_Information) array_push($page_nav, $General_Information);
