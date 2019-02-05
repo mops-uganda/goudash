@@ -1,12 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4df9da7-2526-4ebc-8bac-bb327cbaedba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/inspect/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inspect/manual.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inspect/performance_questions.php" afterDir="false" />
+    <list default="true" id="e4df9da7-2526-4ebc-8bac-bb327cbaedba" name="Default Changelist" comment="cal">
+      <change afterPath="$PROJECT_DIR$/cal/_install.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/calendar.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/fullcalendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/fullcalendar.print.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/install.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/smoothness/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/export.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/files/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/ajaxloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/glyphicons-halflings-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/glyphicons-halflings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/left-nav-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/nav_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/img/today.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/importer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_check_rep_events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_description.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_edit_update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_export.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_quicksave.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/cal_update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/calendar.extension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/calendar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/database.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/embed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/form.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/formParser.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/formater.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/ics.parser.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/ics_template.ics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/inscheck.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/install.data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/loader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/includes/maps.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/fullcalendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/g.map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/gcal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/jquery.calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/lang-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/js/locale-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/animated-overlay.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-icons_2694e8_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-icons_3d80b3_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-icons_72a7cf_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/cupertino/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/moment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-dk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-gr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/i18n/jquery.spectrum-zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/spectrum.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/spectrum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/themes/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/themes/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/spectrum/themes/sp-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/bootstrap-timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-addon-i18n.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-addon-i18n.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-am.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-sr-YU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/i18n/jquery-ui-timepicker-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/jquery-ui-sliderAccess.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/jquery-ui-timepicker-addon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/jquery-ui-timepicker-addon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/jquery-ui-timepicker-addon.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal/lib/timepicker/jquery-ui-timepicker-addon.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.web.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,23 +327,25 @@
     <session id="2021601742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="5" />
-          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="3" />
-          <entry key="html" value="2" />
-          <entry key="js" value="1" />
-          <entry key="php" value="52" />
+          <entry key="css" value="4" />
+          <entry key="html" value="3" />
+          <entry key="js" value="3" />
+          <entry key="php" value="55" />
           <entry key="rnc" value="1" />
           <entry key="vue" value="1" />
         </counts>
@@ -179,30 +353,32 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Blade" value="2" />
-          <entry key="CSS" value="3" />
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="50" />
+          <entry key="CSS" value="4" />
+          <entry key="HTML" value="3" />
+          <entry key="JavaScript" value="3" />
+          <entry key="PHP" value="53" />
           <entry key="RNG Compact" value="1" />
           <entry key="Vue.js" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4" />
-          <entry key="html" value="58" />
-          <entry key="js" value="2" />
-          <entry key="php" value="1274" />
+          <entry key="css" value="7" />
+          <entry key="html" value="65" />
+          <entry key="js" value="18" />
+          <entry key="php" value="1324" />
+          <entry key="txt" value="3" />
           <entry key="vue" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Blade" value="12" />
-          <entry key="CSS" value="4" />
-          <entry key="HTML" value="59" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="1261" />
+          <entry key="CSS" value="7" />
+          <entry key="HTML" value="66" />
+          <entry key="JavaScript" value="18" />
+          <entry key="PHP" value="1311" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Vue.js" value="1" />
         </counts>
       </usages-collector>
@@ -214,16 +390,46 @@
         <entry file="file://$PROJECT_DIR$/inspect/home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="160" lean-forward="true" selection-start-line="7" selection-end-line="8" selection-end-column="160" />
+              <caret line="8" column="160" selection-start-line="7" selection-end-line="8" selection-end-column="160" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init.web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3842">
+              <caret line="226" column="38" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/init.web.php">
+        <entry file="file://$PROJECT_DIR$/cal/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="226" column="38" lean-forward="true" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2057">
+              <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal/js/jquery.calendar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -232,7 +438,7 @@
         <entry file="file://$PROJECT_DIR$/inspect/performance_questions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -248,19 +454,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img/Group</find>
-      <find>#{{isHashtag}}</find>
-      <find>5 free</find>
-      <find>.js</find>
-      <find>ada</find>
-      <find>$list</find>
-      <find>indep</find>
-      <find>render</find>
-      <find>oncli</find>
-      <find>information fee</find>
-      <find>Strategic_Actions</find>
-      <find>order_by</find>
-      <find>-&gt;relation</find>
       <find>long</find>
       <find>home p</find>
       <find>.fa</find>
@@ -278,6 +471,19 @@
       <find>Institutional Arrangements</find>
       <find>wfp</find>
       <find>limit</find>
+      <find>j</find>
+      <find>boots</find>
+      <find>bootstrap.</find>
+      <find>moment.js</find>
+      <find>jquery.js</find>
+      <find>cal_e</find>
+      <find>cal_eve</find>
+      <find>css/style.css</find>
+      <find>cal_description.php</find>
+      <find>includes/loader.php</find>
+      <find>fixed</find>
+      <find>position:fixed;</find>
+      <find>margin-top:</find>
     </findStrings>
     <replaceStrings>
       <replace>gou_dash</replace>
@@ -299,6 +505,7 @@
       <dir>C:\xampp\htdocs\dash\stickynotes</dir>
       <dir>C:\xampp\htdocs\dash</dir>
       <dir>C:\xampp\htdocs\dash\X</dir>
+      <dir>C:\xampp\htdocs\dash\cal</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -307,11 +514,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/app.min.js" />
-        <option value="$PROJECT_DIR$/inc/ribbon.php" />
-        <option value="$PROJECT_DIR$/securex/database/migrations/2018_09_03_142544_add__i_p_p_s_field_to_users_table.php" />
-        <option value="$PROJECT_DIR$/securex/app/User.php" />
-        <option value="$PROJECT_DIR$/securex/resources/lang/en/app.php" />
         <option value="$PROJECT_DIR$/securex/app/Http/Controllers/Web/ProfileController.php" />
         <option value="$PROJECT_DIR$/securex/resources/views/user/partials/details.blade.php" />
         <option value="$PROJECT_DIR$/css/gou_dash.css" />
@@ -358,6 +560,11 @@
         <option value="$PROJECT_DIR$/inspect/manual1.php" />
         <option value="$PROJECT_DIR$/init.web.php" />
         <option value="$PROJECT_DIR$/inspect/performance_questions.php" />
+        <option value="$PROJECT_DIR$/cal/cal.html" />
+        <option value="$PROJECT_DIR$/cal/api.php" />
+        <option value="$PROJECT_DIR$/cal/js/jquery.calendar.js" />
+        <option value="$PROJECT_DIR$/cal/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/cal/index.php" />
       </list>
     </option>
   </component>
@@ -400,6 +607,17 @@
             <path>
               <item name="dash" type="b2602c69:ProjectViewProjectNode" />
               <item name="dash" type="462c0819:PsiDirectoryNode" />
+              <item name="cal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dash" type="462c0819:PsiDirectoryNode" />
+              <item name="cal" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dash" type="462c0819:PsiDirectoryNode" />
               <item name="inspect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -418,7 +636,7 @@
     <property name="ToolWindowFind.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML&#10;PHP" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../calendar2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -492,18 +710,22 @@
       <workItem from="1547984750272" duration="661000" />
       <workItem from="1547985497449" duration="1749000" />
       <workItem from="1548170509313" duration="5178000" />
+      <workItem from="1549304558537" duration="3705000" />
+      <workItem from="1549367660380" duration="32000" />
+      <workItem from="1549367744153" duration="3108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236296000" />
+    <option name="totallyTimeSpent" value="243141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20268457" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21073826" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24966443" />
+      <window_info anchor="bottom" id="Messages" weight="0.32867134" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4966443" weight="0.32867134" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -528,56 +750,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cal" />
+    <option name="LAST_COMMIT_MESSAGE" value="cal" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/inc/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="217" column="65" selection-start-line="217" selection-start-column="65" selection-end-line="217" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/demo.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3138" selection-start-column="3138" selection-end-column="3138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/infofeed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/graphs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ajaxload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/animals-1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -793,16 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" selection-start-line="17" selection-end-line="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inspect/performance_questions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -823,13 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/X/meetdetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/X/votedetails.php">
@@ -838,34 +999,71 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/X/pkpis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/X/pkeyoutputs.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/cal.html" />
+    <entry file="file://$PROJECT_DIR$/cal/includes/loader.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/lib/timepicker/bootstrap-timepicker.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inspect/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="160" lean-forward="true" selection-start-line="7" selection-end-line="8" selection-end-column="160" />
+          <caret line="8" column="160" selection-start-line="7" selection-end-line="8" selection-end-column="160" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init.web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="226" column="38" lean-forward="true" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
+        <state relative-caret-position="3842">
+          <caret line="226" column="38" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inspect/performance_questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/js/jquery.calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="4" column="66155" lean-forward="true" selection-start-line="4" selection-start-column="66155" selection-end-line="4" selection-end-column="66155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
