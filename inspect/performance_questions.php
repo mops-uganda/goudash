@@ -22,7 +22,7 @@ $PerformanceQuestions->columns('sub_section_ID,sub_section,section_ID,section');
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-bar-chart"></i> </span>
-                    <h2>Performance Questions</h2>
+                    <h2>Performance Scorecard Inspection Questions</h2>
 
                 </header>
 

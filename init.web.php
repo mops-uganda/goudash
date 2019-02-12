@@ -43,6 +43,11 @@ $intranet = array(
             "icon" => "fa-sliders",
             "url" => "X/infofeed"
         ),
+        "event_calendar" => array(
+            "title" => "General Calendar",
+            "icon" => "fa-calendar",
+            "url" => "cal/index?=".mt_rand(5, 500)
+        ),
         "calendar" => array(
             "title" => "Events Calendar",
             "icon" => "fa-calendar",
@@ -258,10 +263,10 @@ $inspection_performance = array(
             "icon" => "fa-cube",
             "url" => "X/meetings?=".mt_rand(5, 500)
         ),
-        "strategicactions" => array(
-            "title" => "Actions and Tasks",
+        "Inspection_Tool" => array(
+            "title" => "Inspection Tool",
             "icon" => "fa-tasks",
-            "url" => "X/actions"
+            "url" => "inspect/inspect"
         ),
         "performance_questions" => array(
             "title" => "Performance Questions",

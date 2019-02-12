@@ -3,7 +3,6 @@
 	$_SESSION['token'] = time();
 ?>
     <!-- styles -->
-    <link href="cal/css/bootstrap.css" rel="stylesheet">
     <link href="cal/css/style.css" rel="stylesheet">
     <link href="cal/css/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="cal/css/fullcalendar.print.css" media="print" rel="stylesheet">
@@ -19,6 +18,7 @@
     <!---------------------------------------------- CALENDAR MODALs ---------------------------------------------->
     
     <!-- Calendar Modal -->
+
     <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -196,7 +196,7 @@
 	<div class="navbar navbar-default">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="navbar-brand" href="index.php">Ajax Full Featured Calendar</a>
+				<a class="navbar-brand" href="index.php">Events Calendar</a>
 				<!-- search (required if you want to have search) -->
 				<form class="pull-right form-inline" style="margin-top: 8px; margin-left: 20px;" id="search">
 					<div class="form-group">
