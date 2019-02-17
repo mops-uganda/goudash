@@ -177,9 +177,6 @@ p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
 	text-autospace:none;
 	font-size:14.0pt;
 	font-family:"Times New Roman",serif;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:#954F72;
-	text-decoration:underline;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{margin-top:0in;
 	margin-right:0in;

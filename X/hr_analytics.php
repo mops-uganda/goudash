@@ -1,22 +1,18 @@
 <?php
+require_once '../securex/extra/auth.php';
+$user = Auth::user();
+
 require ('../lib/xcrud/xcrud.php');
 $data = Xcrud::get_instance();
-$data->table('view_inspection_by_vote');
-$data->table_name('Online Joint Inspection and Performance Scorecard Dashboard');
-$data->columns('vote,Vote_Name,Total_Score,Count');
-$data->fields('vote,Vote_Name,Total_Score,Count');
-$data->unique('vote');
-//$data->query('SELECT vote, votes.VoteName as "Vote_Name", COUNT(*) AS Count, SUM(self_score) AS Total_Score FROM performance_scores INNER JOIN votes ON performance_scores.vote = votes.VoteCode GROUP BY vote');
-$data->column_cut(3,'vote');
+$data->table('hr_analytics_categories');
+$data->table_name('List of Categories of HR Analytics Reports');
+$data->columns('id,HR_analytics_category,description');
+$data->fields('id,HR_analytics_category,description');
+$data->limit(25);
+$data->column_cut(100,'description');
+$data->unset_limitlist();
+if (!($user->hasPermission('hr_analytics.manage'))) $data->unset_add()->unset_edit()->unset_remove();
 
-$data->highlight('Total_Score', '<', 41, '#e89e9e')
-    ->highlight('Total_Score', '>', 40, '#FADBD8')
-    ->highlight('Total_Score', '>', 80, '#e2dda0')
-    ->highlight('Total_Score', '>', 120, '#5DADE2')
-    ->highlight('Total_Score', '>', 160, '#2ECC71');
-
-$data->limit(100)
-    ->unset_limitlist();
 
 ?>
 
@@ -34,7 +30,7 @@ $data->limit(100)
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-bar-chart"></i> </span>
-                    <h2>Online Joint Inspection and Performance Scorecard Dashboard</i></h2>
+                    <h2>List of <strong>HR Analytics Reports </strong> <i> by Categoty</i></h2>
 
                 </header>
 
@@ -50,7 +46,7 @@ $data->limit(100)
 
                     <!-- widget content -->
                     <div class="widget-body">
-                        <br>Inspection and Performance Assessment of Ministries, Departments, Agencies (MDAs), Local Governments (LGs) and service delivery facilities.<br>
+                        <br>To view List  <strong>HR Analytics Reports</strong> please select the category of analytics reports that you want to view.<br>
                         <?php
                         echo $data->render();
                         ?>

@@ -1,8 +1,8 @@
 <?php
-
 // if (!session_id()) session_start();
 
 require_once 'init.php';
+
 
 //CONFIGURATION for SmartAdmin UI
 
@@ -61,6 +61,12 @@ $intranet = array(
     )
 );
 
+$hr_analytics = array(
+    "title" => "",
+    "icon" => "fa-rss txt-color-green ",
+    "label_htm" => '<button class="btn btn-sm btn-primary" type="button">HR Analytics Reports</button>',
+    "url" => "X/hr_analytics"
+);
 
 $Strategic_Projects = array(
     "title" => "Strategic Projects",
@@ -257,29 +263,42 @@ $inspection_performance = array(
             "title" => "Inspect Dashboard",
             "icon" => "fa-home",
             "url" => "inspect/home"
-        ),
-        "strategicmeetings" => array(
-            "title" => "Meetings / Events",
-            "icon" => "fa-cube",
-            "url" => "X/meetings?=".mt_rand(5, 500)
-        ),
-        "Inspection_Tool" => array(
-            "title" => "Inspection Tool",
-            "icon" => "fa-tasks",
-            "url" => "inspect/inspect"
-        ),
-        "performance_questions" => array(
-            "title" => "Performance Questions",
-            "icon" => "fa-cube",
-            "url" => "inspect/performance_questions"
-        ),
-        "manual" => array(
-            "title" => "Inspection Manual",
-            "icon" => "fa-calendar",
-            "url" => "inspect/manual"
         )
     )
 );
+$Inspection_Tool = array(
+    "title" => "Inspection Tool",
+    "icon" => "fa-tasks txt-color-green",
+    "url" => "inspect/inspect?=".mt_rand(5, 500)
+);
+$Political_Verification = array(
+    "title" => "Political Verification",
+    "icon" => "fa-tasks txt-color-green",
+    "url" => "inspect/verify?=".mt_rand(5, 500)
+);
+$Joint_Inspection = array(
+    "title" => "Joint Inspection Team",
+    "icon" => "fa-tasks txt-color-green",
+    "url" => "inspect/jointinspect?=".mt_rand(5, 500)
+);
+$performance_questions = array(
+    "title" => "Performance Questions",
+    "icon" => "fa-cube",
+    "url" => "inspect/performance_questions"
+);
+$manual = array(
+    "title" => "Inspection Manual",
+    "icon" => "fa-calendar",
+    "url" => "inspect/manual"
+);
+
+if ($user->hasPermission('Inspect.mdalg')) array_push($inspection_performance['sub'], $Inspection_Tool);
+if ($user->hasPermission('inspect.political')) array_push($inspection_performance['sub'], $Political_Verification);
+if ($user->hasPermission('inspect.joint')) array_push($inspection_performance['sub'], $Joint_Inspection);
+array_push($inspection_performance['sub'], $performance_questions);
+array_push($inspection_performance['sub'], $manual);
+
+
 
 $General_Information = array(
     "title" => "General Information",
@@ -334,6 +353,11 @@ $User_Settings = array(
             "url_target" => "_top",
             "url" => "http://" . $_SERVER['HTTP_HOST'] . "" . $_SERVER['REQUEST_URI'] . "securex/public",
         ),
+        "my_permissions" => array(
+            "title" => "My User Permissions",
+            "icon" => "fa fa-user",
+            "url" => "X/mypermissions?=".mt_rand(5, 500),
+        ),
         "DashboardSkins" => array(
             "title" => "Dashboard Skins",
             "icon" => "fa fa-picture-o",
@@ -359,15 +383,16 @@ $setting_array = array(
         "User_Permissions" => array(
             "title" => "User Permissions",
             "icon" => "fa fa-shield txt-color-red",
-            "url" => "X/userpermissions",
+            "url" => "X/userpermissions?=".mt_rand(5, 500),
         )
     )
 );
 
 array_push($page_nav, $intranet);
+if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $hr_analytics);
 if ($user->Strategic_Projects) array_push($page_nav, $Strategic_Projects);
 if ($user->Strategic_Actions) array_push($page_nav, $Strategic_Actions);
-if ($user->inspection_performance) array_push($page_nav, $inspection_performance);
+if ($user->hasPermission('Inspect.Basic')) array_push($page_nav, $inspection_performance);
 if ($user->Strategic_Data) array_push($page_nav, $Strategic_Data);
 if ($user->Govt_Performance) array_push($page_nav, $Govt_Performance);
 if ($user->General_Information) array_push($page_nav, $General_Information);

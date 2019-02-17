@@ -373,8 +373,8 @@ class Xcrud
                 session_start();
             }
             else
-                self::error('OPMDash can not create session, because the output is already sent into browser. 
-                Try to define OPMDash instance before the output start or use session_start() at the beginning of your script');
+                self::error('MoPSDash can not create session, because the output is already sent into browser. 
+                Try to define MoPSDash instance before the output start or use session_start() at the beginning of your script');
         }
         if (Xcrud_config::$alt_session)
         {
@@ -391,8 +391,8 @@ class Xcrud
                 setcookie($sess_name, self::$sess_id, time() + Xcrud_config::$alt_lifetime * 60, '/');
             }
             else
-                self::error('OPMDash can not start session, because the output is already sent into browser. 
-                Try to define OPMDash instance before the output start or use <strong>Xcrud::session_start();</strong> at the beginning of your script');
+                self::error('MoPSDash can not start session, because the output is already sent into browser. 
+                Try to define MoPSDash instance before the output start or use <strong>Xcrud::session_start();</strong> at the beginning of your script');
         }
     }
 
@@ -7251,7 +7251,7 @@ class Xcrud
     protected static function error($text = 'Error!')
     {
         exit('<div class="xcrud-error" style="position:relative;line-height:1.25;padding:15px;color:#BA0303;margin:10px;border:1px solid #BA0303;border-radius:4px;font-family:Arial,sans-serif;background:#FFB5B5;box-shadow:inset 0 0 80px #E58989;">
-            <span style="position:absolute;font-size:10px;bottom:3px;right:5px;">OPMDash</span>' . $text . '</div>');
+            <span style="position:absolute;font-size:10px;bottom:3px;right:5px;">MoPSDash</span>' . $text . '</div>');
     }
     protected function _upload()
     {

@@ -12,7 +12,7 @@ $fy = "2019/2020";
 $vote = $user->country_id;
 
 for ($count=0;$count<count($list);$count++){
-    $sql = "INSERT INTO `performance_scores` (`FY`, `vote`, `performance_question`, `self_score`, `self_comments`, `political_score`, `political_comments`, `RDC_score`, `RDC_comments`, `Inspection_Team_score`, `Inspection_Team_comments`) VALUES ('" . $fy . "', '" . $vote . "', '" . $list[$count]["sub_section_ID"] . "', '1', '-', '1', '-', '1', '-', '1', '-');";
+    $sql = "INSERT INTO `performance_scores` (`FY`, `vote`, `performance_question`, `self_score`, `self_comments`, `political_score`, `political_comments`, `RDC_score`, `RDC_comments`, `Inspection_Team_score`, `Inspection_Team_comments`) VALUES ('" . $fy . "', '" . $vote . "', '" . $list[$count]["sub_section_ID"] . "', '0', '-', '0', '-', '0', '-', '0', '-');";
     //echo "<br>" . $sql;
     $db->query($sql);
 }

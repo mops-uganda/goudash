@@ -1,24 +1,17 @@
 <?php
-require ('../lib/xcrud/xcrud.php');
-$data = Xcrud::get_instance();
-$data->table('view_inspection_by_vote');
-$data->table_name('Online Joint Inspection and Performance Scorecard Dashboard');
-$data->columns('vote,Vote_Name,Total_Score,Count');
-$data->fields('vote,Vote_Name,Total_Score,Count');
-$data->unique('vote');
-//$data->query('SELECT vote, votes.VoteName as "Vote_Name", COUNT(*) AS Count, SUM(self_score) AS Total_Score FROM performance_scores INNER JOIN votes ON performance_scores.vote = votes.VoteCode GROUP BY vote');
-$data->column_cut(3,'vote');
-
-$data->highlight('Total_Score', '<', 41, '#e89e9e')
-    ->highlight('Total_Score', '>', 40, '#FADBD8')
-    ->highlight('Total_Score', '>', 80, '#e2dda0')
-    ->highlight('Total_Score', '>', 120, '#5DADE2')
-    ->highlight('Total_Score', '>', 160, '#2ECC71');
-
-$data->limit(100)
-    ->unset_limitlist();
-
+require_once '../securex/extra/auth.php';
+$permissions = auth()->user()->role->permissions->toArray();
 ?>
+<style>
+    .alert-info {
+        border-color: #342806;
+        color: #0b0e27;
+    }
+    .alert {
+        border-left-width: 15px;
+        border-right-width: 15px;
+    }
+</style>
 
 
 <section id="widget-grid" class="">
@@ -34,8 +27,7 @@ $data->limit(100)
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-bar-chart"></i> </span>
-                    <h2>Online Joint Inspection and Performance Scorecard Dashboard</i></h2>
-
+                    <h2>Current User Permissions for User: <strong><?php echo auth()->user()->username;?></strong> <i> with assigned Role: <strong><?php echo auth()->user()->role->description;?></i></strong></h2>
                 </header>
 
                 <!-- widget div-->
@@ -50,10 +42,24 @@ $data->limit(100)
 
                     <!-- widget content -->
                     <div class="widget-body">
-                        <br>Inspection and Performance Assessment of Ministries, Departments, Agencies (MDAs), Local Governments (LGs) and service delivery facilities.<br>
+                        <h2>A total of <strong><?php echo count($permissions) ?> Permissions </strong>assigned for User: <strong><?php echo auth()->user()->username;?></strong> <i> with assigned Role: <strong><?php echo auth()->user()->role->description;?>.<br></h2>
                         <?php
-                        echo $data->render();
+                        $i = 1;
+                        foreach ($permissions as $permission){
+                            ?>
+                            <div>
+                                <alert dismissible="false" type="success"><!---->
+                                    <div role="alert" class="alert alert-info alert-dismissible ng-star-inserted bg-color-greenLight"> <!---->
+                                        <h5 class="alert-heading"><?php echo $i . ": " . $permission['name']; ?></h5>
+                                        <p><?php echo $permission['description']; ?></p></div>
+                                </alert>
+                            </div>
+                            <?php
+                            //echo $i . ": " . $permission['name'] . " === > " . $permission['description'] . "<br>";
+                            $i = $i + 1;
+                        }
                         ?>
+
                     </div>
                     <!-- end widget content -->
 

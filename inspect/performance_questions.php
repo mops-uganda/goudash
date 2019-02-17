@@ -1,9 +1,14 @@
 <?php
+require_once '../securex/extra/auth.php';
+$user = Auth::user();
+
 require ('../lib/xcrud/xcrud.php');
 $PerformanceQuestions = Xcrud::get_instance();
 $PerformanceQuestions->table('performance_questions');
 $PerformanceQuestions->relation('Financial_Year','financialyear','FinancialYear','FinancialYear','');
 $PerformanceQuestions->columns('sub_section_ID,sub_section,section_ID,section');
+if (!($user->hasPermission('Inspect.Manage.Questions'))) $PerformanceQuestions->unset_add()->unset_edit()->unset_remove();
+
 
 
 ?>
