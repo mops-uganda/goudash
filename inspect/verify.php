@@ -57,6 +57,7 @@ $VoteName = $db->row()["VoteName"];
                             $data = Xcrud::get_instance();
                             $data->table('performance_scores');
                             $data->table_name('Performance Scores for Vote: ' . $user->country_id . ' - ' . $VoteName);
+                            $data->where('vote = ' . $user->country_id . ' AND FY = "2019/2020"');
                             $data->join('performance_question','performance_questions','sub_section_ID');
                             $data->columns('performance_question,performance_questions.sub_section,performance_questions.section,self_score,political_score');
                             $data->fields('performance_questions.sub_section,performance_questions.section,political_score,political_comments');

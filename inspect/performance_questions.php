@@ -7,6 +7,7 @@ $PerformanceQuestions = Xcrud::get_instance();
 $PerformanceQuestions->table('performance_questions');
 $PerformanceQuestions->relation('Financial_Year','financialyear','FinancialYear','FinancialYear','');
 $PerformanceQuestions->columns('sub_section_ID,sub_section,section_ID,section');
+$PerformanceQuestions->set_lang('add','Add New Performance Question');
 if (!($user->hasPermission('Inspect.Manage.Questions'))) $PerformanceQuestions->unset_add()->unset_edit()->unset_remove();
 
 

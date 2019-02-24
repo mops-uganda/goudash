@@ -244,8 +244,6 @@
     </div> <!-- /container -->
   
 	<script src="cal/lib/moment.js"></script>
-    <script src="cal/lib/jquery.js"></script>
-    <script src="cal/lib/jquery-ui.js"></script>
     <script src="cal/js/bootstrap.js"></script>
     <script src="cal/js/fullcalendar.js"></script>
     <script src="cal/js/lang-all.js"></script>

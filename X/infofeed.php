@@ -34,7 +34,8 @@ $tasks->unset_edit()
         ->unset_remove()
         ->unset_view()
         ->unset_limitlist()
-        ->unset_csv();
+        ->unset_csv()
+        ->set_lang('add','Add New Announcement or Information Feed');
 
 echo $tasks->render();
 

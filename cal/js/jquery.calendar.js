@@ -36,11 +36,11 @@
 								
 				ajaxJsonFetch: 'cal/includes/cal_events.php?'+token,
 				ajaxUiUpdate: 'cal/includes/cal_update.php?'+token,
-				ajaxEventQuickSave: 'includes/cal_quicksave.php?'+token,
-				ajaxEventDelete: 'includes/cal_delete.php?'+token,
-				ajaxEventEdit: 'includes/cal_edit_update.php?'+token,
-				ajaxEventExport: 'includes/cal_export.php?'+token,
-				ajaxRepeatCheck: 'includes/cal_check_rep_events.php?'+token,
+				ajaxEventQuickSave: 'cal/includes/cal_quicksave.php?'+token,
+				ajaxEventDelete: 'cal/includes/cal_delete.php?'+token,
+				ajaxEventEdit: 'cal/includes/cal_edit_update.php?'+token,
+				ajaxEventExport: 'cal/includes/cal_export.php?'+token,
+				ajaxRepeatCheck: 'cal/includes/cal_check_rep_events.php?'+token,
 				ajaxRetrieveDescription: 'cal/includes/cal_description.php?'+token,
 				ajaxImport: 'importer.php?'+token,
 				

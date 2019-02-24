@@ -44,14 +44,9 @@ $intranet = array(
             "url" => "X/infofeed"
         ),
         "event_calendar" => array(
-            "title" => "General Calendar",
-            "icon" => "fa-calendar",
-            "url" => "cal/index?=".mt_rand(5, 500)
-        ),
-        "calendar" => array(
             "title" => "Events Calendar",
             "icon" => "fa-calendar",
-            "url" => "X/calendar?=".mt_rand(5, 500)
+            "url" => "cal/index?=".mt_rand(5, 500)
         ),
         "stickynotes" => array(
             "title" => "Sticky Notes",
@@ -66,6 +61,13 @@ $hr_analytics = array(
     "icon" => "fa-rss txt-color-green ",
     "label_htm" => '<button class="btn btn-sm btn-primary" type="button">HR Analytics Reports</button>',
     "url" => "X/hr_analytics"
+);
+
+$actions_tracker = array(
+    "title" => "",
+    "icon" => "fa-rss txt-color-orange ",
+    "label_htm" => '<button class="btn btn-sm btn-success " type="button">Actions Tracker</button>',
+    "url" => "X/action-tracker"
 );
 
 $Strategic_Projects = array(
@@ -366,6 +368,28 @@ $User_Settings = array(
     )
 );
 
+$general_setting_array = array(
+    "title" => "General Settings",
+    "icon" => "fa fa-cogs txt-color-red",
+    "sub" => array(
+        "Departments" => array(
+            "title" => "Departments",
+            "icon" => "fa fa-cogs txt-color-red",
+            "url" => "X/departments",
+        ),
+        "Officers" => array(
+            "title" => "Officers",
+            "icon" => "fa fa-cogs txt-color-red",
+            "url" => "X/officers",
+        ),
+        "Offices" => array(
+            "title" => "Offices",
+            "icon" => "fa fa-cogs txt-color-red",
+            "url" => "X/offices",
+        )
+    )
+);
+
 $setting_array = array(
     "title" => "Advanced Settings",
     "icon" => "fa fa-cogs txt-color-red",
@@ -390,6 +414,7 @@ $setting_array = array(
 
 array_push($page_nav, $intranet);
 if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $hr_analytics);
+if ($user->hasPermission('actions.tracker')) array_push($page_nav, $actions_tracker);
 if ($user->Strategic_Projects) array_push($page_nav, $Strategic_Projects);
 if ($user->Strategic_Actions) array_push($page_nav, $Strategic_Actions);
 if ($user->hasPermission('Inspect.Basic')) array_push($page_nav, $inspection_performance);
@@ -398,6 +423,7 @@ if ($user->Govt_Performance) array_push($page_nav, $Govt_Performance);
 if ($user->General_Information) array_push($page_nav, $General_Information);
 if ($user->Reports) array_push($page_nav, $reports);
 array_push($page_nav, $User_Settings);
+if ($user->userlevel == 10) array_push($page_nav, $general_setting_array);
 if ($user->userlevel == 10) array_push($page_nav, $setting_array);
 
 //configuration variables
