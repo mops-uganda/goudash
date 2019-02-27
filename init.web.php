@@ -59,7 +59,7 @@ $intranet = array(
 $hr_analytics = array(
     "title" => "",
     "icon" => "fa-rss txt-color-green ",
-    "label_htm" => '<button class="btn btn-sm btn-primary" type="button">HR Analytics Reports</button>',
+    "label_htm" => '<button class="btn btn-sm btn-primary" type="button">HR Analytics</button>',
     "url" => "X/hr_analytics"
 );
 

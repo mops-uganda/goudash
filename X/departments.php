@@ -4,17 +4,15 @@ $user = Auth::user();
 
 require ('../lib/xcrud/xcrud.php');
 $data = Xcrud::get_instance();
-$data->table('department');
-$data->join('department_head','officers','ID');
-$data->columns('ID,department_name,department_abbrev,department_type,department_head');
-$data->fields('vote,department_name,department_abbrev,department_type,department_head');
-$data->column_pattern('department_head', '{officers.officer_title_short} - {officers.first_name} {officers.last_name}');
-$data->relation('department_type','department_type','department_type','department_type','');
-$data->relation('vote','votes','VoteCode','VoteName');
-$data->relation('department_head','officers','ID','officer_title_short')
-    ->set_lang('add','Add New Department');
+$data->table('department')
+    ->set_lang('add','Add New Department')
+    ->relation('vote','votes','VoteCode','VoteName')
+    ->relation('department_type','department_type','department_type','department_type','')
+    ->pass_default('department_head','9')
+    ->relation('department_head','officers','ID','officer_title_short')
+    ->columns('department_name,department_abbrev,department_head,department_type,vote')
+    ->fields('vote,department_name,department_abbrev,department_type,department_head');
 
 
 
 echo $data->render();
-
