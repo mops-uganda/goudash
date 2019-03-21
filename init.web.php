@@ -60,7 +60,7 @@ $hr_analytics = array(
     "title" => "",
     "icon" => "fa-rss txt-color-green ",
     "label_htm" => '<button class="btn btn-sm btn-primary" type="button">HR Analytics</button>',
-    "url" => "X/hr_analytics"
+    "url" => "X/reports?id=500&select=1&SelectBy=reportCategory&reportCategory=Human Resources"
 );
 
 $actions_tracker = array(
@@ -415,11 +415,11 @@ $setting_array = array(
 array_push($page_nav, $intranet);
 if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $hr_analytics);
 if ($user->hasPermission('actions.tracker')) array_push($page_nav, $actions_tracker);
-if ($user->Strategic_Projects) array_push($page_nav, $Strategic_Projects);
-if ($user->Strategic_Actions) array_push($page_nav, $Strategic_Actions);
+if ($user->hasPermission('Strategic_Projects')) array_push($page_nav, $Strategic_Projects);
+if ($user->hasPermission('Strategic_Actions')) array_push($page_nav, $Strategic_Actions);
 if ($user->hasPermission('Inspect.Basic')) array_push($page_nav, $inspection_performance);
-if ($user->Strategic_Data) array_push($page_nav, $Strategic_Data);
-if ($user->Govt_Performance) array_push($page_nav, $Govt_Performance);
+if ($user->hasPermission('Strategic_Data')) array_push($page_nav, $Strategic_Data);
+if ($user->hasPermission('performance')) array_push($page_nav, $Govt_Performance);
 if ($user->General_Information) array_push($page_nav, $General_Information);
 if ($user->Reports) array_push($page_nav, $reports);
 array_push($page_nav, $User_Settings);

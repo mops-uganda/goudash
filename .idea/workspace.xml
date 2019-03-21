@@ -2,9 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4df9da7-2526-4ebc-8bac-bb327cbaedba" name="Default Changelist" comment="cal">
-      <change afterPath="$PROJECT_DIR$/X/department.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/X/hr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/applayout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/blank_.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/blog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/bootstrap-forms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/bootstrap-validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/buttons.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/calendar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/chartjs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/chat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/ckeditor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/dashboard-marketing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/dashboard-social.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/datatables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/demowidget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/difver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/accordion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/alert.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/button.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/carousel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/datatable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/general.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/progress.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/smartform.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/tab.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/docs/smartui/widget.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/dropzone.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/dygraphs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/easypie-charts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-compose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-compose.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-opened.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-opened.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-reply.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-reply.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email-template.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/email/email-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/error404.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/error500.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/fa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/flags.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/flot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/form-elements.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/form-templates.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/forum-post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/forum-topic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/forum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/gchart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/general-elements.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/glyph.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/gmap-xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/grid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/hchartable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/image-editor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/inbox-email-compose.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/inbox-email-reply.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/inbox-email-view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/inbox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/inc/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/inline-charts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/invoice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/jqgrid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/jqui.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/layouts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/modal-content/modal-content-template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/modal-content/modal-voicecommand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/modal-content/model-content-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/modal-content/model-content-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/morris.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/nestable-list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/notify/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/notify/notifications.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/notify/tasks.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/orders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/other-editors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/plugins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/pricing-table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/products-detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/products-view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/projects.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/skins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-accordion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-alert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-button.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-carousel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-datatable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-progress.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-tab.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/smartui-widget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/sparkline-charts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/timeline.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/treeview.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/typography.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/widgets.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart/wizard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/X/departments.php" beforeDir="false" afterPath="$PROJECT_DIR$/X/departments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init.web.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/Indicators for the Dashboard.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/notes/Indicators for the Dashboard.xlsx" afterDir="false" />
     </list>
@@ -155,20 +255,21 @@
     <session id="2021601742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
-          <entry key="project.open.time.10" value="4" />
-          <entry key="project.open.time.11" value="8" />
-          <entry key="project.open.time.12" value="9" />
+          <entry key="project.closed" value="44" />
+          <entry key="project.open.time.10" value="5" />
+          <entry key="project.open.time.11" value="10" />
+          <entry key="project.open.time.12" value="11" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.14" value="5" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -181,7 +282,7 @@
           <entry key="js" value="6" />
           <entry key="json" value="3" />
           <entry key="md" value="1" />
-          <entry key="php" value="124" />
+          <entry key="php" value="135" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="1" />
           <entry key="vue" value="1" />
@@ -196,7 +297,7 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="121" />
+          <entry key="PHP" value="132" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RNG Compact" value="1" />
           <entry key="SQL" value="1" />
@@ -210,7 +311,7 @@
           <entry key="html" value="65" />
           <entry key="js" value="108" />
           <entry key="json" value="3" />
-          <entry key="php" value="6469" />
+          <entry key="php" value="6500" />
           <entry key="sql" value="13" />
           <entry key="txt" value="3" />
           <entry key="vue" value="1" />
@@ -223,7 +324,7 @@
           <entry key="HTML" value="66" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="108" />
-          <entry key="PHP" value="6456" />
+          <entry key="PHP" value="6487" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="13" />
           <entry key="Vue.js" value="1" />
@@ -234,64 +335,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/X/actions.php">
+        <entry file="file://$PROJECT_DIR$/X/action-tracker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="105" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="105" />
+            <state relative-caret-position="221">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smart/chartjs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5559">
+              <caret line="327" column="48" selection-end-line="737" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/X/departments.php">
+        <entry file="file://$PROJECT_DIR$/X/hr.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
+            <state relative-caret-position="633">
+              <caret line="207" column="180" selection-start-line="207" selection-start-column="180" selection-end-line="207" selection-end-column="180" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/X/officers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="82" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/smart/hchartable.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/X/action-tracker.php">
+        <entry file="file://$PROJECT_DIR$/smart/gchart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/X/calendar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cal/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4182">
-              <caret line="246" selection-start-line="246" selection-end-line="246" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init.web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="136">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -307,10 +386,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self_score</find>
-      <find>; $data</find>
-      <find>;</find>
-      <find>954F72</find>
       <find>perfor</find>
       <find>auth</find>
       <find>perform</find>
@@ -337,6 +412,10 @@
       <find>unset</find>
       <find>cal_check_rep_events</find>
       <find>cal_edit_update</find>
+      <find>cal</find>
+      <find>line ch</find>
+      <find>line cha</find>
+      <find>bar</find>
     </findStrings>
     <replaceStrings>
       <replace>gou_dash</replace>
@@ -369,8 +448,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/editors/ckeditor/build-config.js" />
-        <option value="$PROJECT_DIR$/X/infofeeder.php" />
         <option value="$PROJECT_DIR$/lib/xcrud/functions.php" />
         <option value="$PROJECT_DIR$/inc/header.php" />
         <option value="$PROJECT_DIR$/js/demo.min.js" />
@@ -418,8 +495,10 @@
         <option value="$PROJECT_DIR$/X/calendar.php" />
         <option value="$PROJECT_DIR$/cal/index.php" />
         <option value="$PROJECT_DIR$/X/department.php" />
-        <option value="$PROJECT_DIR$/init.web.php" />
         <option value="$PROJECT_DIR$/X/departments.php" />
+        <option value="$PROJECT_DIR$/smart/gchart.php" />
+        <option value="$PROJECT_DIR$/X/hr.php" />
+        <option value="$PROJECT_DIR$/init.web.php" />
       </list>
     </option>
   </component>
@@ -459,31 +538,6 @@
             <path>
               <item name="dash" type="b2602c69:ProjectViewProjectNode" />
               <item name="dash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="cal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="inspect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="notes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="X" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -592,16 +646,26 @@
       <workItem from="1551270053635" duration="2129000" />
       <workItem from="1551287892409" duration="3146000" />
       <workItem from="1551292876005" duration="12000" />
+      <workItem from="1551527539976" duration="799000" />
+      <workItem from="1551547590016" duration="1195000" />
+      <workItem from="1551716392262" duration="598000" />
+      <workItem from="1552045060689" duration="1599000" />
+      <workItem from="1552204734809" duration="598000" />
+      <workItem from="1552751379375" duration="2783000" />
+      <workItem from="1553092136224" duration="1960000" />
+      <workItem from="1553117370877" duration="1971000" />
+      <workItem from="1553146698838" duration="780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348156000" />
+    <option name="totallyTimeSpent" value="360439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2295302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24966443" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -656,45 +720,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="cal" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/X/ajax.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/performance_report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1309" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/performancereport.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/ProgrammesProjects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/meetdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-end-line="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/reports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="77" column="29" lean-forward="true" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cal/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -903,6 +928,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/X/departments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/X/actions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -917,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/X/action-tracker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/X/calendar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -933,22 +958,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cal/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
+        <state relative-caret-position="497">
           <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/xcrud/xcrud_config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal/includes/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/xreports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/action-tracker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart/chartjs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5559">
+          <caret line="327" column="48" selection-end-line="737" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart/hchartable.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart/gchart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init.web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="867">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/X/departments.php">
+    <entry file="file://$PROJECT_DIR$/X/hr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
+        <state relative-caret-position="633">
+          <caret line="207" column="180" selection-start-line="207" selection-start-column="180" selection-end-line="207" selection-end-column="180" />
         </state>
       </provider>
     </entry>
