@@ -55,11 +55,15 @@ switch ($r[0]["gridLabels"]){
 
 switch ($r[0]["ctypeText1"]){
     case "price": $data->change_type($r[0]["ctypeField1"], 'price', '0', array('decimals'=>'0')); $data->column_class($r[0]["ctypeField1"],'align-right'); break;
+    case "shillings": $data->change_type($r[0]["ctypeField1"], 'price','0', array('suffix'=>' /=','decimals'=>'0')); $data->column_class($r[0]["ctypeField1"],'align-right'); break;
+    case "number": $data->change_type($r[0]["ctypeField1"], 'price','0', array('suffix'=>' ','decimals'=>'0')); $data->column_class($r[0]["ctypeField1"],'align-right'); break;
     case "2decimal": $data->change_type($r[0]["ctypeField1"], 'price', '0', array('decimals'=>'2')); $data->column_class($r[0]["ctypeField1"],'align-right'); break;
     case "float": $data->change_type($r[0]["ctypeField1"], 'float', '', array('decimals'=>'0', 'separator'=>',')); $data->column_class($r[0]["ctypeField1"],'align-right'); break;
 }
 switch ($r[0]["ctypeText2"]){
     case "price": $data->change_type($r[0]["ctypeField2"], 'price', '0', array('decimals'=>'0')); $data->column_class($r[0]["ctypeField2"],'align-right'); break;
+    case "shillings": $data->change_type($r[0]["ctypeField2"], 'price','0', array('suffix'=>' /=','decimals'=>'0')); $data->column_class($r[0]["ctypeField2"],'align-right'); break;
+    case "number": $data->change_type($r[0]["ctypeField2"], 'price','0', array('suffix'=>' ','decimals'=>'0')); $data->column_class($r[0]["ctypeField2"],'align-right'); break;
     case "2decimal": $data->change_type($r[0]["ctypeField2"], 'price', '0', array('decimals'=>'2')); $data->column_class($r[0]["ctypeField2"],'align-right'); break;
     case "float": $data->change_type($r[0]["ctypeField2"], 'float', '', array('decimals'=>'0')); $data->column_class($r[0]["ctypeField2"],'align-right'); break;
 }
@@ -98,7 +102,7 @@ $rpt_counter = $db->result();
         </ul>
     </div>
 </div>
-<div class="alert alert-info"><button class="btn btn-success btn-labeled btn-md " onclick="location.href='#X/reports';"><span class="btn-label"><i class="fa fa-chevron-left"></i></span> Return to List of Reports</button>
+<div class="alert alert-info"><button class="btn btn-success btn-labeled btn-md " onclick="location.href='<?php echo $r[0]["return_link"] ?>';"><span class="btn-label"><i class="fa fa-chevron-left"></i></span> <?php echo $r[0]["return_link_text"] ?></button>
     <?php
         if ($r[0]["hasFilter"]) {
             $db->query($r[0]["filterSQL"]);

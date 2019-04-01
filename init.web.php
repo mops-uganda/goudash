@@ -60,7 +60,14 @@ $hr_analytics = array(
     "title" => "",
     "icon" => "fa-rss txt-color-green ",
     "label_htm" => '<button class="btn btn-sm btn-primary" type="button">HR Analytics</button>',
-    "url" => "X/reports?id=500&select=1&SelectBy=reportCategory&reportCategory=Human Resources"
+    "url" => "X/hr_analytics"
+);
+
+$statistics = array(
+    "title" => "",
+    "icon" => "fa-rss txt-color-green ",
+    "label_htm" => '<button class="btn btn-sm btn-warning" type="button">Statistics Dashboard</button>',
+    "url" => "X/statistics"
 );
 
 $actions_tracker = array(
@@ -414,6 +421,7 @@ $setting_array = array(
 
 array_push($page_nav, $intranet);
 if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $hr_analytics);
+if ($user->hasPermission('statistics.view')) array_push($page_nav, $statistics);
 if ($user->hasPermission('actions.tracker')) array_push($page_nav, $actions_tracker);
 if ($user->hasPermission('Strategic_Projects')) array_push($page_nav, $Strategic_Projects);
 if ($user->hasPermission('Strategic_Actions')) array_push($page_nav, $Strategic_Actions);

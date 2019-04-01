@@ -4,14 +4,16 @@ $user = Auth::user();
 
 require ('../lib/xcrud/xcrud.php');
 $data = Xcrud::get_instance();
-$data->table('hr_analytics_categories');
-$data->table_name('List of Categories of HR Analytics Reports');
-$data->columns('id,HR_analytics_category,description');
-$data->fields('id,HR_analytics_category,description');
+$data->table('reports');
+$data->where('reportCategory = ', 'Human Resources');
+$data->table_name('List of HR Analytics Reports');
+$data->columns('rid,ReportTitle,itemsList,reportCategory');
+$data->fields('rid,ReportTitle,itemsList,reportCategory,ReportDescription');
+$data->column_pattern('itemsList', '<a class="btn btn-info btn-xs" href="#X/reports?id={rid}"><i class="fa fa-external-link "></i> View {reportType}</a>');
+$data->label(array('itemsList' => 'View Report','rid' => 'ID','ReportTitle'=>'Report Title','reportCategory'=>'Report Category','ReportDescription'=>'Report Description'));
 $data->limit(25);
-$data->column_cut(100,'description');
 $data->unset_limitlist();
-if (!($user->hasPermission('hr_analytics.manage'))) $data->unset_add()->unset_edit()->unset_remove();
+$data->unset_add()->unset_edit()->unset_remove();
 
 
 ?>
@@ -46,7 +48,13 @@ if (!($user->hasPermission('hr_analytics.manage'))) $data->unset_add()->unset_ed
 
                     <!-- widget content -->
                     <div class="widget-body">
-                        <br>To view List  <strong>HR Analytics Reports</strong> please select the category of analytics reports that you want to view.<br>
+                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-success"> Staff on the Payroll: <strong>314,501</strong></h2></div>
+                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-info"> Permanent & Pensionable: <strong>233,909</strong></h2></div>
+                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-warning"> Staff on Probation: <strong>71,814</strong></h2></div>
+                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-success"> New Recruitments Last FY: <strong>9,110</strong></h2></div>
+                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-info"> Number of Pensioners: <strong>76,913</strong></h2></div>
+                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-warning"> Annual Pension Cost: <strong>288,695,353,695/=</strong></h2></div>
+
                         <?php
                         echo $data->render();
                         ?>
