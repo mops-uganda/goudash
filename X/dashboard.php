@@ -48,12 +48,12 @@ $data->unset_add()->unset_edit()->unset_remove();
 
                     <!-- widget content -->
                     <div class="widget-body">
-                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-success"> Staff on the Payroll: <strong>314,501</strong></h2></div>
-                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-info"> Permanent & Pensionable: <strong>233,909</strong></h2></div>
-                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-warning"> Staff on Probation: <strong>71,814</strong></h2></div>
-                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-success"> New Recruitments Last FY: <strong>9,110</strong></h2></div>
-                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-info"> Number of Pensioners: <strong>76,913</strong></h2></div>
-                        <div class="col-xs-6 col-md-4"><h2 class="alert alert-warning"> Annual Pension Cost: <strong>288,695,353,695/=</strong></h2></div>
+                        <div class="col-xs-6 col-md-4"><h4 class="alert alert-success"> Staff on the Payroll: <strong>314,501</strong></h4></div>
+                        <div class="col-xs-6 col-md-4"><h4 class="alert alert-info"> Permanent & Pensionable: <strong>233,909</strong></h4></div>
+                        <div class="col-xs-6 col-md-4"><h4 class="alert alert-warning"> Staff on Probation: <strong>71,814</strong></h4></div>
+                        <div class="col-xs-6 col-md-4"><h4 class="alert alert-success"> New Recruitments Last FY: <strong>9,110</strong></h4></div>
+                        <div class="col-xs-6 col-md-4"><h4 class="alert alert-info"> Number of Pensioners: <strong>76,913</strong></h4></div>
+                        <div class="col-xs-6 col-md-4"><h4 class="alert alert-warning"> Annual Pension Cost: <strong>288.695 Bn/=</strong></h4></div>
 
                         <?php
                         echo $data->render();

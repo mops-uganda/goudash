@@ -66,7 +66,7 @@ $hr_analytics = array(
 $statistics = array(
     "title" => "",
     "icon" => "fa-rss txt-color-green ",
-    "label_htm" => '<button class="btn btn-sm btn-warning" type="button">Statistics Dashboard</button>',
+    "label_htm" => '<button class="btn btn-sm btn-warning" type="button">General Statistics</button>',
     "url" => "X/statistics"
 );
 
