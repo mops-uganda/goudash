@@ -18,10 +18,12 @@ $r = $db->result();
 $data = Xcrud::get_instance();
 $data->table($r[0]["ReportTable"]);
 $data->order_by($r[0]["orderColumn"],$r[0]["orderAsc"]);
-$data->table_name($r[0]["ReportTitle"]);
+$data->table_name($r[0]["ReportTitle"])
+    ->set_lang('return','Return to ' . $r[0]["ReportTitle"]);
 if ($r[0]["whereTxt"]) $data->where('' . $r[0]["whereTxt"] . '');
 $data->columns($r[0]["gridColumns"]);
 $data->fields($r[0]["gridFields"]);
+
 
 
 if ($r[0]["column_patternYN"]) $data->column_pattern($r[0]["column_patternfield"], $r[0]["column_pattern"]);
@@ -32,6 +34,8 @@ if ($r[0]["textCut2"]) $data->column_cut($r[0]["textCut2"],$r[0]["textCutField2"
 if ($r[0]["highlight"]){$h = explode(':',$r[0]["highlight"]); $data->highlight($h[0], $h[1], $h[2], $h[3]);}
 if ($r[0]["highlight2"]){$h = explode(':',$r[0]["highlight2"]); $data->highlight($h[0], $h[1], $h[2], $h[3]);}
 
+
+if ($r[0]["subselect"]) $data->subselect($r[0]["subselect"], $r[0]["subselect_query"]);
 
 if ($r[0]["unset_add"]) $data->unset_add();
 if ($r[0]["unset_edit"]) $data->unset_edit();
@@ -205,7 +209,7 @@ $rpt_counter = $db->result();
                     <div class="widget-body no-padding">
                         <?php
                         echo $data->render();
-                        echo '<br>' . $r[0]["Report_Notes"];
+                        echo '<h4>' . $r[0]["Report_Notes"] . '</h4>';
                         ?>
                     </div>
                     <!-- end widget content -->

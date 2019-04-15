@@ -164,7 +164,7 @@ if (!$no_main_header) {
         <!-- projects dropdown -->
         <div class="project-context hidden-xs">
             <span class="label">Government Dashboard :: <span><?php echo "Vote - ".$user->country_id; ?>: <?php echo $VoteName; ?></span></span>
-            <span id="project-selector" class="popover-trigger-element dropdown-toggle" data-toggle="dropdown">Priority projects <i class="fa fa-angle-down"></i></span>
+            <span id="project-selector" class="popover-trigger-element dropdown-toggle" data-toggle="dropdown">Favourite Reports/Screens <i class="fa fa-angle-down"></i></span>
 
             <!-- Suggestion: populate this list with fetch and push technique -->
             <ul class="dropdown-menu">

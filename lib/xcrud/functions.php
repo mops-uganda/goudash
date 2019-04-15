@@ -118,8 +118,9 @@ function movetop($xcrud)
     if ($xcrud->get('primary') !== false)
     {
         $primary = (int)$xcrud->get('primary');
+        $myvote = $xcrud->get('vote');
         $db = Xcrud_db::get_instance();
-        $query = 'SELECT `officeCode` FROM `offices` ORDER BY `ordering`,`officeCode`';
+        $query = 'SELECT `id` FROM `vote_departments` WHERE vote = "' . $myvote . '" ORDER BY `ordering`,`id`';
         $db->query($query);
         $result = $db->result();
         $count = count($result);
@@ -127,7 +128,7 @@ function movetop($xcrud)
         $sort = array();
         foreach ($result as $key => $item)
         {
-            if ($item['officeCode'] == $primary && $key != 0)
+            if ($item['id'] == $primary && $key != 0)
             {
                 array_splice($result, $key - 1, 0, array($item));
                 unset($result[$key + 1]);
@@ -137,7 +138,7 @@ function movetop($xcrud)
 
         foreach ($result as $key => $item)
         {
-            $query = 'UPDATE `offices` SET `ordering` = ' . $key . ' WHERE officeCode = ' . $item['officeCode'];
+            $query = 'UPDATE `vote_departments` SET `ordering` = ' . $key . ' WHERE id = ' . $item['id'];
             $db->query($query);
         }
     }
@@ -147,8 +148,9 @@ function movebottom($xcrud)
     if ($xcrud->get('primary') !== false)
     {
         $primary = (int)$xcrud->get('primary');
+        $myvote = $xcrud->get('vote');
         $db = Xcrud_db::get_instance();
-        $query = 'SELECT `officeCode` FROM `offices` ORDER BY `ordering`,`officeCode`';
+        $query = 'SELECT `id` FROM `vote_departments` WHERE vote = "' . $myvote . '" ORDER BY `ordering`,`id`';
         $db->query($query);
         $result = $db->result();
         $count = count($result);
@@ -156,7 +158,7 @@ function movebottom($xcrud)
         $sort = array();
         foreach ($result as $key => $item)
         {
-            if ($item['officeCode'] == $primary && $key != $count - 1)
+            if ($item['id'] == $primary && $key != $count - 1)
             {
                 unset($result[$key]);
                 array_splice($result, $key + 1, 0, array($item));
@@ -166,7 +168,7 @@ function movebottom($xcrud)
 
         foreach ($result as $key => $item)
         {
-            $query = 'UPDATE `offices` SET `ordering` = ' . $key . ' WHERE officeCode = ' . $item['officeCode'];
+            $query = 'UPDATE `vote_departments` SET `ordering` = ' . $key . ' WHERE id = ' . $item['id'];
             $db->query($query);
         }
     }

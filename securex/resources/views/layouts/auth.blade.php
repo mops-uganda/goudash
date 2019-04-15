@@ -12,6 +12,11 @@
     {!! HTML::style('assets/css/fontawesome-all.min.css') !!}
 
     @yield('header-scripts')
+    <style>
+        body{
+            background-image: url("assets/img/wallpaper.jpg");
+        }
+    </style>
 </head>
 <body class="auth">
 
@@ -25,3 +30,4 @@
     @yield('scripts')
 </body>
 </html>
+

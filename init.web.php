@@ -63,6 +63,13 @@ $hr_analytics = array(
     "url" => "X/hr_analytics"
 );
 
+$establishment_structures = array(
+    "title" => "",
+    "icon" => "fa-exchange txt-color-purple",
+    "label_htm" => '<button class="btn btn-sm btn-success" type="button">Vote Structures</button>',
+    "url" => "X/reports?id=600"
+);
+
 $statistics = array(
     "title" => "",
     "icon" => "fa-rss txt-color-green ",
@@ -313,6 +320,10 @@ $General_Information = array(
     "title" => "General Information",
     "icon" => "fa-desktop",
     "sub" => array(
+        "listOfAllVotes" => array(
+            "title" => "List of all Votes",
+            "url" => "X/reports?id=555"
+        ),
         "SectorsAndThematicAreas" => array(
             "title" => "Sectors / Thematic Areas",
             "url" => "X/SectorsAndThematicAreas"
@@ -421,6 +432,7 @@ $setting_array = array(
 
 array_push($page_nav, $intranet);
 if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $hr_analytics);
+if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $establishment_structures);
 if ($user->hasPermission('statistics.view')) array_push($page_nav, $statistics);
 if ($user->hasPermission('actions.tracker')) array_push($page_nav, $actions_tracker);
 if ($user->hasPermission('Strategic_Projects')) array_push($page_nav, $Strategic_Projects);
