@@ -9,6 +9,11 @@ if (isset($_GET['id'])) {
 
 
 require ('../lib/xcrud/xcrud.php');
+require_once '../securex/extra/auth.php';
+
+$user = Auth::user();
+$username = $user->username;
+
 $db = Xcrud_db::get_instance();
 $sql = 'SELECT * FROM `reports` WHERE rid = ' . $reportid;
 $db->query($sql);
@@ -23,6 +28,22 @@ $data->table_name($r[0]["ReportTitle"])
 if ($r[0]["whereTxt"]) $data->where('' . $r[0]["whereTxt"] . '');
 $data->columns($r[0]["gridColumns"]);
 $data->fields($r[0]["gridFields"]);
+
+if ($reportid == 500) {
+    $data->subselect('Quick','SELECT COUNT(*) FROM `reports_favourite` WHERE username = "admin" AND report_id = {rid}');
+    $data->change_type('Quick', 'bool');
+    $data->highlight('Quick','!=','0','#E5F993');
+
+    $data->button('#', "Add to favourite reports", 'glyphicon glyphicon-link icon-arrow-up', 'btn xcrud-action', array(
+        'data-action' => 'add_fav_report',
+        'data-task' => 'action',
+        'data-username' => $username,
+        'data-report_name' => '{ReportTitle}',
+        'data-report_category' => '{reportCategory}',
+        'data-link' => '{link}',
+        'data-primary' => '{rid}'),
+        array('Quick', '=', '0'));
+}
 
 
 

@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4df9da7-2526-4ebc-8bac-bb327cbaedba" name="Default Changelist" comment="cal">
-      <change afterPath="$PROJECT_DIR$/X/vote_establishment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/X/myfavreports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gouDash.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/X/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/X/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/X/hr_analytics.php" beforeDir="false" afterPath="$PROJECT_DIR$/X/hr_analytics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/X/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/X/reports.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/calendar.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/X/vote_establishment.php" beforeDir="false" afterPath="$PROJECT_DIR$/X/vote_establishment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.web.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/xcrud/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/xcrud/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,27 +160,26 @@
     <session id="2021601742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="53" />
+          <entry key="project.closed" value="55" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="12" />
-          <entry key="project.open.time.12" value="12" />
+          <entry key="project.open.time.12" value="13" />
           <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="5" />
+          <entry key="project.open.time.14" value="8" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="4" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="54" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="9" />
+          <entry key="css" value="5" />
           <entry key="csv" value="1" />
           <entry key="env" value="1" />
           <entry key="html" value="3" />
@@ -186,7 +187,7 @@
           <entry key="js" value="6" />
           <entry key="json" value="3" />
           <entry key="md" value="1" />
-          <entry key="php" value="170" />
+          <entry key="php" value="172" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="2" />
           <entry key="vue" value="1" />
@@ -194,14 +195,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="3" />
-          <entry key="CSS" value="9" />
+          <entry key="Blade" value="2" />
+          <entry key="CSS" value="5" />
           <entry key="HTML" value="3" />
           <entry key="Ini" value="1" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="166" />
+          <entry key="PHP" value="169" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RNG Compact" value="1" />
           <entry key="SQL" value="2" />
@@ -215,7 +216,7 @@
           <entry key="html" value="65" />
           <entry key="js" value="108" />
           <entry key="json" value="3" />
-          <entry key="php" value="7780" />
+          <entry key="php" value="7908" />
           <entry key="sql" value="13" />
           <entry key="txt" value="3" />
           <entry key="vue" value="1" />
@@ -223,12 +224,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="95" />
+          <entry key="Blade" value="12" />
           <entry key="CSS" value="9" />
           <entry key="HTML" value="66" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="108" />
-          <entry key="PHP" value="7684" />
+          <entry key="PHP" value="7895" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="13" />
           <entry key="Vue.js" value="1" />
@@ -239,10 +240,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/X/reports.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/xcrud/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/X/vote_establishment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="61" column="79" lean-forward="true" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+            <state relative-caret-position="306">
+              <caret line="48" selection-start-line="48" selection-end-line="52" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -258,11 +277,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>OPMDash</find>
-      <find>localhost</find>
-      <find>auth:</find>
-      <find>page_</find>
-      <find>relation('v</find>
       <find>dash</find>
       <find>$user-&gt;</find>
       <find>unset</find>
@@ -279,15 +293,20 @@
       <find>-&gt;change</find>
       <find>change_</find>
       <find>cdnjs.cloudflare.com</find>
-      <find>retu</find>
       <find>explode</find>
       <find>meet</find>
       <find>priority p</find>
-      <find>movetop</find>
-      <find>xcrud</find>
-      <find>$xcrud</find>
-      <find>overv</find>
-      <find>files</find>
+      <find>inser</find>
+      <find>insert in</find>
+      <find>project list</find>
+      <find>retu</find>
+      <find>high</find>
+      <find>usern</find>
+      <find>cre</find>
+      <find>grap</find>
+      <find>graph</find>
+      <find>itemsList</find>
+      <find>report</find>
     </findStrings>
     <replaceStrings>
       <replace>gou_dash</replace>
@@ -297,8 +316,6 @@
       <replace>?</replace>
       <replace>political_score</replace>
       <replace>Inspection_Team_score</replace>
-      <replace>structure</replace>
-      <replace>$structure</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\gouDash</dir>
@@ -314,7 +331,6 @@
       <dir>C:\xampp\htdocs\dash\cal</dir>
       <dir>C:\xampp\htdocs\dash\X</dir>
       <dir>C:\xampp\htdocs\dash</dir>
-      <dir>C:\xampp\htdocs\dash\lib\xcrud</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -324,7 +340,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/X/timeline.php" />
         <option value="$PROJECT_DIR$/stickynotes/js/stickyNotes.js" />
         <option value="$PROJECT_DIR$/stickynotes/components/multiNotes.vue" />
         <option value="$PROJECT_DIR$/stickynotes/share.html" />
@@ -371,10 +386,11 @@
         <option value="$PROJECT_DIR$/X/dashboard.php" />
         <option value="$PROJECT_DIR$/X/hr_analytics.php" />
         <option value="$PROJECT_DIR$/init.web.php" />
-        <option value="$PROJECT_DIR$/securex/resources/views/layouts/auth.blade.php" />
+        <option value="$PROJECT_DIR$/inc/header.php" />
         <option value="$PROJECT_DIR$/lib/xcrud/functions.php" />
-        <option value="$PROJECT_DIR$/X/reports.php" />
+        <option value="$PROJECT_DIR$/X/myfavreports.php" />
         <option value="$PROJECT_DIR$/X/vote_establishment.php" />
+        <option value="$PROJECT_DIR$/X/reports.php" />
       </list>
     </option>
   </component>
@@ -431,7 +447,7 @@
     <property name="ToolWindowFind.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML&#10;PHP" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -543,18 +559,22 @@
       <workItem from="1554374585713" duration="957000" />
       <workItem from="1554625889463" duration="2480000" />
       <workItem from="1554999167170" duration="8974000" />
-      <workItem from="1555084051465" duration="218000" />
-      <workItem from="1555316580441" duration="19031000" />
+      <workItem from="1555090445201" duration="597000" />
+      <workItem from="1555099285265" duration="658000" />
+      <workItem from="1555350452848" duration="9326000" />
+      <workItem from="1555362378879" duration="3375000" />
+      <workItem from="1555367427093" duration="1803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404471000" />
+    <option name="totallyTimeSpent" value="400981000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17910448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24966443" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -565,7 +585,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32867134" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5033557" side_tool="true" weight="0.32867134" />
@@ -609,6 +629,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="cal" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/data/data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inspect/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/X/.php" />
     <entry file="file://$PROJECT_DIR$/X/offices.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -834,10 +864,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/securex/resources/views/layouts/auth.blade.php">
+    <entry file="file://$PROJECT_DIR$/X/hr_analytics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="697">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/meetdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="178" column="41" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -848,59 +892,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/X/meetdetails.php">
+    <entry file="file://$PROJECT_DIR$/inc/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="178" column="41" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="41" />
+        <state relative-caret-position="3077">
+          <caret line="181" column="68" selection-start-line="181" selection-start-column="68" selection-end-line="181" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init.web.php">
+    <entry file="file://$PROJECT_DIR$/X/myfavreports.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/hr_analytics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/demo.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/gou_dash.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/reports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/xcrud/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/X/vote_establishment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="61" column="79" lean-forward="true" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+        <state relative-caret-position="306">
+          <caret line="48" selection-start-line="48" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/reportsX.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/reports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>

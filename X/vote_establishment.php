@@ -69,7 +69,7 @@ $structure->highlight_row('department_type','=','Division Heading', '#b0b8e5');
 $structure->highlight_row('department_type','=','Stand Alone Division', '#b0b8e5');
 
 $structure->unset_sortable()
-            ->limit(50);
+    ->limit(50);
 $structure->order_by('ordering, id');
 $structure->set_lang('add','Add New Directorate, Department, Division, Section or Unit');
 $structure->set_lang('return','Return to List of Directorates, Departments, Divisions, Sections and Units');

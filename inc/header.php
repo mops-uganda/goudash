@@ -3,6 +3,7 @@ session_start();
 $opmDashSkin = "";
 
 $user = Auth::user();
+$username = $user->username;
 $logo = 'logo';
 if (isset($_COOKIE["opmDashSkin"])) {
     $_SESSION["opmDashSkin"] = "" . $_COOKIE["opmDashSkin"];
@@ -16,7 +17,7 @@ require ('lib/xcrud/xcrud.php');
 $db = Xcrud_db::get_instance();
 $db->query('SELECT `VoteName` FROM `votes` WHERE VoteCode = "' . $user->country_id .'"');
 $VoteName = $db->row()["VoteName"];
-$db->query('SELECT projectName, projectID FROM `projects` WHERE projectPriority = "Very High"');
+$db->query('SELECT report_name, report_id, link FROM `reports_favourite` WHERE username = "' . $username . '"');
 $list = $db->result();
 
 ?>
@@ -171,13 +172,14 @@ if (!$no_main_header) {
                 <?php
                 for ($count=0;$count<count($list);$count++){
                     ?>
-                    <li><a href="#X/projectdetails.php?projectid=<?php echo $list[$count]["projectID"] ?>"><i class="glyphicon glyphicon-new-window"></i> <?php echo $list[$count]["projectName"] ?></a></li>
+                    <li><a href="#X/<?php echo $list[$count]["link"] ?>?id=<?php echo $list[$count]["report_id"] ?>"><i class="glyphicon glyphicon-new-window"></i> <?php echo $list[$count]["report_name"] ?></a></li>
                     <?php
                 }
                 ?>
                 <li class="divider"></li>
                 <li>
-                    <a href="#X/projects.php"><i class="fa fa-power-off"></i> Project List</a>
+                    <a href="#X/myfavreports"><i class="fa fa-power-off"></i> My Favourite Reports</a>
+                    <a href="#X/reports"><i class="fa fa-power-off"></i> All Reports</a>
                 </li>
             </ul>
             <!-- end dropdown-menu-->

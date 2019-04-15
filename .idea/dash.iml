@@ -3,10 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/lib/common" isTestSource="false" packagePrefix="Common\" />
-      <sourceFolder url="file://$MODULE_DIR$/lib/smartui" isTestSource="false" packagePrefix="SmartUI\" />
       <sourceFolder url="file://$MODULE_DIR$/lib/app" isTestSource="false" packagePrefix="App\" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/erusev/parsedown" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/smartui" isTestSource="false" packagePrefix="SmartUI\" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

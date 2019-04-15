@@ -8,6 +8,16 @@ function publish_action($xcrud)
         $db->query($query);
     }
 }
+
+function add_fav_report($xcrud)
+{
+    if ($xcrud->get('primary')) {
+        $db = Xcrud_db::get_instance();
+        $query = 'INSERT INTO `reports_favourite` (`username`, `report_name`, `report_category`, `link`, `report_id`) VALUES ("' . $xcrud->get('username') . '", "' . $xcrud->get('report_name') . '", "' . $xcrud->get('report_category') . '", "' . $xcrud->get('link') . '", "' . (int)$xcrud->get('primary') . '")';
+        $db->query($query);
+    }
+}
+
 function unpublish_action($xcrud)
 {
     if ($xcrud->get('primary'))
