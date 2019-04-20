@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/lib/common" isTestSource="false" packagePrefix="Common\" />
       <sourceFolder url="file://$MODULE_DIR$/lib/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/lib/smartui" isTestSource="false" packagePrefix="SmartUI\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/erusev/parsedown" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

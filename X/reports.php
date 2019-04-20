@@ -1,4 +1,11 @@
 <?php
+require_once '../securex/extra/auth.php';
+$returnURL = 'X/reports';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
 require_once("inc/init.php");
 
 $reportid = 500;
@@ -9,7 +16,6 @@ if (isset($_GET['id'])) {
 
 
 require ('../lib/xcrud/xcrud.php');
-require_once '../securex/extra/auth.php';
 
 $user = Auth::user();
 $username = $user->username;
@@ -30,7 +36,7 @@ $data->columns($r[0]["gridColumns"]);
 $data->fields($r[0]["gridFields"]);
 
 if ($reportid == 500) {
-    $data->subselect('Quick','SELECT COUNT(*) FROM `reports_favourite` WHERE username = "admin" AND report_id = {rid}');
+    $data->subselect('Quick','SELECT COUNT(*) FROM `reports_favourite` WHERE username = "' . $username . '" AND report_id = {rid}');
     $data->change_type('Quick', 'bool');
     $data->highlight('Quick','!=','0','#E5F993');
 
@@ -43,9 +49,8 @@ if ($reportid == 500) {
         'data-link' => '{link}',
         'data-primary' => '{rid}'),
         array('Quick', '=', '0'));
+    $data->create_action('add_fav_report','add_fav_report');
 }
-
-
 
 if ($r[0]["column_patternYN"]) $data->column_pattern($r[0]["column_patternfield"], $r[0]["column_pattern"]);
 if ($r[0]["column_patternYN2"]) $data->column_pattern($r[0]["column_patternfield2"], $r[0]["column_pattern2"]);

@@ -1,4 +1,12 @@
 <?php
+require_once '../securex/extra/auth.php';
+$returnURL = 'X/actionnotes';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
+
 require ('../lib/xcrud/xcrud.php');
 $tasks = Xcrud::get_instance();
 $tasks->table('meetnotes');

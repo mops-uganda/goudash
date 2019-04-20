@@ -1,6 +1,13 @@
 <?php
-require ('../lib/xcrud/xcrud.php');
 require_once '../securex/extra/auth.php';
+$returnURL = 'X/infofeed';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
+
+require ('../lib/xcrud/xcrud.php');
 
 date_default_timezone_set('Africa/Kampala');
 $date = date('m/d/Y h:i:s a', time());

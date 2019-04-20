@@ -1,5 +1,11 @@
 <?php
 require_once '../securex/extra/auth.php';
+$returnURL = 'X/action-tracker';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
 $user = Auth::user();
 
 date_default_timezone_set('Africa/Nairobi');
