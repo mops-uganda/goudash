@@ -1,4 +1,12 @@
 <?php
+require_once '../securex/extra/auth.php';
+$returnURL = 'X/userpermissions';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
+
 require ('../lib/access/xcrud.php');
 $data = Xcrud::get_instance();
 $data->table('users');

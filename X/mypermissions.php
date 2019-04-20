@@ -1,5 +1,11 @@
 <?php
 require_once '../securex/extra/auth.php';
+$returnURL = 'X/mypermissions';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
 $permissions = auth()->user()->role->permissions->toArray();
 ?>
 <style>

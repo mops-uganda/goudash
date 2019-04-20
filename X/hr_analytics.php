@@ -1,6 +1,6 @@
 <?php
 require_once '../securex/extra/auth.php';
-$returnURL = 'X/dashboard';
+$returnURL = 'X/hr_analytics';
 if (! Auth::check()) {
     redirectTo('securex/public/login?to=' . $returnURL);
     exit();
