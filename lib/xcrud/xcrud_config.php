@@ -107,7 +107,7 @@ class Xcrud_config
     
        
     // alert settings
-    public static $email_from = 'pmundua@opm.go.ug'; // email from address
+    public static $email_from = 'patrick.mundua@publicservice.go.ug'; // email from address
     public static $email_from_name = 'GOU Dashboard System'; // email from name
     public static $email_enable_html = true; // enables html in email letters
 
@@ -118,9 +118,10 @@ class Xcrud_config
     
     // date
     public static $date_first_day = 1; // 0 - Sunday, 1 - Monday etc. Uses in datepicker and search ranges
-    public static $date_format = 'dd.mm.yy'; // jqueryui date format
+    //public static $date_format = 'dd.mm.yy'; // jqueryui date format
+    public static $date_format = 'DD, d MM, yy'; // jqueryui date format
     public static $time_format = 'HH:mm:ss'; // jqueryui time format
-    public static $php_date_format = 'd.m.Y'; // php date format
+    public static $php_date_format = 'D, d-M-Y'; // php date format
     public static $php_time_format = 'H:i:s'; // php time format
     
     

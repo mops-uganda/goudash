@@ -18,6 +18,11 @@ function add_fav_report($xcrud)
     }
 }
 
+function add_user_icon($value, $fieldname, $primary_key, $row, $xcrud)
+{
+    return '<div class="alert alert-success fade in"> ' . $value . '  <strong class="pull-right"><i class="fa fa-slack"></i> ' . $row['actions_tracker.current_status'] . '</strong></div>';
+}
+
 function unpublish_action($xcrud)
 {
     if ($xcrud->get('primary'))
