@@ -8,9 +8,9 @@
 	define('TABLE', 'calendar');
 	define('USERS_TABLE', 'users');
 	
-	define('SITE_FILES_URL', 'http://localhost/cal3/simple/');
+	define('SITE_FILES_URL', 'http://localhost/dash/cal/');
 	
 	// Default Categories
-	$categories = array("General","Party","Work", "Letters & Arts");
+$categories = array("General","Meeting","Assignment", "Personal");
 	
 ?>

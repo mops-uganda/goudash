@@ -311,3 +311,8 @@ h2{
 .xcrud.xcrud_rtl .xcrud-details-table td:first-child {
     text-align: left;
 }
+.txtclass {
+    background-color: #f3f3f4;
+    border: 1px solid #bbc0f1;
+    border-left: 5px solid #a7adee;
+}

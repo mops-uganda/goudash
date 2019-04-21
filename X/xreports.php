@@ -13,4 +13,3 @@ $xreports->table_name('List of Reports');
 $xreports->show_primary_ai_column(true);
 
 echo $xreports->render();
-

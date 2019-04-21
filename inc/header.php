@@ -277,26 +277,11 @@ if (!$no_main_header) {
             </div>
             <!-- end voice command -->
 
-            <!-- Financial Years dropdown  -->
-            <ul class="header-dropdown-list hidden-xs">
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-anchor"></i> <span> Financial Year 2016/2017 </span> <i class="fa fa-angle-down"></i> </a>
-                    <ul class="dropdown-menu pull-right">
-                        <?php
-                        $db->query('SELECT FinancialYear FROM `financialyear`');
-                        $list = $db->result();
-                        for ($count=0;$count<count($list);$count++){
-                            ?>
-                            <li><a href="#" onclick='window.location = "#X/dashboard.php?FY=<?php echo $list[$count]["FinancialYear"] ?>"' class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-anchor"></i> <span> <?php echo "  " . $list[$count]["FinancialYear"] ?> </span> </a></li>
-                            <?php
-                        }
-                        ?>
+            <!-- Start Clock -->
+            <span id="clocktext" class="effect2" style="color: rgba(0,0,0,0.6);text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);font-size: 23pt;"></span>
 
+            <!-- End Clock -->
 
-                    </ul>
-                </li>
-            </ul>
-            <!-- end Financial Years  -->
 
         </div>
         <!-- end pulled right: nav area -->
@@ -322,6 +307,27 @@ if (!$no_main_header) {
         </ul>
     </div>
     <!-- END SHORTCUT AREA -->
+
+    <!-- Start Style Clock -->
+
+    <script type="text/javascript">
+        "use strict";
+
+        var textElem = document.getElementById("clocktext");
+
+        function updateClock() {
+            var d = new Date();
+            var s = "";
+            s += ((d.getHours() + 11) % 12 + 1) + ":";
+            s += (10 > d.getMinutes() ? "0" : "") + d.getMinutes() + "\u00A0";
+            s += d.getHours() >= 12 ? "pm" : "am";
+            textElem.textContent = s;
+            setTimeout(updateClock, 1000 - d.getTime() % 1000 + 20);
+        }
+
+        updateClock();
+    </script>
+    <!-- End Style Clock -->
 
     <?php
 }
