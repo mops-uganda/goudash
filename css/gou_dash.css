@@ -37,10 +37,9 @@
 Loading
 */
 
-.container {
-    height: 100px;
+.containerload {
+    height: 150px;
     text-align: center;
-    margin-top: 200px;
 }
 
 .circle {

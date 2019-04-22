@@ -46,12 +46,12 @@ $intranet = array(
         "event_calendar" => array(
             "title" => "Events Calendar",
             "icon" => "fa-calendar",
-            "url" => "cal/index?=".mt_rand(5, 500)
+            "url" => "cal/index?=".mt_rand(5, 500),
         ),
         "stickynotes" => array(
             "title" => "Sticky Notes",
             "icon" => "fa-slack",
-            "url" => "stickynotes/index.html"
+            "url" => "X/notes"
         )
     )
 );

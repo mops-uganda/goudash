@@ -1812,7 +1812,7 @@ var calc_navbar_height = function() {
 				container.removeData().html("");
 				
 				// place cog
-				container.html('<h3><i class="fa fa-cog fa-spin"></i> Loading...</h3><div class="container"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>');
+				container.html('<h1><i class="fa fa-cog fa-spin fa-3x"></i> Loading...</h1><div class="containerload"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>');
 			
 				// Only draw breadcrumb if it is main content material
 				if (container[0] == $("#content")[0]) {

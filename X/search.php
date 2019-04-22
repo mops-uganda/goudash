@@ -1,9 +1,7 @@
 <?php
-    use \SmartUI\Util as SmartUtil;
-    use \Common\HTMLIndent;
-
     //initilize the page
     require_once 'inc/init.php';
+    require ('../lib/xcrud/xcrud.php');
 
     //Get search parameters
     $reportid = 100;
@@ -18,8 +16,9 @@
         $query = $_GET['q'];
     }
 
+    $db = Xcrud_db::get_instance();
+
     //Start to query search results
-    require ('../lib/xcrud/xcrud.php');
     $data = Xcrud::get_instance();
     $data->table('reports')
             ->where('ReportTitle LIKE "%' . $query . '%" OR ReportDescription LIKE "%' . $query . '%"')
@@ -37,6 +36,9 @@
             ->unset_csv()
             ->limit(20)
             ->label(array('itemsList' => 'Basic Report','rid' => 'ID','ReportTitle'=>'Report Title','reportCategory'=>'Report Category','ReportDescription'=>'Report Description'));
+
+    $db->query('SELECT * FROM reports WHERE ReportTitle LIKE "%' . $query . '%" OR ReportDescription LIKE "%' . $query . '%"');
+    $report_count = count($db->result());
 
     $projects = Xcrud::get_instance();
     $projects->table('subprogrammes')
@@ -70,6 +72,8 @@
                 ->unset_remove()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM subprogrammes WHERE (SubProgramName LIKE "%' . $query . '%" OR projectDecription LIKE "%' . $query . '%") AND LENGTH(SubProgramCode) = 4 AND Priority = 1');
+    $subprogrammes_count = count($db->result());
 
     $tasks = Xcrud::get_instance();
     $tasks->table('projecttasks')
@@ -92,6 +96,8 @@
                 ->unset_title()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM projecttasks JOIN projects ON projecttasks.projectID=projects.projectID WHERE projectTaskTitle LIKE "%' . $query . '%" OR projects.projectName LIKE "%' . $query . '%"');
+    $projecttasks_count = count($db->result());
 
     $meetings = Xcrud::get_instance();
     $meetings->table('meetings')
@@ -118,6 +124,8 @@
                 ->unset_title()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM meetings WHERE meetName LIKE "%' . $query . '%" OR meetDecription LIKE "%' . $query . '%"');
+    $meetings_count = count($db->result());
 
     $actions = Xcrud::get_instance();
     $actions->table('meettasks')
@@ -142,6 +150,8 @@
                 ->unset_title()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM meettasks JOIN meetings ON meettasks.meetID=meetings.meetID WHERE meetTaskTitle LIKE "%' . $query . '%" OR meetings.meetName LIKE "%' . $query . '%"');
+    $meettasks_count = count($db->result());
 
     $votes = Xcrud::get_instance();
     $votes->table('votesview')
@@ -157,6 +167,8 @@
                 ->unset_title()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM votesview WHERE VoteName LIKE "%' . $query . '%" OR VoteCode LIKE "%' . $query . '%"');
+    $votesview_count = count($db->result());
 
     $dept_projects = Xcrud::get_instance();
     $dept_projects->table('view_subprogrammes')
@@ -175,6 +187,8 @@
                 ->unset_title()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM view_subprogrammes WHERE VoteName LIKE "%' . $query . '%" OR ProgrammeName LIKE "%' . $query . '%" OR SubProgramName LIKE "%' . $query . '%"');
+    $view_subprogrammes_count = count($db->result());
 
     $LGs = Xcrud::get_instance();
     $LGs->table('d_population')
@@ -189,24 +203,27 @@
                 ->unset_title()
                 ->unset_print()
                 ->unset_csv();
+    $db->query('SELECT * FROM d_population WHERE Sub_Region LIKE "%' . $query . '%" OR District LIKE "%' . $query . '%" OR Sub_County LIKE "%' . $query . '%" OR Parish LIKE "%' . $query . '%"');
+    $local_governments_count = count($db->result());
 
 
 
     $reports_txt = $data->render();
-    $projects_txt = $projects->render();
-    $tasks_txt = $tasks->render();
-    $meetings_txt = $meetings->render();
-    $actions_txt = $actions->render();
-    $votes_txt = $votes->render();
-    $dept_projects_txt = $dept_projects->render();
-    $LGs_txt = $LGs->render();
+if($subprogrammes_count) $projects_txt = $projects->render();
+if($projecttasks_count) $tasks_txt = $tasks->render();
+if($meetings_count) $meetings_txt = $meetings->render();
+if($meettasks_count) $actions_txt = $actions->render();
+if($votesview_count) $votes_txt = $votes->render();
+if($view_subprogrammes_count) $dept_projects_txt = $dept_projects->render();
+if($local_governments_count) $LGs_txt = $LGs->render();
 
 
     $_ui->start_track();
 
     // smartui code
+
     $tabs = array(
-        'Reports' => 'Reports',
+        'Reports' => 'Reports (' . $report_count . ')',
         'Projects' => 'Projects',
         'ProjectTasks' => 'Project Tasks',
         'MeetingsEvents' => 'Meetings / Events',
@@ -215,7 +232,19 @@
         'DepartmentsProjects' => 'Departments / Projects',
         'LocalGovernments' => 'Local Governments'
     );
-    $tab = $_ui->create_tab($tabs);
+
+    $tabs_list = array();
+
+    $tabs_list[Reports] = 'Reports (' . $report_count . ')';
+    if($subprogrammes_count) $tabs_list[Projects] = 'Projects (' . $subprogrammes_count . ')';
+    if($projecttasks_count) $tabs_list[ProjectTasks] = 'Project Tasks (' . $projecttasks_count . ')';
+    if($meetings_count) $tabs_list[MeetingsEvents] = 'Meetings / Events (' . $meetings_count . ')';
+    if($meettasks_count) $tabs_list[Actions] = 'Actions (' . $meettasks_count . ')';
+    if($votesview_count) $tabs_list[MinistriesAgencies] = 'Ministries / Depts / Agencies (' . $votesview_count . ')';
+    if($view_subprogrammes_count) $tabs_list[DepartmentsProjects] = 'Departments / Projects (' . $view_subprogrammes_count . ')';
+    if($local_governments_count) $tabs_list[LocalGovernments] = 'Local Governments (' . $local_governments_count . ')';
+
+    $tab = $_ui->create_tab($tabs_list);
 
     $tab->content('Reports', $reports_txt)
         ->icon('Reports', 'fa fa-home')
