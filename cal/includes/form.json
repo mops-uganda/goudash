@@ -1,0 +1,16 @@
+[
+  {
+    "dataType": "input",
+    "class": "",
+    "fields": {
+      "Venue": "pullFrom-options-name-<Venue>-placeholder-~~"
+    }
+  },
+  {
+    "dataType": "select",
+    "class": "",
+    "fields": {
+      "Priority": "pullFrom-options-name-<Priority>-values{High, Normal, Low}-labels(High, Normal, Low)"
+    }
+  }
+]
