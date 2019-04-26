@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="040bcfe7-8cba-484a-9d53-9eb5d17128da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/X/chart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/includes/form.json" beforeDir="false" afterPath="$PROJECT_DIR$/cal/includes/form.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/X/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/X/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.web.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +20,16 @@
     <session id="2021601742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,7 +38,7 @@
           <entry key="ini" value="3" />
           <entry key="js" value="8" />
           <entry key="json" value="2" />
-          <entry key="php" value="56" />
+          <entry key="php" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -44,7 +47,7 @@
           <entry key="Ini" value="3" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="8" />
-          <entry key="PHP" value="53" />
+          <entry key="PHP" value="56" />
           <entry key="Scratch" value="5" />
         </counts>
       </usages-collector>
@@ -54,7 +57,7 @@
           <entry key="ini" value="21" />
           <entry key="js" value="188" />
           <entry key="json" value="20" />
-          <entry key="php" value="1789" />
+          <entry key="php" value="1954" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -64,14 +67,50 @@
           <entry key="Ini" value="21" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="188" />
-          <entry key="PHP" value="1736" />
+          <entry key="PHP" value="1901" />
           <entry key="Scratch" value="44" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/X/chart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#1;n#!!top" />
+                <element signature="n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/X/dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="2727" column="31" lean-forward="true" selection-start-line="2727" selection-start-column="31" selection-end-line="2727" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#!!top" />
+                <element signature="n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init.web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="363" column="2" lean-forward="true" selection-start-line="363" selection-start-column="2" selection-end-line="363" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,9 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>curFontSize</find>
-      <find>clock</find>
-      <find>clo</find>
       <find>dash.go</find>
       <find>cloudflare</find>
       <find>unset_l</find>
@@ -112,6 +148,9 @@
       <find>insert</find>
       <find>defaultView</find>
       <find>FullCalendarExt</find>
+      <find>fa</find>
+      <find>btn</find>
+      <find>sta</find>
     </findStrings>
     <replaceStrings>
       <replace>Liked</replace>
@@ -129,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/X/dashboard.php" />
         <option value="$PROJECT_DIR$/X/hr_analytics.php" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.php" />
         <option value="$PROJECT_DIR$/lib/xcrud/xcrud_config.php" />
@@ -148,7 +186,6 @@
         <option value="$PROJECT_DIR$/lib/xcrud/themes/bootstrap/xcrud.ini" />
         <option value="$PROJECT_DIR$/X/events.php" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.css" />
-        <option value="$PROJECT_DIR$/init.web.php" />
         <option value="$PROJECT_DIR$/X/search.php" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php" />
         <option value="$PROJECT_DIR$/X/notes.php" />
@@ -158,6 +195,9 @@
         <option value="$PROJECT_DIR$/cal/includes/form.json" />
         <option value="$PROJECT_DIR$/cal/js/jquery.calendar.js" />
         <option value="$PROJECT_DIR$/cal/index.php" />
+        <option value="$PROJECT_DIR$/init.web.php" />
+        <option value="$PROJECT_DIR$/X/dashboard.php" />
+        <option value="$PROJECT_DIR$/X/chart.php" />
       </list>
     </option>
   </component>
@@ -190,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,55 +241,7 @@
             <path>
               <item name="dash" type="b2602c69:ProjectViewProjectNode" />
               <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="cal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="cal" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="cal" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
               <item name="inc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="xcrud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="xcrud" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="xcrud" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dash" type="b2602c69:ProjectViewProjectNode" />
@@ -274,7 +267,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,17 +310,19 @@
       <workItem from="1555967260585" duration="2582000" />
       <workItem from="1556126164375" duration="4625000" />
       <workItem from="1556134865073" duration="595000" />
-      <workItem from="1556214443058" duration="7788000" />
+      <workItem from="1556214443058" duration="7846000" />
+      <workItem from="1556301340024" duration="7445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86006000" />
+    <option name="totallyTimeSpent" value="93509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19194631" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19463088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -356,13 +350,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/X/actions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/X/hr_analytics.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3043">
@@ -391,13 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/X/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -556,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init.web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="433" column="84" selection-start-line="433" selection-end-line="433" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -629,9 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="344" column="28" lean-forward="true" selection-start-line="344" selection-start-column="28" selection-end-line="344" selection-end-column="28" />
-          <folding>
-            <element signature="n#updates#0;n#calendar#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,9 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,10 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,14 +643,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cal/includes/formater.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
+        <state relative-caret-position="-391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="363" column="2" lean-forward="true" selection-start-line="363" selection-start-column="2" selection-end-line="363" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="2727" column="31" lean-forward="true" selection-start-line="2727" selection-start-column="31" selection-end-line="2727" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#!!top" />
+            <element signature="n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/X/chart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#1;n#!!top" />
+            <element signature="n#div#0;n#!!top" />
           </folding>
         </state>
       </provider>
