@@ -36,8 +36,8 @@ $graphData="[";
 $graphData2="[";
 $graphLabels='[';
 
-//echo $YAxis;
-//echo $YAxis2;
+echo $report_definition[0]["SQL_Statement"];
+echo $YAxis2;
 
 for ($count=0;$count<$numrows;$count++){
     $graphData = $graphData . $graph_data[$count][$YAxis];
@@ -54,11 +54,11 @@ $graphData2=$graphData2."]";
 $graphLabels=$graphLabels.']';
 
 
-//echo $numrows . "<br>";
-//echo $no_columns . "<br>";
-//echo $graphData . "<br>";
-//echo $graphLabels . "<br>";
-//echo $graphData2 . "<br>";
+echo $numrows . "<br>";
+echo $no_columns . "<br>";
+echo $graphData . "<br>";
+echo $graphLabels . "<br>";
+echo $graphData2 . "<br>";
 
 ?>
 

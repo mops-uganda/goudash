@@ -363,13 +363,6 @@ $reports = array(
     "url" => "X/reports"
 );
 
-$chart = array(
-    "title" => "Charts",
-    "icon" => "fa-exchange txt-color-purple",
-    "label_htm" => "  <span class='label label-success'>All reports</span>",
-    "url" => "X/chart?" . mt_rand(5, 500)
-);
-
 $User_Settings = array(
     "title" => "User Settings",
     "icon" => "fa-cogs",
@@ -449,7 +442,6 @@ if ($user->hasPermission('Strategic_Data')) array_push($page_nav, $Strategic_Dat
 if ($user->hasPermission('performance')) array_push($page_nav, $Govt_Performance);
 if ($user->General_Information) array_push($page_nav, $General_Information);
 if ($user->Reports) array_push($page_nav, $reports);
-array_push($page_nav, $chart);
 array_push($page_nav, $User_Settings);
 if ($user->userlevel == 10) array_push($page_nav, $general_setting_array);
 if ($user->userlevel == 10) array_push($page_nav, $setting_array);

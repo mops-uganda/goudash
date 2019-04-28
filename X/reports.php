@@ -1,3 +1,41 @@
+<style>
+    .xcrud-top-actions{
+        background-color:#b5b694;
+        border: 1px solid #9c9d7b;
+        background-image: -o-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -moz-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -webkit-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -ms-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: linear-gradient(to bottom, #cecfad 0%, #b5b694 100%);
+        -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
+        -moz-box-shadow: inset 0 1px 0 #e7e8c6;
+        box-shadow: inset 0 1px 0 #e7e8c6;
+        text-shadow: 0 1px 0 #e7e8c6;
+        color: #9c9d7b;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: #eeede9;}
+    .fc-head-container thead tr, .table thead tr{
+        background-color:#ccc5b1;
+        border: 1px solid #b3ac98;
+        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
+        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
+        -moz-box-shadow: inset 0 1px 0 #fef7e3;
+        box-shadow: inset 0 1px 0 #fef7e3;
+        text-shadow: 0 1px 0 #fef7e3;
+        color: #3a6b58;
+        height: 40px;
+        font-size: 14px;
+    }
+    .alert{
+        font-size: 16px;
+    }
+</style>
+
 <?php
 require_once '../securex/extra/auth.php';
 $returnURL = 'X/reports';

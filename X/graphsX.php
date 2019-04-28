@@ -35,6 +35,7 @@ switch ($no_columns){
 
 $graphData="[";
 $graphData2="[";
+$ticksData="[";
 for ($count=0;$count<$numrows;$count++){
     $graphData=$graphData."[".$count.",".$graph_data[$count][$YAxis]."]";
     $graphData2=$graphData2."[".$count.",".$graph_data[$count][$YAxis2]."]";

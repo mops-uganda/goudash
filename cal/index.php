@@ -255,8 +255,7 @@
     
     <script src="cal/js/custom.js"></script>
     
-	<script src="cal/js/g.map.js"></script>
-    <script src="http://maps.google.com/maps/api/js" defer></script>
+
 	
     <!-- call calendar plugin -->
     <script type="text/javascript">

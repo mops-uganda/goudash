@@ -22,7 +22,7 @@ $xcrud1->columns('title')
                 </div>
              </div>')
         ->order_by('id','asc');;
-$xcrud1->unset_view()->unset_limitlist()->limit(25)->unset_csv()->unset_print();
+$xcrud1->unset_view()->unset_limitlist()->limit(25)->unset_csv()->unset_print()->unset_numbers();
 $xcrud1->hide_button('add');
 
 echo $xcrud1->render();
