@@ -22,7 +22,7 @@ $data->label(array('itemsList' => 'View Report','rid' => 'ID','ReportTitle'=>'Re
 $data->subselect('Liked','SELECT COUNT(*) FROM `reports_favourite` WHERE username = "' . $username . '" AND report_id = {rid}')
     ->column_tooltip('Liked','Add to Favourite Screens or Reports');
 $data->change_type('Liked', 'bool');
-$data->highlight('Liked','!=','0','#E5F993');
+$data->highlight('Liked','!=','0','#b1c779');
 $data->button('#', "Add to favourite reports", 'glyphicon glyphicon-link icon-arrow-up', 'btn xcrud-action', array(
     'data-action' => 'add_fav_report',
     'data-task' => 'action',

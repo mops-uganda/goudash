@@ -43,6 +43,11 @@ $intranet = array(
             "icon" => "fa-sliders",
             "url" => "X/infofeed"
         ),
+        "event_list" => array(
+            "title" => "Meetings and Events",
+            "icon" => "fa-calendar",
+            "url" => "cal/meetings",
+        ),
         "event_calendar" => array(
             "title" => "Events Calendar",
             "icon" => "fa-calendar",

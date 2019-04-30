@@ -76,7 +76,7 @@ $data->fields($r[0]["gridFields"]);
 if ($reportid == 500) {
     $data->subselect('Quick','SELECT COUNT(*) FROM `reports_favourite` WHERE username = "' . $username . '" AND report_id = {rid}');
     $data->change_type('Quick', 'bool');
-    $data->highlight('Quick','!=','0','#E5F993');
+    $data->highlight('Quick','!=','0','#b1c779');
 
     $data->button('#', "Add to favourite reports", 'glyphicon glyphicon-link icon-arrow-up', 'btn xcrud-action', array(
         'data-action' => 'add_fav_report',

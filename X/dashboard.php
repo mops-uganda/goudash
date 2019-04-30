@@ -21,7 +21,7 @@ $data->label(array('itemsList' => 'View Report','rid' => 'ID','ReportTitle'=>'Re
 $data->subselect('Liked','SELECT COUNT(*) FROM `reports_favourite` WHERE username = "' . $username . '" AND report_id = {rid}')
         ->column_tooltip('Liked','Add to Favourite Screens or Reports');
 $data->change_type('Liked', 'bool');
-$data->highlight('Liked','!=','0','#E5F993');
+$data->highlight('Liked','!=','0','#b1c779');
 $data->button('#', "Add to favourite reports", 'glyphicon glyphicon-link icon-arrow-up', 'btn xcrud-action', array(
     'data-action' => 'add_fav_report',
     'data-task' => 'action',
@@ -1372,7 +1372,6 @@ $data->unset_add()->unset_edit()->unset_remove()->unset_title();
         -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
         -moz-box-shadow: inset 0 1px 0 #e7e8c6;
         box-shadow: inset 0 1px 0 #e7e8c6;
-        text-shadow: 0 1px 0 #e7e8c6;
         color: #9c9d7b;
     }
     .table-striped>tbody>tr:nth-of-type(odd) {
@@ -1388,7 +1387,6 @@ $data->unset_add()->unset_edit()->unset_remove()->unset_title();
         -webkit-box-shadow: inset 0 1px 0 #fef7e3;
         -moz-box-shadow: inset 0 1px 0 #fef7e3;
         box-shadow: inset 0 1px 0 #fef7e3;
-        text-shadow: 0 1px 0 #fef7e3;
         color: #3a6b58;
         height: 40px;
         font-size: 14px;
