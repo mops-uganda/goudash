@@ -18,7 +18,30 @@
     <!---------------------------------------------- CALENDAR MODALs ---------------------------------------------->
     
     <!-- Calendar Modal -->
-
+    <style>
+        body .fc {
+            background-color: #d1d0bf;
+            border: 1px solid #b8b7a6;
+            background-image: -o-linear-gradient(bottom, #eae9d8 0%, #d1d0bf 100%);
+            background-image: -moz-linear-gradient(bottom, #eae9d8 0%, #d1d0bf 100%);
+            background-image: -webkit-linear-gradient(bottom, #eae9d8 0%, #d1d0bf 100%);
+            background-image: -ms-linear-gradient(bottom, #eae9d8 0%, #d1d0bf 100%);
+            background-image: linear-gradient(to bottom, #eae9d8 0%, #d1d0bf 100%);
+            -webkit-box-shadow: inset 0 1px 0 #fffff1;
+            -moz-box-shadow: inset 0 1px 0 #fffff1;
+            box-shadow: inset 0 1px 0 #fffff1;
+        }
+        .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+            font-size: larger;
+            background-color: #d8d7c3;
+            color: #3a2205;
+        }
+        .fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td {
+            border-color: #bbb8b8;}
+        .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-content, .fc-unthemed .fc-popover, .fc-unthemed .fc-list-view, .fc-unthemed .fc-list-heading td {
+            border-color: #f3f2e5;
+        }
+    </style>
     <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
