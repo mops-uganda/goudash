@@ -43,6 +43,11 @@ $intranet = array(
             "icon" => "fa-sliders",
             "url" => "X/infofeed"
         ),
+        "event_list" => array(
+            "title" => "Meetings and Events",
+            "icon" => "fa-calendar",
+            "url" => "cal/meetings",
+        ),
         "event_calendar" => array(
             "title" => "Events Calendar",
             "icon" => "fa-calendar",
@@ -80,7 +85,7 @@ $statistics = array(
 $actions_tracker = array(
     "title" => "",
     "icon" => "fa-rss txt-color-orange ",
-    "label_htm" => '<button class="btn btn-sm btn-success " type="button">Actions Tracker</button>',
+    "label_htm" => '<button class="btn btn-sm btn-warning " type="button">Actions Tracker</button>',
     "url" => "X/action-tracker"
 );
 
@@ -433,7 +438,7 @@ $setting_array = array(
 array_push($page_nav, $intranet);
 if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $hr_analytics);
 if ($user->hasPermission('hr_analytics.view')) array_push($page_nav, $establishment_structures);
-if ($user->hasPermission('statistics.view')) array_push($page_nav, $statistics);
+//if ($user->hasPermission('statistics.view')) array_push($page_nav, $statistics);
 if ($user->hasPermission('actions.tracker')) array_push($page_nav, $actions_tracker);
 if ($user->hasPermission('Strategic_Projects')) array_push($page_nav, $Strategic_Projects);
 if ($user->hasPermission('Strategic_Actions')) array_push($page_nav, $Strategic_Actions);
