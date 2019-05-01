@@ -1,8 +1,10 @@
+<!--
 <style>
     .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
         line-height: 74px;
     }
 </style>
+-->
 <style>
     .xcrud-top-actions{
         background-color:#b5b694;
@@ -17,7 +19,10 @@
         box-shadow: inset 0 1px 0 #e7e8c6;
         color: #9c9d7b;
     }
-    .table-striped>tbody>tr:nth-of-type(odd) {
+    .xcrud-view{
+        padding-top: 8px;
+    }
+    .table-striped>tbod<div class="xcrud-view">y>tr:nth-of-type(odd) {
         background-color: #eeede9;}
     .fc-head-container thead tr, .table thead tr{
         background-color:#ccc5b1;
@@ -37,6 +42,17 @@
     .alert{
         font-size: 16px;
     }
+    .cardi{
+        background: #eceef1 100% linear-gradient(#e3e2e8 0%, #e0d9d9 50%, #e0d9d9 50%, #e3e2e8 100%);
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(216, 217, 189, 0.4);
+        border-left: 5px solid #44500b;
+        padding-left: 20px;
+        color: #1b1604;
+    }
+    .icon-background1 {
+        color: #ffc0ff;
+    }
+
 </style>
 <?php
 require_once '../securex/extra/auth.php';
@@ -56,8 +72,28 @@ $data->table('calendar')
     ->table_name('Meetings and Events','Track assignments to officers','icon-connection')
     //->field_tooltip('action','Action or Assignment to be tracked')
     //->column_tooltip('action','Action or Assignment to be tracked')
-    //->column_pattern('percent_progress', '<div class="progress left progress-striped"><div class="progress-bar bg-color-greenLight" style="width: {percent_progress}%">{percent_progress}%</div></div>')
-    //->columns('action,assigned_to,assignment_date,current_status,deadline_date,percent_progress')
+    ->column_pattern('title', '
+    <div class="alert cardi container-fluid">
+    <div class="col-sm-9">
+        <i class="fa fa-tasks" style="padding-right: 5px"></i><strong>{title}</strong><p></p>
+        <span class="label label-success">Category: {category}</span>
+        <span class="label label-warning">Priority: {Priority}</span>
+        <span class="label bg-color-greenLight" style="margin-left: 5px">Venue: {Venue}</span><p></p>
+        <span>{description}</span>
+    </div>
+    <div class="col-sm-3 pull-right">
+        <span class="pull-right"><strong>From <i class="fa fa-clock-o" style="padding-right: 5px"></i></strong> {start}</span><br>
+        <span class="pull-right"><strong>To <i class="fa fa-clock-o" style="padding-right: 5px"></i></strong> {end}</span>
+    </div>
+</div>
+    ')
+    ->columns('title')
+    ->fields('title,description,start,end,allDay,category,Venue,Priority')
+    ->change_type('allDay','select','','true,false')
+    ->change_type('category','select','','General,Meeting,Assignment,Personal')
+    ->change_type('Priority','select','','High,Normal,Low')
+    ->unset_add()->unset_edit()->unset_remove()->unset_view()
+    ->order_by('start','asc')
     //->pass_default(array('assigned_by' => $user->username, 'city' => 'Kampala'))
     //->readonly('assigned_by')
     //->pass_default('assignment_date', date("d.m.Y"))
