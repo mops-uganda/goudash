@@ -45,6 +45,7 @@
         box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(216, 217, 189, 0.4);
         border-left: 5px solid #44500b;
         padding-left: 20px;
+        color: #1b1604;
     }
     .icon-background1 {
         color: #ffc0ff;
@@ -54,6 +55,9 @@
 <div class="alert cardi container-fluid">
     <div class="col-sm-9">
         <i class="fa fa-tasks" style="padding-right: 5px"></i><strong>PowerPoint Training</strong><p></p>
+        <span class="label label-success">Category: Meetings</span>
+        <span class="label label-warning">Priority: Normal</span>
+        <span class="label bg-color-greenLight">Venue: Main Boardroom</span><p></p>
         <span>User training</span>
     </div>
     <div class="col-sm-3 pull-right">
