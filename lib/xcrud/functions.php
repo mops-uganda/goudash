@@ -189,6 +189,38 @@ function movebottom($xcrud)
     }
 }
 
+function department_card($value, $fieldname, $primary_key, $row, $xcrud)
+{
+    $class_indent = "";
+    switch ($row['vote_departments.department_type']){
+        case "Department":
+            $class_indent = "cell_indent";
+            break;
+        case "Division":
+            $class_indent = "cell_indent2";
+            break;
+        case "Section":
+            $class_indent = "cell_indent3";
+            break;
+        case "Unit":
+            $class_indent = "cell_indent4";
+            break;
+        case "Office":
+            $class_indent = "cell_indent5";
+            break;
+    }
+    return '
+            <div class="' . $class_indent . '">
+                <div class="col-sm-9">
+                    <i class="fa fa-tasks" style="padding-right: 5px"></i>' . $row['vote_departments.department_name'] . '<p></p>
+                </div>
+                <div class="col-sm-3 pull-right">
+                    <span class="pull-right">' . $row['vote_departments.department_type'] . '</span>
+                </div>
+            </div>
+    ';
+}
+
 function show_description($value, $fieldname, $primary_key, $row, $xcrud)
 {
     $result = '';
