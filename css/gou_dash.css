@@ -15,7 +15,7 @@
     color: #8d8f63;
 }
 #project-selector, .project-selector {
-    color: #9d552e;
+    color: #7f7e11;
 }
 .smart-style-1 .btn-header>:first-child>a {
     background: #393922;
@@ -104,4 +104,14 @@ Loading
         transform: scale(2);
         opacity: 0;
     }
+}
+
+.smart-style-3 #header {
+    background-image: linear-gradient(to bottom,#f69542,#3b2004);
+}
+
+.smart-style-3 .project-context>:first-child{
+    color: #000000;
+    text-shadow: #000000 0 0px;
+    font-size: 11px;
 }
