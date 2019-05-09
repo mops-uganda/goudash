@@ -302,7 +302,7 @@ if (!$no_main_header) {
                 <a href="#cal/index?=<?php echo mt_rand(5, 500) ?>" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
             </li>
             <li>
-                <a href="securex/public" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+                <a href="#X/useradmin" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
             </li>
         </ul>
     </div>

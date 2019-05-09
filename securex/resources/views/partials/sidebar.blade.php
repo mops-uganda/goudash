@@ -29,18 +29,6 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/dash') ? 'active' : ''  }}" href="../../">
-                    <i class="fas fa-home"></i>
-                    <span>Home Page</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('/__') ? 'active' : ''  }}">
-
-                    <span>_______________________________</span>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link {{ Request::is('/') ? 'active' : ''  }}" href="{{ route('dashboard') }}">
                     <i class="fas fa-cube"></i>
                     <span>User Admin Dashboard</span>
@@ -131,4 +119,19 @@
         </ul>
     </div>
 </nav>
+<style>
+    .sidebar {
+        background-color:#1e1c29;
+        border: 1px solid #050310;
+        background-image: -o-linear-gradient(bottom, #373542 0%, #1e1c29 100%);
+        background-image: -moz-linear-gradient(bottom, #373542 0%, #1e1c29 100%);
+        background-image: -webkit-linear-gradient(bottom, #373542 0%, #1e1c29 100%);
+        background-image: -ms-linear-gradient(bottom, #373542 0%, #1e1c29 100%);
+        background-image: linear-gradient(to bottom, #373542 0%, #1e1c29 100%);
+        -webkit-box-shadow: inset 0 1px 0 #504e5b;
+        -moz-box-shadow: inset 0 1px 0 #504e5b;
+        box-shadow: inset 0 1px 0 #504e5b;
+        text-shadow: 0 1px 0 #504e5b;
+    }
+</style>
 

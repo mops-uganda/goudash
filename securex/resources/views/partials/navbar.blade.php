@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top align-items-start navbar-expand-lg pl-0 pr-0 py-0" >
 
     <div class="navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand mr-0" href="../../">
+        <a class="navbar-brand mr-0" href="../../" target="_top">
             <img src="{{ url('assets/img/vanguard-logo.png') }}" height="35" alt="{{ settings('app_name') }}">
         </a>
     </div>
@@ -77,3 +77,39 @@
         </ul>
     </div>
 </nav>
+
+<style>
+    .navbar-brand-wrapper {
+        background-color:#ccc5b1;
+        border: 1px solid #b3ac98;
+        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
+        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
+        -moz-box-shadow: inset 0 1px 0 #fef7e3;
+        box-shadow: inset 0 1px 0 #fef7e3;
+    }
+    .navbar-collapse {
+        background-color:#ccc5b1;
+        border: 1px solid #e8e1cc;
+        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
+        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
+        -moz-box-shadow: inset 0 1px 0 #fef7e3;
+        box-shadow: inset 0 1px 0 #fef7e3;
+    }
+    .text-muted {
+        color: #0d3e21!important;
+    }
+    .breadcrumb-item.active {
+        color: #0d3e21;
+    }
+    .navbar .page-header {
+        border-right: 1px solid #1f3309;
+    }
+</style>

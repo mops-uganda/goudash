@@ -90,8 +90,8 @@ $graphLabels=$graphLabels.']';
     </div>
 </div>
 <script>
-    var nn = <?php echo $no_columns ?>;
-    if (nn===1){
+    var no_columns = <?php echo $no_columns ?>;
+    if (no_columns===1){
         new Chart(document.getElementById("bar-chart"), {
             type: 'bar',
             data: {
@@ -113,11 +113,30 @@ $graphLabels=$graphLabels.']';
                 legend: {
                     position: "top"
                 },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: '<?php echo $Legend;?>'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: '<?php echo $Tooltip;?>'
+                        }
+                    }]
+                }
             }
         });
     }
 
-    if(nn===2){
+    if(no_columns===2){
         new Chart(document.getElementById("bar-chart"), {
             type: 'bar',
             data: {

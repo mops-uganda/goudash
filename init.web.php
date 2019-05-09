@@ -375,8 +375,7 @@ $User_Settings = array(
         "User_Profile" => array(
             "title" => "User Profile",
             "icon" => "fa fa-user",
-            "url_target" => "_top",
-            "url" => "http://" . $_SERVER['HTTP_HOST'] . "" . $_SERVER['REQUEST_URI'] . "securex/public",
+            "url" => "X/useradmin?=".mt_rand(5, 500),
         ),
         "my_permissions" => array(
             "title" => "My User Permissions",
