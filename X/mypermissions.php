@@ -16,6 +16,8 @@ $permissions = auth()->user()->role->permissions->toArray();
     .alert {
         border-left-width: 15px;
         border-right-width: 15px;
+        background-image: linear-gradient(to bottom, #d6cda2 0%, #bdb489 100%);
+
     }
 </style>
 

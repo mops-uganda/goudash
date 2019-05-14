@@ -34,6 +34,7 @@ $page_nav = array(
     )
 );
 
+
 $intranet = array(
     "title" => "Information Feed",
     "icon" => "fa-sliders",
@@ -329,6 +330,10 @@ $General_Information = array(
             "title" => "List of all Votes",
             "url" => "X/reports?id=555"
         ),
+        "votesByVoteType" => array(
+            "title" => "Votes by Vote Type",
+            "url" => "X/data"
+        ),
         "SectorsAndThematicAreas" => array(
             "title" => "Sectors / Thematic Areas",
             "url" => "X/SectorsAndThematicAreas"
@@ -451,9 +456,8 @@ if ($user->userlevel == 10) array_push($page_nav, $general_setting_array);
 if ($user->userlevel == 10) array_push($page_nav, $setting_array);
 
 //configuration variables
-$page_title = "";
+$page_title = "GOU Dashboard";
 $page_css = array();
 $no_main_header = false; //set true for lock.php and login.php
 $page_body_prop = array(); //optional properties for <body>
 $page_html_prop = array(); //optional properties for <html>
-?>

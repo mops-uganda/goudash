@@ -1,41 +1,3 @@
-<style>
-    .xcrud-top-actions{
-        background-color:#b5b694;
-        border: 1px solid #9c9d7b;
-        background-image: -o-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -moz-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -webkit-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -ms-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: linear-gradient(to bottom, #cecfad 0%, #b5b694 100%);
-        -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
-        -moz-box-shadow: inset 0 1px 0 #e7e8c6;
-        box-shadow: inset 0 1px 0 #e7e8c6;
-        text-shadow: 0 1px 0 #e7e8c6;
-        color: #9c9d7b;
-    }
-    .table-striped>tbody>tr:nth-of-type(odd) {
-        background-color: #eeede9;}
-    .fc-head-container thead tr, .table thead tr{
-        background-color:#ccc5b1;
-        border: 1px solid #b3ac98;
-        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
-        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
-        -moz-box-shadow: inset 0 1px 0 #fef7e3;
-        box-shadow: inset 0 1px 0 #fef7e3;
-        text-shadow: 0 1px 0 #fef7e3;
-        color: #3a6b58;
-        height: 40px;
-        font-size: 14px;
-    }
-    .alert{
-        font-size: 16px;
-    }
-</style>
-
 <?php
 require_once '../securex/extra/auth.php';
 $returnURL = 'X/reports';
@@ -65,7 +27,14 @@ $db->query($sql);
 $r = $db->result();
 
 $data = Xcrud::get_instance();
-$data->table($r[0]["ReportTable"]);
+
+
+if ($r[0]["reportType"] == 'Query'){
+    $data->query($r[0]["ReportSQL"]);
+}else{
+    $data->table($r[0]["ReportTable"]);
+}
+
 $data->order_by($r[0]["orderColumn"],$r[0]["orderAsc"]);
 $data->table_name($r[0]["ReportTitle"])
     ->set_lang('return','Return to ' . $r[0]["ReportTitle"]);
@@ -143,11 +112,6 @@ if (isset($_GET['select'])) {
         case 3: if (($_GET[$r[0]["filterColumn3"]])) $data->where($r[0]["filterColumn3"] . ' =', $_GET[$r[0]["filterColumn3"]]); break;
     }
 }
-$sql = "SELECT COUNT(*) as counter FROM " . $r[0]["ReportTable"];
-if ($r[0]["whereTxt"]) $sql = $sql . ' WHERE ' . $r[0]["whereTxt"];
-
-$db->query($sql);
-$rpt_counter = $db->result();
 
 ?>
 
@@ -156,42 +120,42 @@ $rpt_counter = $db->result();
 </script>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
         <h1 class="page-title txt-color-blueDark">
             <i class="fa fa-table fa-fw "></i>
             <?php echo $r[0]["ReportTitle"] ?>
         </h1>
     </div>
-    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
         <ul id="sparks" class="">
             <li class="sparks-info">
-                <h4> <?php echo $rpt_counter[0]["counter"]; ?> <span class="txt-color-blue"> <i class="fa fa-arrow-circle-up" data-rel="bootstrap-tooltip" title="Increased"></i> <?php echo $r[0]["itemsList"] ?></span></h4>
+                <h4><span class="txt-color-blue"> <i class="fa fa-arrow-circle-up" data-rel="bootstrap-tooltip" title="Increased"></i> <?php echo $r[0]["itemsList"] ?></span></h4>
             </li>
         </ul>
     </div>
 </div>
-<div class="alert alert-info"><button class="btn btn-success btn-labeled btn-md " onclick="location.href='<?php echo $r[0]["return_link"] ?>';"><span class="btn-label"><i class="fa fa-chevron-left"></i></span> <?php echo $r[0]["return_link_text"] ?></button>
+<div class="alert alert-info"><button class="btn bg btn-labeled btn-md btn-success" onclick="location.href='<?php echo $r[0]["return_link"] ?>';"><span class="btn-label"><i class="fa fa-chevron-left"></i></span> <?php echo $r[0]["return_link_text"] ?></button>
     <?php
-        if ($r[0]["hasFilter"]) {
-            $db->query($r[0]["filterSQL"]);
-            $filter_list = $db->result_array();
-    ?>
-    <?php echo $r[0]["filterText"] ?> :-
-    <label class="input-sm">
-    <select name="Vote" onchange="document.location.href='#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>&select=1&SelectBy=<?php echo $r[0]["filterColumn"] ?>&<?php echo $r[0]["filterColumn"] ?>='+this.value">
-    <option value="0"><?php echo $r[0]["filterText"] ?></option>
-    <option value="0"> -- Show all records -- </option>
+    if ($r[0]["hasFilter"]) {
+        $db->query($r[0]["filterSQL"]);
+        $filter_list = $db->result_array();
+        ?>
+        <?php echo $r[0]["filterText"] ?> :-
+        <label class="input-sm">
+            <select name="Vote" onchange="document.location.href='#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>&select=1&SelectBy=<?php echo $r[0]["filterColumn"] ?>&<?php echo $r[0]["filterColumn"] ?>='+this.value">
+                <option value="0"><?php echo $r[0]["filterText"] ?></option>
+                <option value="0"> -- Show all records -- </option>
                 <?php
                 for ($count=0;$count<count($filter_list);$count++){
                     ?>
-                        <option value="<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></option>
+                    <option value="<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></option>
                     <?php
                 }
                 ?>
             </select> <i></i>
         </label>
-    <?php
-        }
+        <?php
+    }
     ?>
     <!-- Filter 2 -->
     <?php
@@ -309,5 +273,42 @@ $rpt_counter = $db->result();
     // load related plugins
 
 </script>
+<style>
+    .xcrud-top-actions{
+        background-color:#b5b694;
+        border: 1px solid #9c9d7b;
+        background-image: -o-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -moz-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -webkit-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -ms-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: linear-gradient(to bottom, #cecfad 0%, #b5b694 100%);
+        -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
+        -moz-box-shadow: inset 0 1px 0 #e7e8c6;
+        box-shadow: inset 0 1px 0 #e7e8c6;
+        text-shadow: 0 1px 0 #e7e8c6;
+        color: #9c9d7b;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: #eeede9;}
+    .fc-head-container thead tr, .table thead tr{
+        background-color:#ccc5b1;
+        border: 1px solid #b3ac98;
+        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
+        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
+        -moz-box-shadow: inset 0 1px 0 #fef7e3;
+        box-shadow: inset 0 1px 0 #fef7e3;
+        text-shadow: 0 1px 0 #fef7e3;
+        color: #3a6b58;
+        height: 40px;
+        font-size: 14px;
+    }
+    .alert{
+        font-size: 16px;
+    }
+</style>
 
 

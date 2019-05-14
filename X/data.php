@@ -1,0 +1,1 @@
+<iframe src="report/votes" name="iframe_a" style="border:none;" onload="this.style.height=this.contentDocument.body.scrollHeight+150 +'px';" width="100%"></iframe>
