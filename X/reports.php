@@ -14,7 +14,6 @@ if (isset($_GET['id'])) {
     $reportid = $_GET['id'];
 }
 
-
 require ('../lib/xcrud/xcrud.php');
 
 $user = Auth::user();
@@ -23,7 +22,6 @@ $username = $user->username;
 $db = Xcrud_db::get_instance();
 $sql = 'SELECT * FROM `reports` WHERE rid = ' . $reportid;
 $db->query($sql);
-/** @var TYPE_NAME $r */
 $r = $db->result();
 
 $data = Xcrud::get_instance();

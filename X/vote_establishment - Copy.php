@@ -47,7 +47,7 @@ $structure->table('vote_departments')
     ->fields('id,department_name,Jobs,description', false, 'Overview', 'view')
     ->column_pattern('id','{vote}-{id}')
     ->change_type('priority','select','','Low,Normal,High,Critical')
-    ->subselect('Jobs','SELECT SUM(approv_no) FROM vote_departments_jobs WHERE dept_id = {dept_id}')
+    ->subselect('Jobs','SELECT SUM(approv_no) FROM vote_departments_jobs WHERE dept_id = {id}')
     ->column_width('Jobs','60px')
     ->column_class('Jobs','align-right')
     ->unset_title();
@@ -71,31 +71,30 @@ $structure->highlight_row('department_type','=','Executive Office', '', 'Executi
 $structure->highlight_row('department_type','=','Directorate Heading', '','Directorate_Heading');
 $structure->highlight_row('department_type','=','Directorate', '','Directorate');
 $structure->highlight_row('department_type','=','Department Heading', '', 'Department_Heading');
+$structure->highlight_row('department_type','=','', '#050c23');
 $structure->highlight_row('department_type','=','Department', '#D4DBC5');
 $structure->highlight_row('department_type','=','Division Heading', '#b0b8e5');
-$structure->highlight_row('department_type','=','Town Council', '#b0b8e5');
 $structure->highlight_row('department_type','=','Stand Alone Division', '#b0b8e5');
 
 $structure->column_pattern('department_type','{department_type}');
 $structure->column_callback('department_name','department_card');
 
 $structure->unset_sortable()
-    ->limit(50);
+            ->limit(50);
 $structure->order_by('ordering, id')
-    ->label(array('department_name'=>'List of Departments, Divisions, Sections and Units'));
+        ->label(array('department_name'=>'List of Departments, Divisions, Sections and Units'));
 $structure->set_lang('add','Add New Directorate, Department, Division, Section or Unit');
 $structure->set_lang('return','Return to List of Directorates, Departments, Divisions, Sections and Units');
-$jobs_list = $structure->nested_table('List of Jobs and Approved Establishment','dept_id','vote_departments_jobs','dept_id');
+$jobs_list = $structure->nested_table('List of Jobs and Approved Establishment','id','vote_departments_jobs','dept_id');
 $jobs_list->columns('job_title,salary_scale,approv_no,monthly_salary,Annual_Salary')
-    ->subselect('Annual_Salary','{monthly_salary}*{approv_no}*12')
-    ->label(array('Annual_Salary'=>'Annual Salary'))
-    ->fields('job_title,salary_scale,approv_no,monthly_salary,Annual_Salary')
-    ->table_name('List of Jobs and Approved Establishment')
-    ->change_type('monthly_salary', 'price','0', array('suffix'=>' ','decimals'=>'0'))
-    ->change_type('Annual_Salary', 'price','0', array('suffix'=>' ','decimals'=>'0'))
-    ->column_class('approv_no,monthly_salary,Annual_Salary','align-right')
-    ->sum('approv_no,Annual_Salary','align-right','Total: {value}');
-
+            ->subselect('Annual_Salary','{monthly_salary}*{approv_no}*12')
+            ->label(array('Annual_Salary'=>'Annual Salary'))
+            ->fields('job_title,salary_scale,approv_no,monthly_salary,Annual_Salary')
+            ->table_name('List of Jobs and Approved Establishment')
+            ->change_type('monthly_salary', 'price','0', array('suffix'=>' ','decimals'=>'0'))
+            ->change_type('Annual_Salary', 'price','0', array('suffix'=>' ','decimals'=>'0'))
+            ->column_class('approv_no,monthly_salary,Annual_Salary','align-right')
+            ->sum('approv_no,Annual_Salary','align-right','Total: {value}');
 
 
 $structureText = "List of <strong>Directorates, Departments, Divisions, Sections and Units.</strong><br>";
@@ -103,7 +102,7 @@ $structureText = $structureText . $structure->render();
 
 ?>
 
-<h1><?php echo $votename; ?></h1>
+
 <?php
 // draw tabs
 $_ui->start_track();
@@ -132,6 +131,9 @@ $tab_html = $tab->print_html(true);
 echo $tab_html;
 
 ?>
+
+
+
 
 
 <script language="javascript">
@@ -251,17 +253,17 @@ echo $tab_html;
         font-weight: bold;
         font-family: Verdana, Geneva, sans-serif;
 
-        background-color:#b5b694;
-        border: 1px solid #9c9d7b;
-        background-image: -o-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -moz-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -webkit-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -ms-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: linear-gradient(to bottom, #cecfad 0%, #b5b694 100%);
-        -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
-        -moz-box-shadow: inset 0 1px 0 #e7e8c6;
-        box-shadow: inset 0 1px 0 #e7e8c6;
-        text-shadow: 0 1px 0 #e7e8c6;
+        background-color:#b49c1c;
+        border: 1px solid #9b8303;
+        background-image: -o-linear-gradient(bottom, #cdb535 0%, #b49c1c 100%);
+        background-image: -moz-linear-gradient(bottom, #cdb535 0%, #b49c1c 100%);
+        background-image: -webkit-linear-gradient(bottom, #cdb535 0%, #b49c1c 100%);
+        background-image: -ms-linear-gradient(bottom, #cdb535 0%, #b49c1c 100%);
+        background-image: linear-gradient(to bottom, #cdb535 0%, #b49c1c 100%);
+        -webkit-box-shadow: inset 0 1px 0 #e6ce4e;
+        -moz-box-shadow: inset 0 1px 0 #e6ce4e;
+        box-shadow: inset 0 1px 0 #e6ce4e;
+        text-shadow: 0 1px 0 #e6ce4e;
         color: #483d01;
 
     }
@@ -339,9 +341,11 @@ echo $tab_html;
 
     .col-sm-9 {
         padding-left: 0px;
+        padding-top: 7px;
         font-family: Verdana, Geneva, sans-serif;
     }
     .col-sm-3 {
+        padding-top: 7px;
         font-family: Verdana, Geneva, sans-serif;
     }
     .xcrud-num {
@@ -355,6 +359,10 @@ echo $tab_html;
         background-image: -webkit-linear-gradient(bottom, #e37d1b 0%, #ca6402 100%);
         background-image: -ms-linear-gradient(bottom, #e37d1b 0%, #ca6402 100%);
         background-image: linear-gradient(to bottom, #e37d1b 0%, #ca6402 100%);
+        -webkit-box-shadow: inset 0 1px 0 #fc9634;
+        -moz-box-shadow: inset 0 1px 0 #fc9634;
+        box-shadow: inset 0 1px 0 #fc9634;
+        text-shadow: 0 1px 0 #fc9634;
         color: #f3efed;
     }
     .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
@@ -371,6 +379,9 @@ echo $tab_html;
         box-shadow: inset 0 1px 0 #e7e8c6;
         text-shadow: 0 1px 0 #e7e8c6;
         color: #4b4d10;
+    }
+    .form-horizontal .control-label {
+        padding-top: 12px;
     }
     .xcrud .xcrud-list td.xcrud-sum {
         background-color:#b5b694;
@@ -390,8 +401,8 @@ echo $tab_html;
     .table-bordered>thead>tr>th {
         border: 1px solid #babb97;
     }
-    .table>tbody>tr>td{
-        padding: 8px 10px 1px 10px;
+    .xcrud-list td.align-right {
+        padding-top: 15px;
     }
 </style>
 

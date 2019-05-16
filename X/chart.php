@@ -18,18 +18,18 @@ if (isset($_GET['id'])) {
 $db = Xcrud_db::get_instance();
 $sql = 'SELECT * FROM `graphs` WHERE GID = ' . $graph_id;
 $db->query($sql);
-$report_definition = $db->result();
-$db->query($report_definition[0]["SQL_Statement"]);
+$repDef = $db->result();
+$db->query($repDef[0]["SQL_Statement"]);
 $graph_data = $db->result();
 $numrows=count($graph_data);
-$no_columns = $report_definition[0]["columns"];
+$no_columns = $repDef[0]["columns"];
 
 list($XAxis, $YAxis, $YAxis2, $Tooltip, $Tooltip2) = array('XAxis','YAxis','YAxis2','Tooltip','Tooltip2');
-$no_columns = $report_definition[0]["columns"];
-$column_size = $report_definition[0]["Colmn_Size"];
+$no_columns = $repDef[0]["columns"];
+$column_size = $repDef[0]["Colmn_Size"];
 switch ($no_columns){
-    case 1: list($XAxis, $YAxis, $Tooltip, $Legend) = explode(':',$report_definition[0]["X_Y_Axis"]); $YAxis2=""; $Legend2=""; break;
-    case 2: list($XAxis, $YAxis, $YAxis2, $Tooltip, $Legend, $Legend2) = explode(':',$report_definition[0]["X_Y_Axis"]); break;
+    case 1: list($XAxis, $YAxis, $Tooltip, $Legend) = explode(':',$repDef[0]["X_Y_Axis"]); $YAxis2=""; $Legend2=""; break;
+    case 2: list($XAxis, $YAxis, $YAxis2, $Tooltip, $Legend, $Legend2) = explode(':',$repDef[0]["X_Y_Axis"]); break;
 }
 
 $graphData="[";
@@ -81,10 +81,10 @@ $graphLabels=$graphLabels.']';
 
     }
 </style>
-<button class="btn btn-success btn-labeled btn-md " onclick="location.href='#X/reports';"><span class="btn-label"><i class="fa fa-chevron-left"></i></span> Return to List of Reports</button>
+<button class="btn btn-success btn-labeled btn-md " onclick="location.href='<?php echo $repDef[0]["return_link"] ?>';"><span class="btn-label"><i class="fa fa-chevron-left"></i></span> <?php echo $repDef[0]["return_link_text"] ?></button>
 <button class="btn btn-warning btn-labeled btn-md " onclick="location.reload();"><span class="btn-label"><i class="fa fa-refresh"></i></span> Refresh</button>
 <div class="container">
-    <h2><?php echo $report_definition[0]["Graph_Name"]; ?></h2>
+    <h2><?php echo $repDef[0]["Graph_Name"]; ?></h2>
     <div>
         <canvas id="bar-chart"></canvas>
     </div>
@@ -93,13 +93,13 @@ $graphLabels=$graphLabels.']';
     var no_columns = <?php echo $no_columns ?>;
     if (no_columns===1){
         new Chart(document.getElementById("bar-chart"), {
-            type: 'bar',
+            type: '<?php echo $repDef[0]["GraphType"];?>',
             data: {
                 labels: <?php echo $graphLabels;?>,
                 datasets: [
                     {
-                        label: "<?php echo $report_definition[0]["Label"]; ?>",
-                        backgroundColor: ["#3E312E", "#A09A7B","#323617","#B8903B","#733C24","#6F572C","#2A301B","#496152","#738984","#B0BD9F","#290F1C","#71474F","#D58C57","#CAC59E","#9B9596","#3D4543","#657669","#7E927D","#191C2C","#41425E","#AECCC6"],
+                        label: "<?php echo $repDef[0]["Label"]; ?>",
+                        backgroundColor: ["#3E312E", "#A09A7B","#323617","#B8903B","#733C24","#6F572C","#2A301B","#496152","#738984","#B0BD9F","#290F1C","#71474F","#D58C57","#CAC59E","#9B9596","#3D4543","#657669","#7E927D","#191C2C","#41425E","#AECCC6","#3E312E", "#A09A7B","#323617","#B8903B","#733C24","#6F572C","#2A301B","#496152","#738984","#B0BD9F","#290F1C","#71474F","#D58C57","#CAC59E","#9B9596"],
                         data: <?php echo $graphData;?>
                     }
                 ]
@@ -108,7 +108,7 @@ $graphLabels=$graphLabels.']';
                 legend: { display: false },
                 title: {
                     display: true,
-                    text: '<?php echo $report_definition[0]["Graph_Heading"]; ?>'
+                    text: '<?php echo $repDef[0]["Graph_Heading"]; ?>'
                 },
                 legend: {
                     position: "top"
