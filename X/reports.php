@@ -283,7 +283,6 @@ if (isset($_GET['select'])) {
         -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
         -moz-box-shadow: inset 0 1px 0 #e7e8c6;
         box-shadow: inset 0 1px 0 #e7e8c6;
-        text-shadow: 0 1px 0 #e7e8c6;
         color: #9c9d7b;
     }
     .table-striped>tbody>tr:nth-of-type(odd) {
