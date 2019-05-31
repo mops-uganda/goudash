@@ -137,7 +137,12 @@ $list = $db->result();
                         <h5>List of Government Projects, <strong>Tick on the Right Button </strong> to Mark as a Priority, Strategic Project</h5>
                         <?php
                         echo $data->render();
+                        include "xcrud_js.php";
                         ?>
+
+                        <!-- Xcrud CSS -->
+                        <link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+                        <link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
                     </div>
                     <!-- end widget content -->
 

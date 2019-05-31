@@ -1,0 +1,2 @@
+[23-May-2019 10:01:29 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pmundua/public_html/dash/cal/includes/calendar.php on line 51
+[23-May-2019 10:01:29 UTC] PHP Notice:  Undefined variable: f_site_url in /home/pmundua/public_html/dash/cal/_install.php on line 205

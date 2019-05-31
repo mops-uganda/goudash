@@ -1,59 +1,3 @@
-<!--
-<style>
-    .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-        line-height: 74px;
-    }
-</style>
--->
-<style>
-    .xcrud-top-actions{
-        background-color:#b5b694;
-        border: 1px solid #9c9d7b;
-        background-image: -o-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -moz-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -webkit-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: -ms-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
-        background-image: linear-gradient(to bottom, #cecfad 0%, #b5b694 100%);
-        -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
-        -moz-box-shadow: inset 0 1px 0 #e7e8c6;
-        box-shadow: inset 0 1px 0 #e7e8c6;
-        color: #9c9d7b;
-    }
-    .xcrud-view{
-        padding-top: 8px;
-    }
-    .table-striped>tbod<div class="xcrud-view">y>tr:nth-of-type(odd) {
-        background-color: #eeede9;}
-    .fc-head-container thead tr, .table thead tr{
-        background-color:#ccc5b1;
-        border: 1px solid #b3ac98;
-        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
-        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
-        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
-        -moz-box-shadow: inset 0 1px 0 #fef7e3;
-        box-shadow: inset 0 1px 0 #fef7e3;
-        color: #3a6b58;
-        height: 40px;
-        font-size: 14px;
-    }
-    .alert{
-        font-size: 16px;
-    }
-    .cardi{
-        background: #eceef1 100% linear-gradient(#e3e2e8 0%, #e0d9d9 50%, #e0d9d9 50%, #e3e2e8 100%);
-        box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(216, 217, 189, 0.4);
-        border-left: 5px solid #44500b;
-        padding-left: 20px;
-        color: #1b1604;
-    }
-    .icon-background1 {
-        color: #ffc0ff;
-    }
-
-</style>
 <?php
 require_once '../securex/extra/auth.php';
 $returnURL = 'X/meetings';
@@ -112,3 +56,64 @@ $data->table('calendar')
     //->column_callback('action','add_user_icon')
     ->set_lang('add','Add New Meetings / Event');
 echo $data->render();
+include "xcrud_js.php";
+?>
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
+<!--
+<style>
+    .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+        line-height: 74px;
+    }
+</style>
+-->
+<style>
+    .xcrud-top-actions{
+        background-color:#b5b694;
+        border: 1px solid #9c9d7b;
+        background-image: -o-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -moz-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -webkit-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: -ms-linear-gradient(bottom, #cecfad 0%, #b5b694 100%);
+        background-image: linear-gradient(to bottom, #cecfad 0%, #b5b694 100%);
+        -webkit-box-shadow: inset 0 1px 0 #e7e8c6;
+        -moz-box-shadow: inset 0 1px 0 #e7e8c6;
+        box-shadow: inset 0 1px 0 #e7e8c6;
+        color: #9c9d7b;
+    }
+    .xcrud-view{
+        padding-top: 8px;
+    }
+    .table-striped>tbod<div class="xcrud-view">y>tr:nth-of-type(odd) {
+                                                  background-color: #eeede9;}
+    .fc-head-container thead tr, .table thead tr{
+        background-color:#ccc5b1;
+        border: 1px solid #b3ac98;
+        background-image: -o-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -moz-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -webkit-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: -ms-linear-gradient(bottom, #e5deca 0%, #ccc5b1 100%);
+        background-image: linear-gradient(to bottom, #e5deca 0%, #ccc5b1 100%);
+        -webkit-box-shadow: inset 0 1px 0 #fef7e3;
+        -moz-box-shadow: inset 0 1px 0 #fef7e3;
+        box-shadow: inset 0 1px 0 #fef7e3;
+        color: #3a6b58;
+        height: 40px;
+        font-size: 14px;
+    }
+    .alert{
+        font-size: 16px;
+    }
+    .cardi{
+        background: #eceef1 100% linear-gradient(#e3e2e8 0%, #e0d9d9 50%, #e0d9d9 50%, #e3e2e8 100%);
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(216, 217, 189, 0.4);
+        border-left: 5px solid #44500b;
+        padding-left: 20px;
+        color: #1b1604;
+    }
+    .icon-background1 {
+        color: #ffc0ff;
+    }
+
+</style>

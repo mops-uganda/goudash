@@ -67,6 +67,7 @@ if ($r[0]["highlight2"]){$h = explode(':',$r[0]["highlight2"]); $data->highlight
 
 
 if ($r[0]["subselect"]) $data->subselect($r[0]["subselect"], $r[0]["subselect_query"]);
+if ($r[0]["subselect2"]) $data->subselect($r[0]["subselect2"], $r[0]["subselect_query2"]);
 
 if ($r[0]["unset_add"]) $data->unset_add();
 if ($r[0]["unset_edit"]) $data->unset_edit();
@@ -138,20 +139,21 @@ if (isset($_GET['select'])) {
         $db->query($r[0]["filterSQL"]);
         $filter_list = $db->result_array();
         ?>
-        <?php echo $r[0]["filterText"] ?> :-
-        <label class="input-sm">
-            <select name="Vote" onchange="document.location.href='#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>&select=1&SelectBy=<?php echo $r[0]["filterColumn"] ?>&<?php echo $r[0]["filterColumn"] ?>='+this.value">
-                <option value="0"><?php echo $r[0]["filterText"] ?></option>
-                <option value="0"> -- Show all records -- </option>
+        <div class="btn-group">
+            <button class="btn btn-default btn-xs" onclick="location.href='#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>';"> <?php echo $r[0]["filterText"] ?> </button>
+            <button class="btn btn-success class-1 class-2 class-custom btn-xs dropdown-toggle" data-toggle="dropdown" data-custom-attr="12345" aria-expanded="false"><span class="caret"></span></button>
+            <ul role="menu" class="dropdown-menu multi-level scrollable-menu">
+                <li><a href="#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>"> -- Show all records -- </a></li>
+                <li class="divider">-</li>
                 <?php
                 for ($count=0;$count<count($filter_list);$count++){
                     ?>
-                    <option value="<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></option>
+                    <li><a href="#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>&select=1&SelectBy=<?php echo $r[0]["filterColumn"] ?>&<?php echo $r[0]["filterColumn"] ?>=<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></a></li>
                     <?php
                 }
                 ?>
-            </select> <i></i>
-        </label>
+            </ul>
+        </div>
         <?php
     }
     ?>
@@ -161,20 +163,21 @@ if (isset($_GET['select'])) {
         $db->query($r[0]["filterSQL2"]);
         $filter_list = $db->result_array();
         ?>
-        <?php echo $r[0]["filterText2"] ?> :-
-        <label class="input-sm">
-            <select name="Vote" onchange="document.location.href='#X/<?php echo $r[0]["filterURL2"] ?>?id=<?php echo $reportid ?>&select=2&SelectBy=<?php echo $r[0]["filterColumn2"] ?>&<?php echo $r[0]["filterColumn2"] ?>='+this.value">
-                <option value="0"><?php echo $r[0]["filterText2"] ?></option>
-                <option value="0"> -- Show all records -- </option>
+        <div class="btn-group">
+            <button class="btn btn-default btn-xs" onclick="location.href='#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>';"> <?php echo $r[0]["filterText2"] ?> </button>
+            <button class="btn btn-success class-1 class-2 class-custom btn-xs dropdown-toggle" data-toggle="dropdown" data-custom-attr="12345" aria-expanded="false"><span class="caret"></span></button>
+            <ul role="menu" class="dropdown-menu multi-level scrollable-menu">
+                <li><a href="#X/<?php echo $r[0]["filterURL2"] ?>?id=<?php echo $reportid ?>"> -- Show all records -- </a></li>
+                <li class="divider">-</li>
                 <?php
                 for ($count=0;$count<count($filter_list);$count++){
                     ?>
-                    <option value="<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></option>
+                    <li><a href="#X/<?php echo $r[0]["filterURL2"] ?>?id=<?php echo $reportid ?>&select=2&SelectBy=<?php echo $r[0]["filterColumn2"] ?>&<?php echo $r[0]["filterColumn2"] ?>=<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></a></li>
                     <?php
                 }
                 ?>
-            </select> <i></i>
-        </label>
+            </ul>
+        </div>
         <?php
     }
     ?>
@@ -184,20 +187,21 @@ if (isset($_GET['select'])) {
         $db->query($r[0]["filterSQL3"]);
         $filter_list = $db->result_array();
         ?>
-        <?php echo $r[0]["filterText3"] ?> :-
-        <label class="input-sm">
-            <select name="Vote" onchange="document.location.href='#X/<?php echo $r[0]["filterURL3"] ?>?id=<?php echo $reportid ?>&select=3&SelectBy=<?php echo $r[0]["filterColumn3"] ?>&<?php echo $r[0]["filterColumn3"] ?>='+this.value">
-                <option value="0"><?php echo $r[0]["filterText3"] ?></option>
-                <option value="0"> -- Show all records -- </option>
+        <div class="btn-group">
+            <button class="btn btn-default btn-xs" onclick="location.href='#X/<?php echo $r[0]["filterURL"] ?>?id=<?php echo $reportid ?>';"> <?php echo $r[0]["filterText3"] ?> </button>
+            <button class="btn btn-success class-1 class-2 class-custom btn-xs dropdown-toggle" data-toggle="dropdown" data-custom-attr="12345" aria-expanded="false"><span class="caret"></span></button>
+            <ul role="menu" class="dropdown-menu multi-level scrollable-menu">
+                <li><a href="#X/<?php echo $r[0]["filterURL3"] ?>?id=<?php echo $reportid ?>"> -- Show all records -- </a></li>
+                <li class="divider">-</li>
                 <?php
                 for ($count=0;$count<count($filter_list);$count++){
                     ?>
-                    <option value="<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></option>
+                    <li><a href="#X/<?php echo $r[0]["filterURL3"] ?>?id=<?php echo $reportid ?>&select=3&SelectBy=<?php echo $r[0]["filterColumn3"] ?>&<?php echo $r[0]["filterColumn3"] ?>=<?php echo $filter_list[$count][0] ?>"><?php echo $filter_list[$count][1] ?></a></li>
                     <?php
                 }
                 ?>
-            </select> <i></i>
-        </label>
+            </ul>
+        </div>
         <?php
     }
     ?>
@@ -235,6 +239,7 @@ if (isset($_GET['select'])) {
                     <div class="widget-body no-padding">
                         <?php
                         echo $data->render();
+                        include "xcrud_js.php";
                         echo '<h4>' . $r[0]["Report_Notes"] . '</h4>';
                         ?>
                     </div>
@@ -257,6 +262,36 @@ if (isset($_GET['select'])) {
 
 </section>
 <!-- end widget grid -->
+<!--<div class="row"><div class="col-md-2"><button class="save btn btn-success">Save sort order</button></div><div class="alert alert-success col-md-10" id="response" role="alert">Sort and save :)</div></div>-->
+<script>
+    //$( "tbody" ).sortable();
+    // var btn_save = $('button.save'), div_response = $('#response');
+    //
+    // var ul_sortable = $('.ui-sortable');
+    //
+    // btn_save.on('click', function(e) {
+    //     e.preventDefault();
+    //
+    //     var order_list = [];
+    //     //console.log($(ul_sortable).children());
+    //     $(ul_sortable).children().each(function (index) {
+    //         //console.log($(ul_sortable).children()[index].cells[2].innerText);
+    //         order_list.push([$(ul_sortable).children()[index].cells[1].innerText,index,$(ul_sortable).children()[index].cells[2].innerText]);
+    //     });
+    //     console.log(order_list);
+    //
+    //     div_response.text('Saving.......');
+    //     $.ajax({
+    //         data: {data:order_list},
+    //         type: 'POST',
+    //         url: 'X/refresh_order',
+    //         success:function(result) {
+    //             div_response.text(result);
+    //         }
+    //     });
+    // });
+
+</script>
 <script type="text/javascript">
 
 
@@ -272,6 +307,11 @@ if (isset($_GET['select'])) {
 
 </script>
 <style>
+    .scrollable-menu {
+        height: auto;
+        max-height: 500px;
+        overflow-x: hidden;
+    }
     .xcrud-top-actions{
         background-color:#b5b694;
         border: 1px solid #9c9d7b;
@@ -307,5 +347,6 @@ if (isset($_GET['select'])) {
         font-size: 16px;
     }
 </style>
-
-
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">

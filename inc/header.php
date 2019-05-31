@@ -47,8 +47,7 @@ $list = $db->result();
         <!-- GOU Dashboard RTL Support is under construction-->
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo ASSETS_URL; ?>/css/smartadmin-rtl.min.css">
         <link rel="prefetch" href="lib/xcrud/plugins/dash.min.js">
-
-
+        
         <?php
 
         if ($page_css) {

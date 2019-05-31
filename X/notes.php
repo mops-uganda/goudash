@@ -37,6 +37,7 @@ $xcrud2->fields('title,notes,color,date')
 $xcrud2->hide_button('save_return,return,save_edit');
 $xcrud2->set_lang('save_new','Publish New Note');
 echo $xcrud2->render('create');
+include "xcrud_js.php";
 ?>
 <script type="text/javascript">
     window.onload = function(){
@@ -47,3 +48,6 @@ echo $xcrud2->render('create');
         });
     }
 </script>
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">

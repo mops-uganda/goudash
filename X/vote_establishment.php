@@ -23,33 +23,21 @@ $array = $db->result();
 $votename = $array[0]["Vote_Name"];
 $vote = $array[0]["Vote_Code"];
 
-
-
-$xcrud->table('votes_core');
-$xcrud->table_name($votename);
-$xcrud->fields('Vote_Code,Vote_Name,Vote_type,Central_or_Local_Government');
-$xcrud->columns('Vote_Code,Vote_Name,Vote_type,Central_or_Local_Government');
-
-$xcrud->unset_list();
-$xcrud->unset_title();
-
-$overviewtext = $xcrud->render('view', $vote);
-
 $structure = Xcrud::get_instance();
 $structure->table('vote_departments')
     ->where('vote =', $vote)
-    ->table_name('Departments, Divisions and Units')
+    ->table_name('vote_structures')
     ->pass_default('vote',$vote)
     ->pass_var('vote', $vote)
-    ->columns('department_name,Jobs')
+    ->columns('id,department_name,Jobs')
     ->fields('department_name,department_type,description', false, 'Add New Department, Division or Section', 'create')
     ->fields('department_name,department_type,description', false, 'Overview', 'edit')
     ->fields('id,department_name,Jobs,description', false, 'Overview', 'view')
-    ->column_pattern('id','{vote}-{id}')
     ->change_type('priority','select','','Low,Normal,High,Critical')
     ->subselect('Jobs','SELECT SUM(approv_no) FROM vote_departments_jobs WHERE dept_id = {dept_id}')
     ->column_width('Jobs','60px')
     ->column_class('Jobs','align-right')
+    ->column_width('id','20px')
     ->unset_title();
 
 $structure->button('#', "Top", 'glyphicon glyphicon-arrow-up icon-arrow-up', 'btn xcrud-action', array(
@@ -80,7 +68,8 @@ $structure->column_pattern('department_type','{department_type}');
 $structure->column_callback('department_name','department_card');
 
 $structure->unset_sortable()
-    ->limit(50);
+    ->limit(200)
+    ->unset_limitlist();
 $structure->order_by('ordering, id')
     ->label(array('department_name'=>'List of Departments, Divisions, Sections and Units'));
 $structure->set_lang('add','Add New Directorate, Department, Division, Section or Unit');
@@ -96,10 +85,9 @@ $jobs_list->columns('job_title,salary_scale,approv_no,monthly_salary,Annual_Sala
     ->column_class('approv_no,monthly_salary,Annual_Salary','align-right')
     ->sum('approv_no,Annual_Salary','align-right','Total: {value}');
 
-
-
 $structureText = "List of <strong>Directorates, Departments, Divisions, Sections and Units.</strong><br>";
 $structureText = $structureText . $structure->render();
+$structureText = $structureText . '<div class="row"><div class="col-md-2"><button class="save btn btn-success">Save sort order</button></div><div class="alert alert-success col-md-10" id="response" role="alert">Sort and save</div></div>';
 
 ?>
 
@@ -113,14 +101,11 @@ $tabs = array(
     'Departments' => 'List of Departments, Divisions and Units',
     'Establishment' => 'Structures and Establishment',
     'Notes' => 'Notes',
-    'Files' => 'Files',
-    'Overview' => 'Overview'
+    'Files' => 'Files'
 );
 $tab = $_ui->create_tab($tabs);
 
-$tab->content('Overview', $overviewtext)
-    ->icon('Overview', 'fa fa-home')
-    ->content('Departments', $structureText)
+$tab->content('Departments', $structureText)
     ->icon('Departments', 'fa fa-slack');
 
 $tab->options('bordered', true)
@@ -130,12 +115,46 @@ $tab->active('Departments', true);
 $tab_html = $tab->print_html(true);
 
 echo $tab_html;
-
+include "xcrud_js.php";
 ?>
+
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 
 <script language="javascript">
     drawBreadCrumb(["Vote Structure and Establishment", "<?php echo $votename; ?>"]);
+</script>
+<script>
+    $( "#vote_structures" ).sortable();
+
+    var btn_save = $('button.save'), div_response = $('#response');
+
+    var ul_sortable = $('#vote_structures');
+
+    btn_save.on('click', function(e) {
+        e.preventDefault();
+
+        var order_list = [];
+        console.log($(ul_sortable).children());
+        $(ul_sortable).children().each(function (index) {
+            console.log($(ul_sortable).children()[index].cells[1].innerText);
+            order_list.push([$(ul_sortable).children()[index].cells[1].innerText,index]);
+        });
+        console.log(order_list);
+
+        div_response.text('Saving....Please wait....');
+        $.ajax({
+            data: {data:order_list},
+            type: 'POST',
+            url: 'X/refresh_order',
+            success:function(result) {
+                div_response.text(result);
+            }
+        });
+    });
+
 </script>
 
 <script type="text/javascript">

@@ -1,4 +1,11 @@
 <?php
-require_once("inc/init.php");
-echo (file_get_contents(APP_URL."/data/data.json"));
+require ('../lib/xcrud/xcrud.php');
+$data = Xcrud::get_instance();
+$data->table('department');
+?>
+
+<?php
+echo $data->render();
+echo "<div>" . Xcrud::load_js() . "</div>";
+//include "xcrud_js.php";
 ?>

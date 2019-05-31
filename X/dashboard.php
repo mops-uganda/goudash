@@ -11,6 +11,9 @@ $username = $user->username;
 
 include 'hr_dashboard_table.php';
 ?>
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 <!-- /*  Dashboard */ -->
 <style>
@@ -336,7 +339,7 @@ include 'hr_dashboard_table.php';
 
     .modal-content .modal-header {
         border-bottom: none;
-        padding-top: 24px;
+        padding-top: 10px;
         padding-right: 24px;
         padding-bottom: 0;
         padding-left: 24px; }
@@ -1475,6 +1478,7 @@ include 'hr_dashboard_table.php';
                     <div class="widget-body">
                         <?php
                         echo $data->render();
+                        include "xcrud_js.php";
                         ?>
                     </div>
                     <!-- end widget content -->
@@ -1495,7 +1499,13 @@ include 'hr_dashboard_table.php';
     <!-- end row -->
 
 </section>
-
+<script>
+    // Modal Sidebar Window Content for Help/info
+    var x = document.getElementById("myModalLabel2");
+    var y = document.getElementById("help_modal_window");
+    x.innerHTML = "Welcome to the Public Service Smart Dashboard";
+    y.innerHTML = '<span style="font-family: Verdana, Geneva, sans-serif; font-size: 16px;"><p>Smart Dashboard for the Public Service analyses and displays visual data on the following.</p><ol><li>Large Screens at key points for target audiences.</li><li>Mobile Devices like Ipads, Tablets and Phones.</li><li>Desktop Computers.</li></ol><p>The System has intelligence tools to generate the following presentation layers, that will be visually appealing and easily interpreted by all audiences.</p><ol><li>Graphs,</li><li>Charts,</li><li>Maps, and</li><li>Tabular Data</li></ol></span>';
+</script>
 <script type="text/javascript">
 
     /* DO NOT REMOVE : GLOBAL FUNCTIONS!

@@ -287,7 +287,12 @@ if($local_governments_count) $LGs_txt = $LGs->render();
 
 <?php
 echo $tab_html;
+include "xcrud_js.php";
 ?>
+
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 
 <script type="text/javascript">

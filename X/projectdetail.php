@@ -233,9 +233,12 @@ $tab_widget->options('widget', true)->options('pull', 'left');
 $tab_widget_html = $tab_widget->print_html(true);
 
 echo $tab_widget_html;
-
-
+include "xcrud_js.php";
 ?>
+
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 
 

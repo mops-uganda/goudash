@@ -55,7 +55,12 @@ $keyoutputs->unset_title();
                         <br>Key outputs may be in the form of a <strong>tangible deliverable, component or product, a document, or an intangible service or result</strong>.
                         <?php
                         echo $keyoutputs->render();
+                        include "xcrud_js.php";
                         ?>
+
+                        <!-- Xcrud CSS -->
+                        <link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+                        <link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
                     </div>
                     <!-- end widget content -->
 

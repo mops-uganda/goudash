@@ -10,9 +10,9 @@ $num_rows=count($data);
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="styles/kendo.common.min.css" />
-    <link rel="stylesheet" href="styles/kendo.default.min.css" />
-    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+    <link rel="stylesheet" href="styles/all.css" />
+<!--    <link rel="stylesheet" href="styles/kendo.fiori.min.css" />-->
+<!--    <link rel="stylesheet" href="styles/kendo.fiori.mobile.min.css" />-->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jszip.js"></script>
@@ -34,7 +34,7 @@ $num_rows=count($data);
             },
             dataSource: {
                 data: <?php echo json_encode($data); ?>,
-                pageSize: 25,
+                pageSize: 50,
                 aggregate: [
                     { field: "Vote_Code", aggregate: "count" }
                 ]
@@ -46,7 +46,7 @@ $num_rows=count($data);
             columnMenu: true,
             pageable: {
                 refresh: true,
-                pageSizes: true,
+                pageSizes: [50, 100, 200],
                 buttonCount: 12
             },
             columns: [

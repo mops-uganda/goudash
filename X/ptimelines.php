@@ -52,7 +52,12 @@ $projecttimeline->unset_title();
                         <br><strong>Project activities</strong> and <strong>timelines of events</strong> within te implementation of the Project.<br>
                         <?php
                         echo $projecttimeline->render();
+                        include "xcrud_js.php";
                         ?>
+
+                        <!-- Xcrud CSS -->
+                        <link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+                        <link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
                     </div>
                     <!-- end widget content -->
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../securex/extra/auth.php';
 require ('../lib/xcrud/xcrud.php');
 
@@ -14,6 +15,9 @@ $VoteName = $db->row()["VoteName"];
 
 
 ?>
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 
 <section id="widget-grid" class="">
@@ -83,6 +87,7 @@ $VoteName = $db->row()["VoteName"];
                                     ->unset_add()
                                     ->unset_remove();
                             echo $data->render();
+                            include "xcrud_js.php";
 
                         }else{
                             ?>

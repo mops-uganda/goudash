@@ -6,7 +6,6 @@ $data->table_name('Online Joint Inspection and Performance Scorecard Dashboard')
 $data->columns('vote,Vote_Name,Total_Score,Count');
 $data->fields('vote,Vote_Name,Total_Score,Count');
 $data->unique('vote');
-//$data->query('SELECT vote, votes.VoteName as "Vote_Name", COUNT(*) AS Count, SUM(self_score) AS Total_Score FROM performance_scores INNER JOIN votes ON performance_scores.vote = votes.VoteCode GROUP BY vote');
 $data->column_cut(3,'vote');
 
 $data->highlight('Total_Score', '<', 41, '#e89e9e')
@@ -19,6 +18,9 @@ $data->limit(100)
     ->unset_limitlist();
 
 ?>
+<!-- Xcrud CSS -->
+<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
+<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 
 <section id="widget-grid" class="">
@@ -53,6 +55,7 @@ $data->limit(100)
                         <br>Inspection and Performance Assessment of Ministries, Departments, Agencies (MDAs), Local Governments (LGs) and service delivery facilities.<br>
                         <?php
                         echo $data->render();
+                        include "xcrud_js.php";
                         ?>
                     </div>
                     <!-- end widget content -->
@@ -75,78 +78,5 @@ $data->limit(100)
 </section>
 
 <script type="text/javascript">
-
-    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
-     *
-     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
-     *
-     * // activate tooltips
-     * $("[rel=tooltip]").tooltip();
-     *
-     * // activate popovers
-     * $("[rel=popover]").popover();
-     *
-     * // activate popovers with hover states
-     * $("[rel=popover-hover]").popover({ trigger: "hover" });
-     *
-     * // activate inline charts
-     * runAllCharts();
-     *
-     * // setup widgets
-     * setup_widgets_desktop();
-     *
-     * // run form elements
-     * runAllForms();
-     *
-     ********************************
-     *
-     * pageSetUp() is needed whenever you load a page.
-     * It initializes and checks for all basic elements of the page
-     * and makes rendering easier.
-     *
-     */
-
     pageSetUp();
-
-    // PAGE RELATED SCRIPTS
-
-    // pagefunction
-
-    var pagefunction = function() {
-
-        // switch style change
-        $('input[name="checkbox-style"]').change(function() {
-            //alert($(this).val())
-            $this = $(this);
-
-            if ($this.attr('value') === "switch-1") {
-                $("#switch-1").show();
-                $("#switch-2").hide();
-            } else if ($this.attr('value') === "switch-2") {
-                $("#switch-1").hide();
-                $("#switch-2").show();
-            }
-
-        });
-
-        // tab - pills toggle
-        $('#show-tabs').click(function() {
-            $this = $(this);
-            if($this.prop('checked')){
-                $("#widget-tab-1").removeClass("nav-pills").addClass("nav-tabs");
-            } else {
-                $("#widget-tab-1").removeClass("nav-tabs").addClass("nav-pills");
-            }
-
-        });
-
-    };
-
-    // end pagefunction
-
-    // run pagefunction on load
-
-    pagefunction();
-
-
 </script>

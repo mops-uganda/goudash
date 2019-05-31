@@ -1609,7 +1609,7 @@ function loadURL(url, container) {
     if (debugState){
         root.root.console.log("Loading URL: %c" + url, debugStyle);
     }
-
+    $.ajaxSetup({'cache':true});
     $.ajax({
         type : "GET",
         url : url,
