@@ -367,10 +367,17 @@ $General_Information = array(
 );
 
 $reports = array(
-    "title" => "Reports",
-    "icon" => "fa-exchange txt-color-purple",
-    "label_htm" => "  <span class='label label-success'>All reports</span>",
+    "title" => "",
+    "icon" => "fa-rss txt-color-yellow ",
+    "label_htm" => '<button class="btn btn-sm btn-success " type="button">All Reports</button>',
     "url" => "X/reports?all"
+);
+
+$reports_adv = array(
+    "title" => "",
+    "icon" => "fa-rss txt-color-orange ",
+    "label_htm" => '<button class="btn btn-sm btn-warning " type="button">Advanced Reports</button>',
+    "url" => "X/bi"
 );
 
 $User_Settings = array(
@@ -451,6 +458,7 @@ if ($user->hasPermission('Strategic_Data')) array_push($page_nav, $Strategic_Dat
 if ($user->hasPermission('performance')) array_push($page_nav, $Govt_Performance);
 if ($user->General_Information) array_push($page_nav, $General_Information);
 if ($user->Reports) array_push($page_nav, $reports);
+if ($user->Reports) array_push($page_nav, $reports_adv);
 array_push($page_nav, $User_Settings);
 //array_push($page_nav, $Govt_Performance);
 if ($user->userlevel == 10) array_push($page_nav, $general_setting_array);

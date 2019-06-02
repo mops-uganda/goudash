@@ -1,5 +1,22 @@
-<?php require_once("inc/init.php"); ?>
+<?php
+require_once '../securex/extra/auth.php';
+if (! Auth::check()) {
+    redirectTo('securex/public/login?to=' . $returnURL);
+    exit();
+}
+$returnURL = 'X/bi';
+app(\Vanguard\Services\Logging\UserActivity\Logger::class)->log($returnURL);
+require_once("inc/init.php");
+require ('../lib/xcrud/xcrud.php');
 
+
+$db = Xcrud_db::get_instance();
+$db->query('SELECT DISTINCT reportCategory FROM reports');
+$result = $db->result();
+$db->query('SELECT rid, ReportTitle, reportCategory, link, reportType FROM reports');
+$reports_list = $db->result();
+?>
+<div>
 <!-- widget grid -->
 <section id="widget-grid" class="">
 
@@ -27,24 +44,57 @@
                 <header>
                     <h2>Business Intelligence Analytical Tool </h2>
                 </header>
-                <style>
-                    .shadd {
-                        padding-left: 5px;
-                        -moz-box-shadow: 4px 4px 16px 0px rgba(173,184,186,1);
-                        box-shadow: 4px 4px 16px 0px rgba(173,184,186,1);
-                    }
-               </style>
                 <!-- widget div-->
-                <div style="height: 70%;">
+                <div id="bi" class="row">
                     <!-- widget content -->
-                    <div class="shadd col-sm-2 jarviswidget jarviswidget-color-blueLight" id="wid-id-2" data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-sortable="false">
-                        <h3>Category</h3>
+                    <div class="col-sm-3 col-xs-12 innerDIV">
+                        <div class="shadd col-sm-12 col-xs-12">
+                            <form class="smart-form ng-untouched ng-pristine ng-valid" novalidate="">
+                            <header>
+                                <li class="fa fa-slack"></li> Reporting Category
+                            </header>
+                                <fieldset>
+                                    <section>
+                                        <label class="select report-btn">
+<!--                                            <select onchange="data_filter(this.value)">-->
+                                            <select @change="r_filter($event)" id="ReportCategory">
+                                                <option value="0">Choose Report Category</option>
+                                                <?php
+                                                foreach ($result as $row){
+                                                    print_r(' <option value="' . $row["reportCategory"] . '">' . $row["reportCategory"] . '</option>');
+                                                }
+                                                ?>
+                                            </select> <i></i>
+                                        </label>
+                                        <section>
+                                            <label class="toggle">
+                                                <input checked="checked" name="radio-toggle" type="radio">
+                                                <i data-swchoff-text="OFF" data-swchon-text="ON"></i>Preset Reports</label>
+                                            <label class="toggle">
+                                                <input name="radio-toggle" type="radio">
+                                                <i data-swchoff-text="OFF" data-swchon-text="ON"></i>Report From Table</label>
+                                        </section>
+                                        <label class="select report-btn">
+                                            <select @change="report_changed($event)" id="Select_Report_Table" v-model="report_id">
+                                                <option value="500">Select Report</option>
+                                                <option v-for="item in filtered_list" :value="item.rid">{{ item.ReportTitle }}</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </fieldset>
+                                <fieldset>
+                                    <a @click="loadReport()" class="btn btn-labeled bg-color-greenLight txt-color-white report-btn"> <span class="btn-label"><i class="glyphicon glyphicon-th-list"></i></span>View {{ report_type }} </a>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                    <div class="shadd col-sm-10 jarviswidget jarviswidget-color-blueLight" id="wid-id-2" data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-sortable="false">
-                            <h3>Category</h3>
+                    <div class="col-sm-9 col-xs-12 innerDIV">
+                        <div id="report_content" class="shadd col-sm-12 col-xs-12" style="background-image: url('img/bg_material2.jpg')">
+                            Select Report
+                        </div>
                     </div>
                     <!-- end widget content -->
-
+                    <div class="col-md-12" style="margin-bottom: 10px"> </div>
                 </div>
                 <!-- end widget div -->
 
@@ -61,40 +111,10 @@
 </section>
 <!-- end widget grid -->
 
+</div>
+
 <script type="text/javascript">
-    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
-     *
-     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
-     *
-     * // activate tooltips
-     * $("[rel=tooltip]").tooltip();
-     *
-     * // activate popovers
-     * $("[rel=popover]").popover();
-     *
-     * // activate popovers with hover states
-     * $("[rel=popover-hover]").popover({ trigger: "hover" });
-     *
-     * // activate inline charts
-     * runAllCharts();
-     *
-     * // setup widgets
-     * setup_widgets_desktop();
-     *
-     * // run form elements
-     * runAllForms();
-     *
-     ********************************
-     *
-     * pageSetUp() is needed whenever you load a page.
-     * It initializes and checks for all basic elements of the page
-     * and makes rendering easier.
-     *
-     */
-
     pageSetUp();
-
-    // PAGE RELATED SCRIPTS
 
     // pagefunction
 
@@ -103,8 +123,85 @@
     };
 
     // end pagefunction
-
     // Load bootstrap wizard dependency then run pagefunction
     pagefunction();
 
 </script>
+
+<!--Vue Script-->
+<script>
+    new Vue({
+        el: '#bi',
+        data: {
+            report_id: 500,
+            report_link: "reports",
+            report_type: "All Reports",
+            reports_list: <?php echo json_encode($reports_list); ?>,
+            filtered_list:[],
+            selected_row:[]
+        },
+        computed: {
+            full_link: function () {
+                return 'X/' + this.report_link + '?id=' + this.report_id
+            }
+        },
+        methods: {
+            report_changed(event) {
+                this.selected_row = this.reports_list.filter(
+                    function (el) {
+                        return (el.rid === event.target.value);
+                    }
+                );
+                this.report_type = this.selected_row[0].reportType;
+                this.report_link = this.selected_row[0].link;
+            },
+            r_filter(event) {
+                this.filtered_list = this.reports_list.filter(
+                    function (el) {
+                        return (el.reportCategory === event.target.value);
+                    }
+                );
+                this.report_id = 500;
+                this.report_link = "reports";
+                this.report_type = "All Reports";
+            },
+            loadReport(){
+                //console.log(this.full_link);
+                //loadURL("X/email-reply.html", $('#report_content > .table-wrap'));
+                $('#report_content').load( this.full_link );
+            }
+        }
+    })
+
+    // this.report_id = event.target.value;
+    // var mytext = $("#Select_Report_Table option:selected").text();
+    // console.log(mytext);
+</script>
+
+<style>
+    .shadd {
+        padding-left: 5px;
+        -moz-box-shadow: 1px 1px 4px 0px rgba(173,184,186,1);
+        box-shadow: 1px 1px 3px 0px rgba(173,184,186,1);
+        background-color: #ffffff;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .innerDIV {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .jarviswidget>div {
+        background-color: #edf1f3 !important;
+    }
+    .report-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .smart-form .toggle {
+        margin-bottom: 1px;
+        font-size: 13px;
+    }
+</style>
+
