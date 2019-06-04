@@ -36,9 +36,3 @@ $data->table('actions_tracker')
         ->column_callback('action','add_user_icon')
         ->set_lang('add','Add New Action');
 echo $data->render();
-include "xcrud_js.php";
-?>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
-

@@ -22,9 +22,3 @@ $data->table('department')
 
 
 echo $data->render();
-include "xcrud_js.php";
-?>
-
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">

@@ -69,7 +69,6 @@ $VoteName = $db->row()["VoteName"];
                             $data->unset_add();
                             $data->unset_remove();
                             echo $data->render();
-                            include "xcrud_js.php";
                         }else{
                             ?>
                             <br><br><div class="btn btn-success btn-lg btn-block" onclick="location.href='#inspect/start_inspection?<?php echo rand(); ?>';">
@@ -102,6 +101,3 @@ $VoteName = $db->row()["VoteName"];
 <script type="text/javascript">
     pageSetUp();
 </script>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">

@@ -30,9 +30,6 @@ $data->unset_pagination();
 $data->limit(20);
 
 ?>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 <div class="row">
     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
@@ -97,7 +94,6 @@ $data->limit(20);
                     <div class="widget-body no-padding">
                         <?php
                         echo $data->render();
-                        include "xcrud_js.php";
                         ?>
 
                     </div>

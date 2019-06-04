@@ -239,7 +239,6 @@ if (isset($_GET['select'])) {
                     <div class="widget-body no-padding">
                         <?php
                         echo $data->render();
-                        include "xcrud_js.php";
                         echo '<h4>' . $r[0]["Report_Notes"] . '</h4>';
                         ?>
                     </div>
@@ -347,6 +346,3 @@ if (isset($_GET['select'])) {
         font-size: 16px;
     }
 </style>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">

@@ -115,12 +115,7 @@ $tab->active('Departments', true);
 $tab_html = $tab->print_html(true);
 
 echo $tab_html;
-include "xcrud_js.php";
 ?>
-
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 
 <script language="javascript">

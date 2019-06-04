@@ -42,7 +42,7 @@ class Xcrud_config
     public static $load_jquery_ui = false; // jQueryUI, turn it on if you already have jQueryUI on your page (datepicker and slider widgets are mandatory).
     public static $load_jcrop = false; // disable, if your page already uses jCrop
     public static $jquery_no_conflict = true; // Includes jQuery.noConflict(). Use according to jQuery documentation.
-    public static $manual_load = true; // Allows you to disable xcruds css and js output, but you can use Xcrud::load_css() & Xcrud::load_js() in your code manually.
+    public static $manual_load = false; // Allows you to disable xcruds css and js output, but you can use Xcrud::load_css() & Xcrud::load_js() in your code manually.
 
     
     // editor

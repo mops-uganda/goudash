@@ -11,9 +11,6 @@ $username = $user->username;
 
 include 'hr_dashboard_table.php';
 ?>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 <!-- /*  Dashboard */ -->
 <style>
@@ -1478,7 +1475,6 @@ include 'hr_dashboard_table.php';
                     <div class="widget-body">
                         <?php
                         echo $data->render();
-                        include "xcrud_js.php";
                         ?>
                     </div>
                     <!-- end widget content -->

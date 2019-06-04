@@ -369,14 +369,14 @@ $General_Information = array(
 $reports = array(
     "title" => "",
     "icon" => "fa-rss txt-color-yellow ",
-    "label_htm" => '<button class="btn btn-sm btn-success " type="button">All Reports</button>',
+    "label_htm" => '<button class="btn btn-sm btn-success" type="button">All Reports</button>',
     "url" => "X/reports?all"
 );
 
 $reports_adv = array(
     "title" => "",
     "icon" => "fa-rss txt-color-orange ",
-    "label_htm" => '<button class="btn btn-sm btn-warning " type="button">Advanced Reports</button>',
+    "label_htm" => '<button class="btn btn-sm btn-lightGreen" type="button">Advanced Reports</button>',
     "url" => "X/bi"
 );
 

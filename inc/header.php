@@ -83,6 +83,7 @@ $list = $db->result();
         <link rel="apple-touch-startup-image" href="<?php echo ASSETS_URL; ?>/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
         <link rel="apple-touch-startup-image" href="<?php echo ASSETS_URL; ?>/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
         <script type="text/javascript">
+            if (!localStorage.my_skin) localStorage.my_skin = "<?php echo $opmDashSkin; ?>";
             var search_page = function () {
                 document.location.href='#X/search?q='+document.getElementById("search-fld").value;
             };

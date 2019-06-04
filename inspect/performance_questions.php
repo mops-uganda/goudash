@@ -11,10 +11,6 @@ $PerformanceQuestions->set_lang('add','Add New Performance Question');
 if (!($user->hasPermission('Inspect.Manage.Questions'))) $PerformanceQuestions->unset_add()->unset_edit()->unset_remove();
 
 ?>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
-
 
 <section id="widget-grid" class="">
 
@@ -49,7 +45,6 @@ if (!($user->hasPermission('Inspect.Manage.Questions'))) $PerformanceQuestions->
                         The four perspectives of the Performance Scorecard provide the environment (systems, processes, resources) within which performance is managed and public services provided. Each assessment area/criteria will be rated on a scale of 1-5. The total scores for the 40 assessment areas will be computed as a percentage, that is x/200 x 100% and graded according to the criteria below:
                         <?php
                         echo $PerformanceQuestions->render();
-                        include "xcrud_js.php";
                         ?>
                     </div>
                     <!-- end widget content -->

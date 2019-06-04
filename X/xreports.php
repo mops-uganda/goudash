@@ -13,9 +13,3 @@ $xreports->table_name('List of Reports');
 $xreports->show_primary_ai_column(true);
 
 echo $xreports->render();
-include "xcrud_js.php";
-?>
-
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">

@@ -21,10 +21,6 @@ $tasks->unset_remove();
 $tasks->unset_title();
 
 ?>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
-
 <section id="widget-grid" class="">
 
     <!-- row -->
@@ -57,7 +53,6 @@ $tasks->unset_title();
                         <br>Project Tasks are <strong>Activities</strong> that needs to be accomplished within a <strong>defined period of time or by a deadline</strong> to achieve the Project-related goals.<br>
                         <?php
                         echo $tasks->render();
-                        include "xcrud_js.php";
                         ?>
                     </div>
                     <!-- end widget content -->

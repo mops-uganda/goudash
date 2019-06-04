@@ -52,12 +52,7 @@ $milestones->unset_title();
                         <br>Milestones are <strong>Checkpoints</strong> throughout the life of the project used in Project Management to mark specific points or stages along a project implementation timeline.<br>
                         <?php
                         echo $milestones->render();
-                        include "xcrud_js.php";
                         ?>
-
-                        <!-- Xcrud CSS -->
-                        <link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-                        <link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
                     </div>
                     <!-- end widget content -->
 

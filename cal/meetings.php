@@ -56,11 +56,7 @@ $data->table('calendar')
     //->column_callback('action','add_user_icon')
     ->set_lang('add','Add New Meetings / Event');
 echo $data->render();
-include "xcrud_js.php";
 ?>
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 <!--
 <style>
     .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {

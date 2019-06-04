@@ -47,48 +47,127 @@ $reports_list = $db->result();
                 <!-- widget div-->
                 <div id="bi" class="row">
                     <!-- widget content -->
-                    <div class="col-sm-3 col-xs-12 innerDIV">
+                    <div class="col-sm-12 col-xs-12 innerDIV">
                         <div class="shadd col-sm-12 col-xs-12">
                             <form class="smart-form ng-untouched ng-pristine ng-valid" novalidate="">
-                            <header>
-                                <li class="fa fa-slack"></li> Reporting Category
-                            </header>
-                                <fieldset>
-                                    <section>
-                                        <label class="select report-btn">
-<!--                                            <select onchange="data_filter(this.value)">-->
-                                            <select @change="r_filter($event)" id="ReportCategory">
-                                                <option value="0">Choose Report Category</option>
-                                                <?php
-                                                foreach ($result as $row){
-                                                    print_r(' <option value="' . $row["reportCategory"] . '">' . $row["reportCategory"] . '</option>');
-                                                }
-                                                ?>
-                                            </select> <i></i>
-                                        </label>
+                                <div class="col-3 col-xs-12 section_block">
+                                    <header>
+                                        <li class="fa fa-slack"></li> Report Category
+                                    </header>
+                                    <fieldset>
                                         <section>
-                                            <label class="toggle">
-                                                <input checked="checked" name="radio-toggle" type="radio">
-                                                <i data-swchoff-text="OFF" data-swchon-text="ON"></i>Preset Reports</label>
-                                            <label class="toggle">
-                                                <input name="radio-toggle" type="radio">
-                                                <i data-swchoff-text="OFF" data-swchon-text="ON"></i>Report From Table</label>
+                                            <label class="select report-btn">
+                                                <!--                                            <select onchange="data_filter(this.value)">-->
+                                                <select @change="r_filter($event)" id="ReportCategory">
+                                                    <option value="0">Choose Report Category</option>
+                                                    <?php
+                                                    foreach ($result as $row){
+                                                        print_r(' <option value="' . $row["reportCategory"] . '">' . $row["reportCategory"] . '</option>');
+                                                    }
+                                                    ?>
+                                                </select> <i></i>
+                                            </label>
+                                            <section>
+                                                <label class="toggle">
+                                                    <input checked="checked" name="radio-toggle" type="radio">
+                                                    <i data-swchoff-text="OFF" data-swchon-text="ON"></i>Preset Reports</label>
+                                                <label class="toggle">
+                                                    <input name="radio-toggle" type="radio">
+                                                    <i data-swchoff-text="OFF" data-swchon-text="ON"></i>Report From Table</label>
+                                            </section>
                                         </section>
-                                        <label class="select report-btn">
-                                            <select @change="report_changed($event)" id="Select_Report_Table" v-model="report_id">
-                                                <option value="500">Select Report</option>
-                                                <option v-for="item in filtered_list" :value="item.rid">{{ item.ReportTitle }}</option>
-                                            </select> <i></i>
-                                        </label>
-                                    </section>
-                                </fieldset>
-                                <fieldset>
-                                    <a @click="loadReport()" class="btn btn-labeled bg-color-greenLight txt-color-white report-btn"> <span class="btn-label"><i class="glyphicon glyphicon-th-list"></i></span>View {{ report_type }} </a>
-                                </fieldset>
+                                    </fieldset>
+                                </div>
+                                <div class="col-3 col-xs-12 section_block">
+                                    <header>
+                                        <li class="fa fa-slack"></li> Select Report
+                                    </header>
+                                    <fieldset>
+                                        <section>
+                                            <label class="select report-btn">
+                                                <select @change="report_changed($event)" id="Select_Report_Table" v-model="report_id">
+                                                    <option value="500">Select Report</option>
+                                                    <option v-for="item in filtered_list" :value="item.rid">{{ item.ReportTitle }}</option>
+                                                </select> <i></i>
+                                            </label>
+                                        </section>
+                                    </fieldset>
+                                    <fieldset>
+                                        <a @click="loadReport()" class="btn btn-labeled bg-color-greenLight txt-color-white report-btn"> <span class="btn-label"><i class="glyphicon glyphicon-th-list"></i></span>View {{ report_type }} </a>
+                                    </fieldset>
+                                </div>
+                                <div class="col-3 col-xs-12 section_block">
+                                    <header>
+                                        <li class="fa fa-slack"></li> Filter Report
+                                    </header>
+                                    <fieldset>
+                                        <section>
+                                            <label class="select report-btn">
+                                                <select class="input-sm">
+                                                    <option value="500">No Filter Set</option>
+                                                </select> <i></i>
+                                            </label>
+                                            <label class="select report-btn">
+                                                <select class="input-sm">
+                                                    <option value="500">No Filter Set</option>
+                                                </select> <i></i>
+                                            </label>
+                                            <label class="select report-btn">
+                                                <select class="input-sm">
+                                                    <option value="500">No Filter Set</option>
+                                                </select> <i></i>
+                                            </label>
+                                        </section>
+                                    </fieldset>
+                                </div>
+                                <div class="col-3 col-xs-12 section_block">
+                                    <header>
+                                        <li class="fa fa-slack"></li> Select Fields
+                                    </header>
+                                    <fieldset>
+                                        <section>
+                                            <div class="row">
+                                                <div class="col col-4">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox" checked="checked">
+                                                        <i></i>Field 1</label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 2</label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 3</label>
+                                                </div>
+                                                <div class="col col-4">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 4</label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 5</label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 6</label>
+                                                </div>
+                                                <div class="col col-4">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 7</label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 8</label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox">
+                                                        <i></i>Field 9</label>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </fieldset>
+                                </div>
                             </form>
                         </div>
                     </div>
-                    <div class="col-sm-9 col-xs-12 innerDIV">
+                    <div class="col-sm-12 col-xs-12 innerDIV">
                         <div id="report_content" class="shadd col-sm-12 col-xs-12" style="background-image: url('img/bg_material2.jpg')">
                             Select Report
                         </div>
@@ -127,6 +206,7 @@ $reports_list = $db->result();
     pagefunction();
 
 </script>
+
 
 <!--Vue Script-->
 <script>
@@ -177,6 +257,8 @@ $reports_list = $db->result();
     // var mytext = $("#Select_Report_Table option:selected").text();
     // console.log(mytext);
 </script>
+<!--End Vue Script-->
+
 
 <style>
     .shadd {
@@ -187,6 +269,13 @@ $reports_list = $db->result();
         margin-right: 5px;
         margin-bottom: 10px;
         display: inline-block;
+        padding-right: 6px;
+    }
+    .section_block {
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+        vertical-align: top;
     }
     .innerDIV {
         padding-left: 8px;
@@ -203,5 +292,13 @@ $reports_list = $db->result();
         margin-bottom: 1px;
         font-size: 13px;
     }
-</style>
+    .smart-form .col-3 {
+        width: 23%;
+    }
+    .smart-form .select-multiple select {
+        height: 160px;
+    }
+    .select_style {
 
+    }
+</style>

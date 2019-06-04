@@ -115,3 +115,8 @@ Loading
     text-shadow: #000000 0 0px;
     font-size: 11px;
 }
+.btn-lightGreen {
+    color: #fff;
+    background-color: #71843f;
+    border-color: #d6cfc0;
+}

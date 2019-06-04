@@ -47,12 +47,7 @@ if ($vote){
 }
 
 echo $data->render();
-include "xcrud_js.php";
 ?>
-
-<!-- Xcrud CSS -->
-<link href="./lib/xcrud/plugins/timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css">
-<link href="./lib/xcrud/themes/bootstrap/xcrud.css" rel="stylesheet" type="text/css">
 
 <script>
 
@@ -60,8 +55,6 @@ include "xcrud_js.php";
         loadURL("X/budgets-programme?vote=".concat(myvote,"&votename=",myvotename) , $('#inbox-content > .table-wrap'));
 
     }
-
-
 
 </script>
 

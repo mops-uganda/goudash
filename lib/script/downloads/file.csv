@@ -1,0 +1,15 @@
+MeetTaskID,MeetTaskTitle,MeetID,MeetTaskDescription,"Assigned to",Deadline,Labels,Priority,Status,ImProgress,"Start date",Collaborators,Deleted
+1,"Implementation Team Meeting",1,"<p>Start meeting for Implementation Team</p>","Ministry of Local Government",2018-07-25,,High,"On going",37,2017-07-05,"<p>OPM</p>
+<p>MoFPED</p>",0
+2,"Completion of GAPR Document and Presentation to PS",2,"<p>Complete all GAPR Excels and Final Document</p>
+<p>Review within Department</p>
+<p>Forward to PS</p>","Monitoring and Evaluation",2017-11-16,,Low,"On going",45,2017-07-03,"<p>MoFPED</p>
+<p>NPA</p>",0
+3,"NIRA to produce report on Status of Registration of Pupils",4,"<p>Registration of Pupils by District, Region, Sex and Age group</p>
+<p>Submit to OPM</p>",NIRA,2017-08-23,,High,"Not Started",5,2017-07-05,"<p>UBOS</p>
+<p>NIRA</p>
+<p>OPM</p>",0
+4,"UBOS to Verify Registration Report",4,"<p>UBOS to Verify Registration Report and advise on Data quality</p>","Uganda Bureau of Statistics",2017-07-30,,Normal,"Not Started",0,2017-07-04,"<p>Uganda Bureau of Statistics</p>
+<p>Ministry of Education</p>",0
+5,"Minister of Health to prepare Cabinet Paper on State of Mulago Hospital",3,"<p>Cabinet Paper on State of Mulago Hospital</p>
+<p>Addressing newly renovated Hospital</p>","Ministry of Health",2017-10-26,,High,Delayed,45,2017-07-03,"<p>MoH, OPM-PIC</p>",0
