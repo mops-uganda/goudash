@@ -13,7 +13,7 @@ require ('../lib/xcrud/xcrud.php');
 $db = Xcrud_db::get_instance();
 $db->query('SELECT DISTINCT reportCategory FROM reports');
 $result = $db->result();
-$db->query('SELECT rid, ReportTitle, reportCategory, link, reportType FROM reports');
+$db->query('SELECT rid, ReportTitle, reportCategory, link, reportType, hasFilter, filterSQL, filterText, filterURL, filterColumn, hasFilter2, filterSQL2, filterText2, filterURL2, filterColumn2, hasFilter3, filterSQL3, filterText3, filterURL3, filterColumn3 FROM reports');
 $reports_list = $db->result();
 ?>
 <div>
@@ -102,19 +102,22 @@ $reports_list = $db->result();
                                     </header>
                                     <fieldset>
                                         <section>
-                                            <label class="select report-btn">
+                                            <label v-if="hasFilter_1 === 'on'" class="select report-btn">
                                                 <select class="input-sm">
-                                                    <option value="500">No Filter Set</option>
+                                                    <option value="0">Select /  {{ selected_row[0].filterText }}</option>
+                                                    <option v-for="filter_item in filter_select_1" :value="filter_item[filter_1_value]">{{ filter_item[filter_1_name] }}</option>
                                                 </select> <i></i>
                                             </label>
-                                            <label class="select report-btn">
+                                            <label v-if="hasFilter_2 === 'on'" class="select report-btn">
                                                 <select class="input-sm">
-                                                    <option value="500">No Filter Set</option>
+                                                    <option value="0">Select /  {{ selected_row[0].filterText2 }}</option>
+                                                    <option v-for="filter_item in filter_select_2" :value="filter_item[filter_2_value]">{{ filter_item[filter_2_name] }}</option>
                                                 </select> <i></i>
                                             </label>
-                                            <label class="select report-btn">
+                                            <label v-if="hasFilter_3 === 'on'" class="select report-btn">
                                                 <select class="input-sm">
-                                                    <option value="500">No Filter Set</option>
+                                                    <option value="0">Select /  {{ selected_row[0].filterText3 }}</option>
+                                                    <option v-for="filter_item in filter_select_3" :value="filter_item[filter_3_value]">{{ filter_item[filter_3_name] }}</option>
                                                 </select> <i></i>
                                             </label>
                                         </section>
@@ -217,8 +220,10 @@ $reports_list = $db->result();
             report_link: "reports",
             report_type: "All Reports",
             reports_list: <?php echo json_encode($reports_list); ?>,
-            filtered_list:[],
-            selected_row:[]
+            filtered_list:[], selected_row:[],
+            hasFilter_1: "off", filter_select_1:[], filter_1_name: "", filter_1_value: "", filterText1: "",
+            hasFilter_2: "off", filter_select_2:[], filter_2_name: "", filter_2_value: "", filterText2: "",
+            hasFilter_3: "off", filter_select_3:[], filter_3_name: "", filter_3_value: "", filterText3: "",
         },
         computed: {
             full_link: function () {
@@ -234,6 +239,64 @@ $reports_list = $db->result();
                 );
                 this.report_type = this.selected_row[0].reportType;
                 this.report_link = this.selected_row[0].link;
+                // console.log(this.selected_row);
+
+                // filter 1
+                if (this.selected_row[0].hasFilter === "1") {
+                    axios.get('X/api?sql=' + this.selected_row[0].filterSQL)
+                        .then(response => {
+                            this.filter_select_1 = response.data;
+                            if (Object.keys(this.filter_select_1[0]).length == 1){
+                                this.filter_1_name = Object.keys(this.filter_select_1[0])[0];
+                                this.filter_1_value = Object.keys(this.filter_select_1[0])[0];
+                            }
+                            if (Object.keys(this.filter_select_1[0]).length == 2){
+                                this.filter_1_name = Object.keys(this.filter_select_1[0])[1];
+                                this.filter_1_value = Object.keys(this.filter_select_1[0])[0];
+                            }
+                        });
+                    this.hasFilter_1 = "on";
+                } else {
+                    this.hasFilter_1 = "off";
+                }
+
+                // filter 2
+                if (this.selected_row[0].hasFilter2 === "1") {
+                    axios.get('X/api?sql=' + this.selected_row[0].filterSQL2)
+                        .then(response => {
+                            this.filter_select_2 = response.data;
+                            if (Object.keys(this.filter_select_2[0]).length == 1){
+                                this.filter_2_name = Object.keys(this.filter_select_2[0])[0];
+                                this.filter_2_value = Object.keys(this.filter_select_2[0])[0];
+                            }
+                            if (Object.keys(this.filter_select_2[0]).length == 2){
+                                this.filter_2_name = Object.keys(this.filter_select_2[0])[1];
+                                this.filter_2_value = Object.keys(this.filter_select_2[0])[0];
+                            }
+                        });
+                    this.hasFilter_2 = "on";
+                } else {
+                    this.hasFilter_2 = "off";
+                }
+
+                // filter 3
+                if (this.selected_row[0].hasFilter3 === "1") {
+                    axios.get('X/api?sql=' + this.selected_row[0].filterSQL3)
+                        .then(response => {
+                            this.filter_select_3 = response.data;
+                            if (Object.keys(this.filter_select_3[0]).length == 1){
+                                this.filter_3_name = Object.keys(this.filter_select_3[0])[0];
+                                this.filter_3_value = Object.keys(this.filter_select_3[0])[0];
+                            }
+                            if (Object.keys(this.filter_select_3[0]).length == 2){
+                                this.filter_3_name = Object.keys(this.filter_select_3[0])[1];
+                                this.filter_3_value = Object.keys(this.filter_select_3[0])[0];
+                            }
+                        });
+                    this.hasFilter_3 = "on";
+                } else {
+                    this.hasFilter_3 = "off";
+                }
             },
             r_filter(event) {
                 this.filtered_list = this.reports_list.filter(
@@ -244,6 +307,9 @@ $reports_list = $db->result();
                 this.report_id = 500;
                 this.report_link = "reports";
                 this.report_type = "All Reports";
+                this.hasFilter_1 = "off"; this.filter_select_1 = []; this.filter_1_name = ""; this.filter_1_value = "";
+                this.hasFilter_2 = "off"; this.filter_select_2 = []; this.filter_2_name = ""; this.filter_2_value = "";
+                this.hasFilter_3 = "off"; this.filter_select_3 = []; this.filter_3_name = ""; this.filter_3_value = "";
             },
             loadReport(){
                 //console.log(this.full_link);
@@ -293,12 +359,9 @@ $reports_list = $db->result();
         font-size: 13px;
     }
     .smart-form .col-3 {
-        width: 23%;
+        width: 24%;
     }
     .smart-form .select-multiple select {
         height: 160px;
-    }
-    .select_style {
-
     }
 </style>

@@ -6,6 +6,7 @@
 <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
 
 <script>
     if (!window.jQuery) {
